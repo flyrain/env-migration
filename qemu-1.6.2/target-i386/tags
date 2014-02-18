@@ -1,0 +1,2841 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AC_MASK	cpu.h	119;"	d
+AESNI_OP	translate.c	3154;"	d	file:
+APIC_DEFAULT_ADDRESS	cpu.h	1234;"	d
+APIC_SPACE_SIZE	cpu.h	1235;"	d
+Addr	rev_sem/taint.h	/^typedef  unsigned int Addr;$/;"	t
+B	ops_sse.h	2298;"	d
+B	ops_sse.h	23;"	d
+B	ops_sse.h	31;"	d
+BIASEXPONENT	fpu_helper.c	44;"	d	file:
+BLACK	rev_sem/heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	e	enum:__anon14
+BUS_MCEERR_AO	kvm.c	54;"	d	file:
+BUS_MCEERR_AR	kvm.c	51;"	d	file:
+CALL_STACK_H	rev_sem/callstack.h	2;"	d
+CCOp	cpu.h	/^} CCOp;$/;"	t	typeref:enum:__anon5
+CCPrepare	translate.c	/^typedef struct CCPrepare {$/;"	s	file:
+CCPrepare	translate.c	/^} CCPrepare;$/;"	t	typeref:struct:CCPrepare	file:
+CC_A	cpu.h	103;"	d
+CC_C	cpu.h	101;"	d
+CC_DST	cpu.h	1104;"	d
+CC_O	cpu.h	106;"	d
+CC_OP	cpu.h	1107;"	d
+CC_OP_ADCB	cpu.h	/^    CC_OP_ADCB, \/* modify all flags, CC_DST = res, CC_SRC = src1 *\/$/;"	e	enum:__anon5
+CC_OP_ADCL	cpu.h	/^    CC_OP_ADCL,$/;"	e	enum:__anon5
+CC_OP_ADCOX	cpu.h	/^    CC_OP_ADCOX, \/* CC_DST = C, CC_SRC2 = O, CC_SRC = rest.  *\/$/;"	e	enum:__anon5
+CC_OP_ADCQ	cpu.h	/^    CC_OP_ADCQ,$/;"	e	enum:__anon5
+CC_OP_ADCW	cpu.h	/^    CC_OP_ADCW,$/;"	e	enum:__anon5
+CC_OP_ADCX	cpu.h	/^    CC_OP_ADCX, \/* CC_DST = C, CC_SRC = rest.  *\/$/;"	e	enum:__anon5
+CC_OP_ADDB	cpu.h	/^    CC_OP_ADDB, \/* modify all flags, CC_DST = res, CC_SRC = src1 *\/$/;"	e	enum:__anon5
+CC_OP_ADDL	cpu.h	/^    CC_OP_ADDL,$/;"	e	enum:__anon5
+CC_OP_ADDQ	cpu.h	/^    CC_OP_ADDQ,$/;"	e	enum:__anon5
+CC_OP_ADDW	cpu.h	/^    CC_OP_ADDW,$/;"	e	enum:__anon5
+CC_OP_ADOX	cpu.h	/^    CC_OP_ADOX, \/* CC_DST = O, CC_SRC = rest.  *\/$/;"	e	enum:__anon5
+CC_OP_BMILGB	cpu.h	/^    CC_OP_BMILGB, \/* Z,S via CC_DST, C = SRC==0; O=0; P,A undefined *\/$/;"	e	enum:__anon5
+CC_OP_BMILGL	cpu.h	/^    CC_OP_BMILGL,$/;"	e	enum:__anon5
+CC_OP_BMILGQ	cpu.h	/^    CC_OP_BMILGQ,$/;"	e	enum:__anon5
+CC_OP_BMILGW	cpu.h	/^    CC_OP_BMILGW,$/;"	e	enum:__anon5
+CC_OP_CLR	cpu.h	/^    CC_OP_CLR, \/* Z set, all other flags clear.  *\/$/;"	e	enum:__anon5
+CC_OP_DECB	cpu.h	/^    CC_OP_DECB, \/* modify all flags except, CC_DST = res, CC_SRC = C  *\/$/;"	e	enum:__anon5
+CC_OP_DECL	cpu.h	/^    CC_OP_DECL,$/;"	e	enum:__anon5
+CC_OP_DECQ	cpu.h	/^    CC_OP_DECQ,$/;"	e	enum:__anon5
+CC_OP_DECW	cpu.h	/^    CC_OP_DECW,$/;"	e	enum:__anon5
+CC_OP_DYNAMIC	cpu.h	/^    CC_OP_DYNAMIC, \/* must use dynamic code to get cc_op *\/$/;"	e	enum:__anon5
+CC_OP_EFLAGS	cpu.h	/^    CC_OP_EFLAGS,  \/* all cc are explicitly computed, CC_SRC = flags *\/$/;"	e	enum:__anon5
+CC_OP_INCB	cpu.h	/^    CC_OP_INCB, \/* modify all flags except, CC_DST = res, CC_SRC = C *\/$/;"	e	enum:__anon5
+CC_OP_INCL	cpu.h	/^    CC_OP_INCL,$/;"	e	enum:__anon5
+CC_OP_INCQ	cpu.h	/^    CC_OP_INCQ,$/;"	e	enum:__anon5
+CC_OP_INCW	cpu.h	/^    CC_OP_INCW,$/;"	e	enum:__anon5
+CC_OP_LOGICB	cpu.h	/^    CC_OP_LOGICB, \/* modify all flags, CC_DST = res *\/$/;"	e	enum:__anon5
+CC_OP_LOGICL	cpu.h	/^    CC_OP_LOGICL,$/;"	e	enum:__anon5
+CC_OP_LOGICQ	cpu.h	/^    CC_OP_LOGICQ,$/;"	e	enum:__anon5
+CC_OP_LOGICW	cpu.h	/^    CC_OP_LOGICW,$/;"	e	enum:__anon5
+CC_OP_MULB	cpu.h	/^    CC_OP_MULB, \/* modify all flags, C, O = (CC_SRC != 0) *\/$/;"	e	enum:__anon5
+CC_OP_MULL	cpu.h	/^    CC_OP_MULL,$/;"	e	enum:__anon5
+CC_OP_MULQ	cpu.h	/^    CC_OP_MULQ,$/;"	e	enum:__anon5
+CC_OP_MULW	cpu.h	/^    CC_OP_MULW,$/;"	e	enum:__anon5
+CC_OP_NB	cpu.h	/^    CC_OP_NB,$/;"	e	enum:__anon5
+CC_OP_SARB	cpu.h	/^    CC_OP_SARB, \/* modify all flags, CC_DST = res, CC_SRC.lsb = C *\/$/;"	e	enum:__anon5
+CC_OP_SARL	cpu.h	/^    CC_OP_SARL,$/;"	e	enum:__anon5
+CC_OP_SARQ	cpu.h	/^    CC_OP_SARQ,$/;"	e	enum:__anon5
+CC_OP_SARW	cpu.h	/^    CC_OP_SARW,$/;"	e	enum:__anon5
+CC_OP_SBBB	cpu.h	/^    CC_OP_SBBB, \/* modify all flags, CC_DST = res, CC_SRC = src1 *\/$/;"	e	enum:__anon5
+CC_OP_SBBL	cpu.h	/^    CC_OP_SBBL,$/;"	e	enum:__anon5
+CC_OP_SBBQ	cpu.h	/^    CC_OP_SBBQ,$/;"	e	enum:__anon5
+CC_OP_SBBW	cpu.h	/^    CC_OP_SBBW,$/;"	e	enum:__anon5
+CC_OP_SHLB	cpu.h	/^    CC_OP_SHLB, \/* modify all flags, CC_DST = res, CC_SRC.msb = C *\/$/;"	e	enum:__anon5
+CC_OP_SHLL	cpu.h	/^    CC_OP_SHLL,$/;"	e	enum:__anon5
+CC_OP_SHLQ	cpu.h	/^    CC_OP_SHLQ,$/;"	e	enum:__anon5
+CC_OP_SHLW	cpu.h	/^    CC_OP_SHLW,$/;"	e	enum:__anon5
+CC_OP_SUBB	cpu.h	/^    CC_OP_SUBB, \/* modify all flags, CC_DST = res, CC_SRC = src1 *\/$/;"	e	enum:__anon5
+CC_OP_SUBL	cpu.h	/^    CC_OP_SUBL,$/;"	e	enum:__anon5
+CC_OP_SUBQ	cpu.h	/^    CC_OP_SUBQ,$/;"	e	enum:__anon5
+CC_OP_SUBW	cpu.h	/^    CC_OP_SUBW,$/;"	e	enum:__anon5
+CC_P	cpu.h	102;"	d
+CC_S	cpu.h	105;"	d
+CC_SRC	cpu.h	1105;"	d
+CC_SRC2	cpu.h	1106;"	d
+CC_Z	cpu.h	104;"	d
+CODE64	translate.c	43;"	d	file:
+CODE64	translate.c	47;"	d	file:
+CONDITION_H	rev_sem/condition.h	2;"	d
+CONFIG_PEMU_H	rev_sem/config_pemu.h	2;"	d
+CPUArchState	cpu.h	45;"	d
+CPUID_7_0_EBX_ADX	cpu.h	532;"	d
+CPUID_7_0_EBX_AVX2	cpu.h	525;"	d
+CPUID_7_0_EBX_BMI1	cpu.h	523;"	d
+CPUID_7_0_EBX_BMI2	cpu.h	527;"	d
+CPUID_7_0_EBX_ERMS	cpu.h	528;"	d
+CPUID_7_0_EBX_FSGSBASE	cpu.h	522;"	d
+CPUID_7_0_EBX_HLE	cpu.h	524;"	d
+CPUID_7_0_EBX_INVPCID	cpu.h	529;"	d
+CPUID_7_0_EBX_RDSEED	cpu.h	531;"	d
+CPUID_7_0_EBX_RTM	cpu.h	530;"	d
+CPUID_7_0_EBX_SMAP	cpu.h	533;"	d
+CPUID_7_0_EBX_SMEP	cpu.h	526;"	d
+CPUID_ACPI	cpu.h	406;"	d
+CPUID_APIC	cpu.h	395;"	d
+CPUID_CLFLUSH	cpu.h	404;"	d
+CPUID_CMOV	cpu.h	400;"	d
+CPUID_CX8	cpu.h	394;"	d
+CPUID_DE	cpu.h	388;"	d
+CPUID_DTS	cpu.h	405;"	d
+CPUID_EXT2_3DNOW	cpu.h	475;"	d
+CPUID_EXT2_3DNOWEXT	cpu.h	474;"	d
+CPUID_EXT2_AMD_ALIASES	cpu.h	478;"	d
+CPUID_EXT2_APIC	cpu.h	457;"	d
+CPUID_EXT2_CMOV	cpu.h	462;"	d
+CPUID_EXT2_CX8	cpu.h	456;"	d
+CPUID_EXT2_DE	cpu.h	450;"	d
+CPUID_EXT2_FFXSR	cpu.h	470;"	d
+CPUID_EXT2_FPU	cpu.h	448;"	d
+CPUID_EXT2_FXSR	cpu.h	469;"	d
+CPUID_EXT2_LM	cpu.h	473;"	d
+CPUID_EXT2_MCA	cpu.h	461;"	d
+CPUID_EXT2_MCE	cpu.h	455;"	d
+CPUID_EXT2_MMX	cpu.h	468;"	d
+CPUID_EXT2_MMXEXT	cpu.h	467;"	d
+CPUID_EXT2_MP	cpu.h	465;"	d
+CPUID_EXT2_MSR	cpu.h	453;"	d
+CPUID_EXT2_MTRR	cpu.h	459;"	d
+CPUID_EXT2_NX	cpu.h	466;"	d
+CPUID_EXT2_PAE	cpu.h	454;"	d
+CPUID_EXT2_PAT	cpu.h	463;"	d
+CPUID_EXT2_PDPE1GB	cpu.h	471;"	d
+CPUID_EXT2_PGE	cpu.h	460;"	d
+CPUID_EXT2_PSE	cpu.h	451;"	d
+CPUID_EXT2_PSE36	cpu.h	464;"	d
+CPUID_EXT2_RDTSCP	cpu.h	472;"	d
+CPUID_EXT2_SYSCALL	cpu.h	458;"	d
+CPUID_EXT2_TSC	cpu.h	452;"	d
+CPUID_EXT2_VME	cpu.h	449;"	d
+CPUID_EXT3_3DNOWPREFETCH	cpu.h	496;"	d
+CPUID_EXT3_ABM	cpu.h	493;"	d
+CPUID_EXT3_CMP_LEG	cpu.h	489;"	d
+CPUID_EXT3_CR8LEG	cpu.h	492;"	d
+CPUID_EXT3_EXTAPIC	cpu.h	491;"	d
+CPUID_EXT3_FMA4	cpu.h	503;"	d
+CPUID_EXT3_IBS	cpu.h	498;"	d
+CPUID_EXT3_LAHF_LM	cpu.h	488;"	d
+CPUID_EXT3_LWP	cpu.h	502;"	d
+CPUID_EXT3_MISALIGNSSE	cpu.h	495;"	d
+CPUID_EXT3_NODEID	cpu.h	505;"	d
+CPUID_EXT3_OSVW	cpu.h	497;"	d
+CPUID_EXT3_PERFCORE	cpu.h	508;"	d
+CPUID_EXT3_PERFNB	cpu.h	509;"	d
+CPUID_EXT3_SKINIT	cpu.h	500;"	d
+CPUID_EXT3_SSE4A	cpu.h	494;"	d
+CPUID_EXT3_SVM	cpu.h	490;"	d
+CPUID_EXT3_TBM	cpu.h	506;"	d
+CPUID_EXT3_TCE	cpu.h	504;"	d
+CPUID_EXT3_TOPOEXT	cpu.h	507;"	d
+CPUID_EXT3_WDT	cpu.h	501;"	d
+CPUID_EXT3_XOP	cpu.h	499;"	d
+CPUID_EXT_AES	cpu.h	440;"	d
+CPUID_EXT_AVX	cpu.h	443;"	d
+CPUID_EXT_CID	cpu.h	427;"	d
+CPUID_EXT_CX16	cpu.h	429;"	d
+CPUID_EXT_DCA	cpu.h	433;"	d
+CPUID_EXT_DSCPL	cpu.h	421;"	d
+CPUID_EXT_DTES64	cpu.h	419;"	d
+CPUID_EXT_EST	cpu.h	424;"	d
+CPUID_EXT_F16C	cpu.h	444;"	d
+CPUID_EXT_FMA	cpu.h	428;"	d
+CPUID_EXT_HYPERVISOR	cpu.h	446;"	d
+CPUID_EXT_MONITOR	cpu.h	420;"	d
+CPUID_EXT_MOVBE	cpu.h	437;"	d
+CPUID_EXT_OSXSAVE	cpu.h	442;"	d
+CPUID_EXT_PCID	cpu.h	432;"	d
+CPUID_EXT_PCLMULQDQ	cpu.h	418;"	d
+CPUID_EXT_PDCM	cpu.h	431;"	d
+CPUID_EXT_POPCNT	cpu.h	438;"	d
+CPUID_EXT_RDRAND	cpu.h	445;"	d
+CPUID_EXT_SMX	cpu.h	423;"	d
+CPUID_EXT_SSE3	cpu.h	417;"	d
+CPUID_EXT_SSE41	cpu.h	434;"	d
+CPUID_EXT_SSE42	cpu.h	435;"	d
+CPUID_EXT_SSSE3	cpu.h	426;"	d
+CPUID_EXT_TM2	cpu.h	425;"	d
+CPUID_EXT_TSC_DEADLINE_TIMER	cpu.h	439;"	d
+CPUID_EXT_VMX	cpu.h	422;"	d
+CPUID_EXT_X2APIC	cpu.h	436;"	d
+CPUID_EXT_XSAVE	cpu.h	441;"	d
+CPUID_EXT_XTPR	cpu.h	430;"	d
+CPUID_FP87	cpu.h	386;"	d
+CPUID_FXSR	cpu.h	408;"	d
+CPUID_HT	cpu.h	412;"	d
+CPUID_IA64	cpu.h	414;"	d
+CPUID_MCA	cpu.h	399;"	d
+CPUID_MCE	cpu.h	393;"	d
+CPUID_MMX	cpu.h	407;"	d
+CPUID_MSR	cpu.h	391;"	d
+CPUID_MTRR	cpu.h	397;"	d
+CPUID_MWAIT_EMX	cpu.h	550;"	d
+CPUID_MWAIT_IBE	cpu.h	549;"	d
+CPUID_PAE	cpu.h	392;"	d
+CPUID_PAT	cpu.h	401;"	d
+CPUID_PBE	cpu.h	415;"	d
+CPUID_PGE	cpu.h	398;"	d
+CPUID_PN	cpu.h	403;"	d
+CPUID_PSE	cpu.h	389;"	d
+CPUID_PSE36	cpu.h	402;"	d
+CPUID_SEP	cpu.h	396;"	d
+CPUID_SS	cpu.h	411;"	d
+CPUID_SSE	cpu.h	409;"	d
+CPUID_SSE2	cpu.h	410;"	d
+CPUID_SVM_DECODEASSIST	cpu.h	518;"	d
+CPUID_SVM_FLUSHASID	cpu.h	517;"	d
+CPUID_SVM_LBRV	cpu.h	512;"	d
+CPUID_SVM_NPT	cpu.h	511;"	d
+CPUID_SVM_NRIPSAVE	cpu.h	514;"	d
+CPUID_SVM_PAUSEFILTER	cpu.h	519;"	d
+CPUID_SVM_PFTHRESHOLD	cpu.h	520;"	d
+CPUID_SVM_SVMLOCK	cpu.h	513;"	d
+CPUID_SVM_TSCSCALE	cpu.h	515;"	d
+CPUID_SVM_VMCBCLEAN	cpu.h	516;"	d
+CPUID_TM	cpu.h	413;"	d
+CPUID_TSC	cpu.h	390;"	d
+CPUID_VENDOR_AMD	cpu.h	545;"	d
+CPUID_VENDOR_AMD_1	cpu.h	542;"	d
+CPUID_VENDOR_AMD_2	cpu.h	543;"	d
+CPUID_VENDOR_AMD_3	cpu.h	544;"	d
+CPUID_VENDOR_INTEL	cpu.h	540;"	d
+CPUID_VENDOR_INTEL_1	cpu.h	537;"	d
+CPUID_VENDOR_INTEL_2	cpu.h	538;"	d
+CPUID_VENDOR_INTEL_3	cpu.h	539;"	d
+CPUID_VENDOR_SZ	cpu.h	535;"	d
+CPUID_VENDOR_VIA	cpu.h	547;"	d
+CPUID_VME	cpu.h	387;"	d
+CPUX86State	cpu.h	/^typedef struct CPUX86State {$/;"	s
+CPUX86State	cpu.h	/^} CPUX86State;$/;"	t	typeref:struct:CPUX86State
+CPU_I386_H	cpu.h	20;"	d
+CPU_INTERRUPT_INIT	cpu.h	580;"	d
+CPU_INTERRUPT_MCE	cpu.h	578;"	d
+CPU_INTERRUPT_NMI	cpu.h	577;"	d
+CPU_INTERRUPT_POLL	cpu.h	575;"	d
+CPU_INTERRUPT_SIPI	cpu.h	581;"	d
+CPU_INTERRUPT_SMI	cpu.h	576;"	d
+CPU_INTERRUPT_TPR	cpu.h	582;"	d
+CPU_INTERRUPT_VIRQ	cpu.h	579;"	d
+CPU_NB_REGS	cpu.h	718;"	d
+CPU_NB_REGS	cpu.h	720;"	d
+CPU_NB_REGS32	cpu.h	715;"	d
+CPU_NB_REGS64	cpu.h	714;"	d
+CR0_AM_MASK	cpu.h	202;"	d
+CR0_EM_MASK	cpu.h	197;"	d
+CR0_ET_MASK	cpu.h	199;"	d
+CR0_MP_MASK	cpu.h	196;"	d
+CR0_MP_SHIFT	cpu.h	193;"	d
+CR0_NE_MASK	cpu.h	200;"	d
+CR0_PE_MASK	cpu.h	195;"	d
+CR0_PE_SHIFT	cpu.h	192;"	d
+CR0_PG_MASK	cpu.h	203;"	d
+CR0_TS_MASK	cpu.h	198;"	d
+CR0_WP_MASK	cpu.h	201;"	d
+CR4_DE_MASK	cpu.h	208;"	d
+CR4_FSGSBASE_MASK	cpu.h	219;"	d
+CR4_MCE_MASK	cpu.h	211;"	d
+CR4_OSFXSR_MASK	cpu.h	215;"	d
+CR4_OSFXSR_SHIFT	cpu.h	214;"	d
+CR4_OSXMMEXCPT_MASK	cpu.h	216;"	d
+CR4_OSXSAVE_MASK	cpu.h	221;"	d
+CR4_PAE_MASK	cpu.h	210;"	d
+CR4_PCE_MASK	cpu.h	213;"	d
+CR4_PCIDE_MASK	cpu.h	220;"	d
+CR4_PGE_MASK	cpu.h	212;"	d
+CR4_PSE_MASK	cpu.h	209;"	d
+CR4_PVI_MASK	cpu.h	206;"	d
+CR4_SMAP_MASK	cpu.h	223;"	d
+CR4_SMEP_MASK	cpu.h	222;"	d
+CR4_SMXE_MASK	cpu.h	218;"	d
+CR4_TSD_MASK	cpu.h	207;"	d
+CR4_VME_MASK	cpu.h	205;"	d
+CR4_VMXE_MASK	cpu.h	217;"	d
+CRCPOLY	ops_sse.h	2143;"	d
+CRCPOLY_BITREV	ops_sse.h	2144;"	d
+Char	rev_sem/taint.h	/^typedef    signed char   Char;$/;"	t
+DATA_BITS	cc_helper_template.h	20;"	d
+DATA_BITS	cc_helper_template.h	238;"	d
+DATA_BITS	shift_helper_template.h	103;"	d
+DATA_BITS	shift_helper_template.h	20;"	d
+DATA_MASK	cc_helper_template.h	241;"	d
+DATA_MASK	shift_helper_template.h	107;"	d
+DATA_MASK	shift_helper_template.h	30;"	d
+DATA_MASK	shift_helper_template.h	33;"	d
+DATA_MASK	shift_helper_template.h	36;"	d
+DATA_MASK	shift_helper_template.h	39;"	d
+DATA_TYPE	cc_helper_template.h	240;"	d
+DATA_TYPE	cc_helper_template.h	24;"	d
+DATA_TYPE	cc_helper_template.h	27;"	d
+DATA_TYPE	cc_helper_template.h	30;"	d
+DATA_TYPE	cc_helper_template.h	33;"	d
+DATA_TYPE	shift_helper_template.h	106;"	d
+DEBUG_TAINT	rev_sem/hook_inst.c	22;"	d	file:
+DEBUG_TAINT	rev_sem/taint.c	13;"	d	file:
+DESC_AVL_MASK	cpu.h	82;"	d
+DESC_A_MASK	cpu.h	89;"	d
+DESC_B_MASK	cpu.h	79;"	d
+DESC_B_SHIFT	cpu.h	78;"	d
+DESC_CS_MASK	cpu.h	91;"	d
+DESC_C_MASK	cpu.h	92;"	d
+DESC_DPL_MASK	cpu.h	85;"	d
+DESC_DPL_SHIFT	cpu.h	84;"	d
+DESC_E_MASK	cpu.h	95;"	d
+DESC_G_MASK	cpu.h	77;"	d
+DESC_L_MASK	cpu.h	81;"	d
+DESC_L_SHIFT	cpu.h	80;"	d
+DESC_P_MASK	cpu.h	83;"	d
+DESC_R_MASK	cpu.h	93;"	d
+DESC_S_MASK	cpu.h	86;"	d
+DESC_TSS_BUSY_MASK	cpu.h	98;"	d
+DESC_TYPE_MASK	cpu.h	88;"	d
+DESC_TYPE_SHIFT	cpu.h	87;"	d
+DESC_W_MASK	cpu.h	96;"	d
+DF_MASK	cpu.h	114;"	d
+DISABLE_TIMMER	rev_sem/config_pemu.h	5;"	d
+DISAS_H	rev_sem/disas.h	2;"	d
+DPRINTF	kvm.c	40;"	d	file:
+DPRINTF	kvm.c	43;"	d	file:
+DR6_BD	cpu.h	225;"	d
+DR6_BS	cpu.h	226;"	d
+DR6_BT	cpu.h	227;"	d
+DR6_FIXED_1	cpu.h	228;"	d
+DR7_FIXED_1	cpu.h	233;"	d
+DR7_GD	cpu.h	230;"	d
+DR7_LEN_SHIFT	cpu.h	232;"	d
+DR7_LOCAL_BP_MASK	cpu.h	234;"	d
+DR7_MAX_BP	cpu.h	235;"	d
+DR7_TYPE_BP_INST	cpu.h	236;"	d
+DR7_TYPE_DATA_RW	cpu.h	239;"	d
+DR7_TYPE_DATA_WR	cpu.h	237;"	d
+DR7_TYPE_IO_RW	cpu.h	238;"	d
+DR7_TYPE_SHIFT	cpu.h	231;"	d
+DUMP_CODE_BYTES_BACKWARD	helper.c	180;"	d	file:
+DUMP_CODE_BYTES_TOTAL	helper.c	179;"	d	file:
+DisasContext	translate.c	/^typedef struct DisasContext {$/;"	s	file:
+DisasContext	translate.c	/^} DisasContext;$/;"	t	typeref:struct:DisasContext	file:
+ELF_MACHINE	cpu.h	40;"	d
+ELF_MACHINE	cpu.h	42;"	d
+ENABLE_TAINT	rev_sem/hook_inst.c	23;"	d	file:
+ENSURE_MAPPABLE	rev_sem/taint.c	28;"	d	file:
+ENSURE_MAPPABLE_BYTE_GRANUITY	rev_sem/taint.c	35;"	d	file:
+ENV_GET_CPU	cpu-qom.h	85;"	d
+ENV_OFFSET	cpu-qom.h	87;"	d
+EXCP00_DIVZ	cpu.h	552;"	d
+EXCP01_DB	cpu.h	553;"	d
+EXCP02_NMI	cpu.h	554;"	d
+EXCP03_INT3	cpu.h	555;"	d
+EXCP04_INTO	cpu.h	556;"	d
+EXCP05_BOUND	cpu.h	557;"	d
+EXCP06_ILLOP	cpu.h	558;"	d
+EXCP07_PREX	cpu.h	559;"	d
+EXCP08_DBLE	cpu.h	560;"	d
+EXCP09_XERR	cpu.h	561;"	d
+EXCP0A_TSS	cpu.h	562;"	d
+EXCP0B_NOSEG	cpu.h	563;"	d
+EXCP0C_STACK	cpu.h	564;"	d
+EXCP0D_GPF	cpu.h	565;"	d
+EXCP0E_PAGE	cpu.h	566;"	d
+EXCP10_COPR	cpu.h	567;"	d
+EXCP11_ALGN	cpu.h	568;"	d
+EXCP12_MCHK	cpu.h	569;"	d
+EXCP_SYSCALL	cpu.h	571;"	d
+EXPBIAS	fpu_helper.c	40;"	d	file:
+EXPBIAS1	machine.c	94;"	d	file:
+EXPD	fpu_helper.c	41;"	d	file:
+EXPD1	machine.c	95;"	d	file:
+FABSB	ops_sse.h	1487;"	d
+FABSL	ops_sse.h	1489;"	d
+FABSW	ops_sse.h	1488;"	d
+FADD	ops_sse.h	337;"	d
+FADDSB	ops_sse.h	340;"	d
+FADDSW	ops_sse.h	341;"	d
+FADDUB	ops_sse.h	338;"	d
+FADDUW	ops_sse.h	339;"	d
+FAND	ops_sse.h	353;"	d
+FANDN	ops_sse.h	354;"	d
+FAVG	ops_sse.h	368;"	d
+FBLENDP	ops_sse.h	1857;"	d
+FBLENDVB	ops_sse.h	1599;"	d
+FBLENDVPD	ops_sse.h	1601;"	d
+FBLENDVPS	ops_sse.h	1600;"	d
+FCMPEQ	ops_sse.h	361;"	d
+FCMPEQQ	ops_sse.h	1650;"	d
+FCMPGTB	ops_sse.h	358;"	d
+FCMPGTL	ops_sse.h	360;"	d
+FCMPGTQ	ops_sse.h	1936;"	d
+FCMPGTW	ops_sse.h	359;"	d
+FDTAINTED	rev_sem/taint.h	19;"	d
+FDregTaint	rev_sem/taint.c	/^unsigned int FDregTaint[XED_REG_LAST];$/;"	v
+FEATURE_WORDS	cpu.h	/^    FEATURE_WORDS,$/;"	e	enum:FeatureWord
+FEAT_1_ECX	cpu.h	/^    FEAT_1_ECX,         \/* CPUID[1].ECX *\/$/;"	e	enum:FeatureWord
+FEAT_1_EDX	cpu.h	/^    FEAT_1_EDX,         \/* CPUID[1].EDX *\/$/;"	e	enum:FeatureWord
+FEAT_7_0_EBX	cpu.h	/^    FEAT_7_0_EBX,       \/* CPUID[EAX=7,ECX=0].EBX *\/$/;"	e	enum:FeatureWord
+FEAT_8000_0001_ECX	cpu.h	/^    FEAT_8000_0001_ECX, \/* CPUID[8000_0001].ECX *\/$/;"	e	enum:FeatureWord
+FEAT_8000_0001_EDX	cpu.h	/^    FEAT_8000_0001_EDX, \/* CPUID[8000_0001].EDX *\/$/;"	e	enum:FeatureWord
+FEAT_C000_0001_EDX	cpu.h	/^    FEAT_C000_0001_EDX, \/* CPUID[C000_0001].EDX *\/$/;"	e	enum:FeatureWord
+FEAT_KVM	cpu.h	/^    FEAT_KVM,           \/* CPUID[4000_0001].EAX (KVM_CPUID_FEATURES) *\/$/;"	e	enum:FeatureWord
+FEAT_SVM	cpu.h	/^    FEAT_SVM,           \/* CPUID[8000_000A].EDX *\/$/;"	e	enum:FeatureWord
+FMAXSB	ops_sse.h	1667;"	d
+FMAXSD	ops_sse.h	1668;"	d
+FMAXSW	ops_sse.h	351;"	d
+FMAXUB	ops_sse.h	350;"	d
+FMINSB	ops_sse.h	1665;"	d
+FMINSD	ops_sse.h	1666;"	d
+FMINSW	ops_sse.h	349;"	d
+FMINUB	ops_sse.h	348;"	d
+FMULHRSW	ops_sse.h	1494;"	d
+FMULHRW	ops_sse.h	364;"	d
+FMULHUW	ops_sse.h	365;"	d
+FMULHW	ops_sse.h	366;"	d
+FMULLD	ops_sse.h	1678;"	d
+FMULLW	ops_sse.h	363;"	d
+FOR	ops_sse.h	355;"	d
+FPReg	cpu.h	/^} FPReg;$/;"	t	typeref:union:__anon8
+FPUC_EM	fpu_helper.c	56;"	d	file:
+FPUS_B	fpu_helper.c	54;"	d	file:
+FPUS_DE	fpu_helper.c	47;"	d	file:
+FPUS_IE	fpu_helper.c	46;"	d	file:
+FPUS_OE	fpu_helper.c	49;"	d	file:
+FPUS_PE	fpu_helper.c	51;"	d	file:
+FPUS_SE	fpu_helper.c	53;"	d	file:
+FPUS_SF	fpu_helper.c	52;"	d	file:
+FPUS_UE	fpu_helper.c	50;"	d	file:
+FPUS_ZE	fpu_helper.c	48;"	d	file:
+FPU_ADD	ops_sse.h	604;"	d
+FPU_CMPEQ	ops_sse.h	969;"	d
+FPU_CMPLE	ops_sse.h	973;"	d
+FPU_CMPLT	ops_sse.h	971;"	d
+FPU_CMPNEQ	ops_sse.h	977;"	d
+FPU_CMPNLE	ops_sse.h	981;"	d
+FPU_CMPNLT	ops_sse.h	979;"	d
+FPU_CMPORD	ops_sse.h	983;"	d
+FPU_CMPUNORD	ops_sse.h	975;"	d
+FPU_DIV	ops_sse.h	607;"	d
+FPU_MAX	ops_sse.h	616;"	d
+FPU_MIN	ops_sse.h	614;"	d
+FPU_MUL	ops_sse.h	606;"	d
+FPU_RC_CHOP	fpu_helper.c	34;"	d	file:
+FPU_RC_DOWN	fpu_helper.c	32;"	d	file:
+FPU_RC_MASK	fpu_helper.c	30;"	d	file:
+FPU_RC_NEAR	fpu_helper.c	31;"	d	file:
+FPU_RC_UP	fpu_helper.c	33;"	d	file:
+FPU_SQRT	ops_sse.h	608;"	d
+FPU_SUB	ops_sse.h	605;"	d
+FSIGNB	ops_sse.h	1497;"	d
+FSIGNL	ops_sse.h	1499;"	d
+FSIGNW	ops_sse.h	1498;"	d
+FSUB	ops_sse.h	343;"	d
+FSUBSB	ops_sse.h	346;"	d
+FSUBSW	ops_sse.h	347;"	d
+FSUBUB	ops_sse.h	344;"	d
+FSUBUW	ops_sse.h	345;"	d
+FT0	cpu.h	1120;"	d
+FXOR	ops_sse.h	356;"	d
+FeatureWord	cpu.h	/^typedef enum FeatureWord {$/;"	g
+FeatureWord	cpu.h	/^} FeatureWord;$/;"	t	typeref:enum:FeatureWord
+FeatureWordArray	cpu.h	/^typedef uint32_t FeatureWordArray[FEATURE_WORDS];$/;"	t
+FeatureWordInfo	cpu.c	/^typedef struct FeatureWordInfo {$/;"	s	file:
+FeatureWordInfo	cpu.c	/^} FeatureWordInfo;$/;"	t	typeref:struct:FeatureWordInfo	file:
+GEN_HELPER	rev_sem/main.c	12;"	d	file:
+GEN_HELPER	translate.c	32;"	d	file:
+GEN_HELPER	translate.c	8269;"	d	file:
+GEN_REPZ	translate.c	1372;"	d	file:
+GEN_REPZ2	translate.c	1388;"	d	file:
+HChar	rev_sem/taint.h	/^typedef           char   HChar; \/* signfulness depends on host *\/$/;"	t
+HF2_GIF_MASK	cpu.h	187;"	d
+HF2_GIF_SHIFT	cpu.h	182;"	d
+HF2_HIF_MASK	cpu.h	188;"	d
+HF2_HIF_SHIFT	cpu.h	183;"	d
+HF2_NMI_MASK	cpu.h	189;"	d
+HF2_NMI_SHIFT	cpu.h	184;"	d
+HF2_VINTR_MASK	cpu.h	190;"	d
+HF2_VINTR_SHIFT	cpu.h	185;"	d
+HFLAG_COPY_MASK	kvm.c	1280;"	d	file:
+HF_AC_MASK	cpu.h	173;"	d
+HF_AC_SHIFT	cpu.h	150;"	d
+HF_ADDSEG_MASK	cpu.h	162;"	d
+HF_ADDSEG_SHIFT	cpu.h	138;"	d
+HF_CPL_MASK	cpu.h	157;"	d
+HF_CPL_SHIFT	cpu.h	129;"	d
+HF_CS32_MASK	cpu.h	160;"	d
+HF_CS32_SHIFT	cpu.h	135;"	d
+HF_CS64_MASK	cpu.h	170;"	d
+HF_CS64_SHIFT	cpu.h	147;"	d
+HF_EM_MASK	cpu.h	166;"	d
+HF_EM_SHIFT	cpu.h	143;"	d
+HF_INHIBIT_IRQ_MASK	cpu.h	159;"	d
+HF_INHIBIT_IRQ_SHIFT	cpu.h	133;"	d
+HF_IOPL_MASK	cpu.h	168;"	d
+HF_IOPL_SHIFT	cpu.h	145;"	d
+HF_LMA_MASK	cpu.h	169;"	d
+HF_LMA_SHIFT	cpu.h	146;"	d
+HF_MP_MASK	cpu.h	165;"	d
+HF_MP_SHIFT	cpu.h	142;"	d
+HF_OSFXSR_MASK	cpu.h	177;"	d
+HF_OSFXSR_SHIFT	cpu.h	154;"	d
+HF_PE_MASK	cpu.h	163;"	d
+HF_PE_SHIFT	cpu.h	140;"	d
+HF_RF_MASK	cpu.h	171;"	d
+HF_RF_SHIFT	cpu.h	148;"	d
+HF_SMAP_MASK	cpu.h	178;"	d
+HF_SMAP_SHIFT	cpu.h	155;"	d
+HF_SMM_MASK	cpu.h	174;"	d
+HF_SMM_SHIFT	cpu.h	151;"	d
+HF_SOFTMMU_MASK	cpu.h	158;"	d
+HF_SOFTMMU_SHIFT	cpu.h	131;"	d
+HF_SS32_MASK	cpu.h	161;"	d
+HF_SS32_SHIFT	cpu.h	136;"	d
+HF_SVME_MASK	cpu.h	175;"	d
+HF_SVME_SHIFT	cpu.h	152;"	d
+HF_SVMI_MASK	cpu.h	176;"	d
+HF_SVMI_SHIFT	cpu.h	153;"	d
+HF_TF_MASK	cpu.h	164;"	d
+HF_TF_SHIFT	cpu.h	141;"	d
+HF_TS_MASK	cpu.h	167;"	d
+HF_TS_SHIFT	cpu.h	144;"	d
+HF_VM_MASK	cpu.h	172;"	d
+HF_VM_SHIFT	cpu.h	149;"	d
+HOOK_INST_H	rev_sem/hook_inst.h	3;"	d
+HWPoisonPage	kvm.c	/^typedef struct HWPoisonPage {$/;"	s	file:
+HWPoisonPage	kvm.c	/^} HWPoisonPage;$/;"	t	typeref:struct:HWPoisonPage	file:
+HYPERV_SPINLOCK_NEVER_RETRY	hyperv.h	22;"	d
+I486_FEATURES	cpu.c	381;"	d	file:
+IDX_FLAGS_REG	gdbstub.c	35;"	d	file:
+IDX_FP_REGS	gdbstub.c	37;"	d	file:
+IDX_IP_REG	gdbstub.c	34;"	d	file:
+IDX_MXCSR_REG	gdbstub.c	39;"	d	file:
+IDX_SEG_REGS	gdbstub.c	36;"	d	file:
+IDX_XMM_REGS	gdbstub.c	38;"	d	file:
+ID_MASK	cpu.h	122;"	d
+IF_MASK	cpu.h	113;"	d
+IOPL_MASK	cpu.h	115;"	d
+IOPL_SHIFT	cpu.h	109;"	d
+IS_DISTINGUISHED_SM	rev_sem/taint.c	25;"	d	file:
+Instrument	rev_sem/hook_inst.c	/^void Instrument(INS ins)$/;"	f
+Instrument_Binary_OP	rev_sem/hook_inst.c	/^static void Instrument_Binary_OP(INS ins)\/\/TODO: if parameter bop local_variable ==> local_variable$/;"	f	file:
+Instrument_CALL	rev_sem/hook_inst.c	/^static void Instrument_CALL(INS xi)$/;"	f	file:
+Instrument_CMOVcc	rev_sem/hook_inst.c	/^static void Instrument_CMOVcc(INS ins) $/;"	f	file:
+Instrument_LEA	rev_sem/hook_inst.c	/^static void Instrument_LEA(INS xi)$/;"	f	file:
+Instrument_LODSX	rev_sem/hook_inst.c	/^static void Instrument_LODSX(INS ins)$/;"	f	file:
+Instrument_MOV	rev_sem/hook_inst.c	/^static void Instrument_MOV(INS ins)$/;"	f	file:
+Instrument_MOVSBWD	rev_sem/hook_inst.c	/^static void Instrument_MOVSBWD(INS ins) $/;"	f	file:
+Instrument_NONE	rev_sem/hook_inst.c	/^static void Instrument_NONE(INS ins)$/;"	f	file:
+Instrument_POP	rev_sem/hook_inst.c	/^static void Instrument_POP(INS ins)$/;"	f	file:
+Instrument_POPAD	rev_sem/hook_inst.c	/^static void Instrument_POPAD(INS ins){ $/;"	f	file:
+Instrument_POPFD	rev_sem/hook_inst.c	/^static void Instrument_POPFD(INS ins)$/;"	f	file:
+Instrument_PUSH	rev_sem/hook_inst.c	/^static void Instrument_PUSH(INS ins) $/;"	f	file:
+Instrument_PUSHAD	rev_sem/hook_inst.c	/^static void Instrument_PUSHAD(INS ins) {$/;"	f	file:
+Instrument_PUSHFD	rev_sem/hook_inst.c	/^static void Instrument_PUSHFD(INS ins)$/;"	f	file:
+Instrument_RET	rev_sem/hook_inst.c	/^static void Instrument_RET(INS xi)$/;"	f	file:
+Instrument_SETcc	rev_sem/hook_inst.c	/^static void Instrument_SETcc(INS ins)$/;"	f	file:
+Instrument_STOSX	rev_sem/hook_inst.c	/^static void Instrument_STOSX(INS ins)$/;"	f	file:
+Instrument_XADD	rev_sem/hook_inst.c	/^static void Instrument_XADD(INS ins)\/\/TODO: if parameter bop local_variable ==> local_variable$/;"	f	file:
+Instrument_XOR	rev_sem/hook_inst.c	/^static void Instrument_XOR(INS xi) $/;"	f	file:
+Int	rev_sem/taint.h	/^typedef    signed int    Int;$/;"	t
+JCC_B	translate.c	/^    JCC_B,$/;"	e	enum:__anon17	file:
+JCC_BE	translate.c	/^    JCC_BE,$/;"	e	enum:__anon17	file:
+JCC_L	translate.c	/^    JCC_L,$/;"	e	enum:__anon17	file:
+JCC_LE	translate.c	/^    JCC_LE,$/;"	e	enum:__anon17	file:
+JCC_O	translate.c	/^    JCC_O,$/;"	e	enum:__anon17	file:
+JCC_P	translate.c	/^    JCC_P,$/;"	e	enum:__anon17	file:
+JCC_S	translate.c	/^    JCC_S,$/;"	e	enum:__anon17	file:
+JCC_Z	translate.c	/^    JCC_Z,$/;"	e	enum:__anon17	file:
+KVM_CPUID_SIGNATURE_NEXT	hyperv.h	26;"	d
+KVM_MAX_CPUID_ENTRIES	kvm.c	423;"	d	file:
+KeyType	rev_sem/heap_shadow.h	/^typedef unsigned int KeyType;            \/\/ type of key$/;"	t
+L	ops_sse.h	2300;"	d
+L	ops_sse.h	25;"	d
+L	ops_sse.h	33;"	d
+LOG_PCALL	seg_helper.c	36;"	d	file:
+LOG_PCALL	seg_helper.c	40;"	d	file:
+LOG_PCALL_STATE	seg_helper.c	37;"	d	file:
+LOG_PCALL_STATE	seg_helper.c	41;"	d	file:
+Libc_item	rev_sem/linux.h	/^}Libc_item;$/;"	t	typeref:struct:_Libc_item
+MANTD	fpu_helper.c	43;"	d	file:
+MANTD1	machine.c	93;"	d	file:
+MAXEXPD	fpu_helper.c	39;"	d	file:
+MAXTAN	fpu_helper.c	36;"	d	file:
+MCEInjectionParams	helper.c	/^typedef struct MCEInjectionParams {$/;"	s	file:
+MCEInjectionParams	helper.c	/^} MCEInjectionParams;$/;"	t	typeref:struct:MCEInjectionParams	file:
+MCE_BANKS_DEF	cpu.h	276;"	d
+MCE_CAP_DEF	cpu.h	275;"	d
+MCE_INJECT_BROADCAST	cpu.h	1163;"	d
+MCE_INJECT_UNCOND_AO	cpu.h	1164;"	d
+MCG_CTL_P	cpu.h	272;"	d
+MCG_SER_P	cpu.h	273;"	d
+MCG_STATUS_EIPV	cpu.h	279;"	d
+MCG_STATUS_MCIP	cpu.h	280;"	d
+MCG_STATUS_RIPV	cpu.h	278;"	d
+MCI_STATUS_ADDRV	cpu.h	287;"	d
+MCI_STATUS_AR	cpu.h	290;"	d
+MCI_STATUS_EN	cpu.h	285;"	d
+MCI_STATUS_MISCV	cpu.h	286;"	d
+MCI_STATUS_OVER	cpu.h	283;"	d
+MCI_STATUS_PCC	cpu.h	288;"	d
+MCI_STATUS_S	cpu.h	289;"	d
+MCI_STATUS_UC	cpu.h	284;"	d
+MCI_STATUS_VAL	cpu.h	282;"	d
+MCM_ADDR_GENERIC	cpu.h	297;"	d
+MCM_ADDR_LINEAR	cpu.h	294;"	d
+MCM_ADDR_MEM	cpu.h	296;"	d
+MCM_ADDR_PHYS	cpu.h	295;"	d
+MCM_ADDR_SEGOFF	cpu.h	293;"	d
+MMUSUFFIX	mem_helper.c	114;"	d	file:
+MMU_KERNEL_IDX	cpu.h	1094;"	d
+MMU_KSMAP_IDX	cpu.h	1096;"	d
+MMU_MODE0_SUFFIX	cpu.h	1091;"	d
+MMU_MODE1_SUFFIX	cpu.h	1092;"	d
+MMU_MODE2_SUFFIX	cpu.h	1093;"	d
+MMU_USER_IDX	cpu.h	1095;"	d
+MMXReg	cpu.h	/^} MMXReg;$/;"	t	typeref:union:__anon7
+MMX_B	cpu.h	685;"	d
+MMX_B	cpu.h	697;"	d
+MMX_L	cpu.h	687;"	d
+MMX_L	cpu.h	699;"	d
+MMX_OP2	translate.c	2921;"	d	file:
+MMX_Q	cpu.h	702;"	d
+MMX_S	cpu.h	688;"	d
+MMX_S	cpu.h	700;"	d
+MMX_W	cpu.h	686;"	d
+MMX_W	cpu.h	698;"	d
+MSR_CSTAR	cpu.h	361;"	d
+MSR_EFER	cpu.h	350;"	d
+MSR_EFER_FFXSR	cpu.h	357;"	d
+MSR_EFER_LMA	cpu.h	354;"	d
+MSR_EFER_LME	cpu.h	353;"	d
+MSR_EFER_NXE	cpu.h	355;"	d
+MSR_EFER_SCE	cpu.h	352;"	d
+MSR_EFER_SVME	cpu.h	356;"	d
+MSR_FMASK	cpu.h	362;"	d
+MSR_FSBASE	cpu.h	363;"	d
+MSR_GSBASE	cpu.h	364;"	d
+MSR_IA32_APICBASE	cpu.h	300;"	d
+MSR_IA32_APICBASE_BASE	cpu.h	303;"	d
+MSR_IA32_APICBASE_BSP	cpu.h	301;"	d
+MSR_IA32_APICBASE_ENABLE	cpu.h	302;"	d
+MSR_IA32_MISC_ENABLE	cpu.h	322;"	d
+MSR_IA32_MISC_ENABLE_DEFAULT	cpu.h	324;"	d
+MSR_IA32_PERF_STATUS	cpu.h	320;"	d
+MSR_IA32_SYSENTER_CS	cpu.h	312;"	d
+MSR_IA32_SYSENTER_EIP	cpu.h	314;"	d
+MSR_IA32_SYSENTER_ESP	cpu.h	313;"	d
+MSR_IA32_TSC	cpu.h	299;"	d
+MSR_IA32_TSCDEADLINE	cpu.h	305;"	d
+MSR_KERNELGSBASE	cpu.h	365;"	d
+MSR_KVM_SYSTEM_TIME	kvm.c	48;"	d	file:
+MSR_KVM_WALL_CLOCK	kvm.c	47;"	d	file:
+MSR_LSTAR	cpu.h	360;"	d
+MSR_MC0_ADDR	cpu.h	347;"	d
+MSR_MC0_CTL	cpu.h	345;"	d
+MSR_MC0_MISC	cpu.h	348;"	d
+MSR_MC0_STATUS	cpu.h	346;"	d
+MSR_MCG_CAP	cpu.h	316;"	d
+MSR_MCG_CTL	cpu.h	318;"	d
+MSR_MCG_STATUS	cpu.h	317;"	d
+MSR_MTRRcap	cpu.h	307;"	d
+MSR_MTRRcap_FIXRANGE_SUPPORT	cpu.h	309;"	d
+MSR_MTRRcap_VCNT	cpu.h	308;"	d
+MSR_MTRRcap_WC_SUPPORTED	cpu.h	310;"	d
+MSR_MTRRdefType	cpu.h	343;"	d
+MSR_MTRRfix16K_80000	cpu.h	330;"	d
+MSR_MTRRfix16K_A0000	cpu.h	331;"	d
+MSR_MTRRfix4K_C0000	cpu.h	332;"	d
+MSR_MTRRfix4K_C8000	cpu.h	333;"	d
+MSR_MTRRfix4K_D0000	cpu.h	334;"	d
+MSR_MTRRfix4K_D8000	cpu.h	335;"	d
+MSR_MTRRfix4K_E0000	cpu.h	336;"	d
+MSR_MTRRfix4K_E8000	cpu.h	337;"	d
+MSR_MTRRfix4K_F0000	cpu.h	338;"	d
+MSR_MTRRfix4K_F8000	cpu.h	339;"	d
+MSR_MTRRfix64K_00000	cpu.h	329;"	d
+MSR_MTRRphysBase	cpu.h	326;"	d
+MSR_MTRRphysMask	cpu.h	327;"	d
+MSR_PAT	cpu.h	341;"	d
+MSR_STAR	cpu.h	359;"	d
+MSR_TSC_ADJUST	cpu.h	304;"	d
+MSR_TSC_AUX	cpu.h	366;"	d
+MSR_VM_HSAVE_PA	cpu.h	368;"	d
+MTRRVar	cpu.h	/^} MTRRVar;$/;"	t	typeref:struct:__anon9
+NB_MMU_MODES	cpu.h	723;"	d
+NB_OP_SIZES	translate.c	332;"	d	file:
+NB_OP_SIZES	translate.c	336;"	d	file:
+NT_MASK	cpu.h	116;"	d
+NodeTag	rev_sem/heap_shadow.h	/^typedef struct NodeTag {$/;"	s
+NodeType	rev_sem/heap_shadow.h	/^} NodeType;$/;"	t	typeref:struct:NodeTag
+OP_ADCL	translate.c	/^    OP_ADCL,$/;"	e	enum:__anon15	file:
+OP_ADDL	translate.c	/^    OP_ADDL,$/;"	e	enum:__anon15	file:
+OP_ANDL	translate.c	/^    OP_ANDL,$/;"	e	enum:__anon15	file:
+OP_CMPL	translate.c	/^    OP_CMPL,$/;"	e	enum:__anon15	file:
+OP_ORL	translate.c	/^    OP_ORL,$/;"	e	enum:__anon15	file:
+OP_RCL	translate.c	/^    OP_RCL,$/;"	e	enum:__anon16	file:
+OP_RCR	translate.c	/^    OP_RCR,$/;"	e	enum:__anon16	file:
+OP_ROL	translate.c	/^    OP_ROL,$/;"	e	enum:__anon16	file:
+OP_ROR	translate.c	/^    OP_ROR,$/;"	e	enum:__anon16	file:
+OP_SAR	translate.c	/^    OP_SAR = 7,$/;"	e	enum:__anon16	file:
+OP_SBBL	translate.c	/^    OP_SBBL,$/;"	e	enum:__anon15	file:
+OP_SHL	translate.c	/^    OP_SHL,$/;"	e	enum:__anon16	file:
+OP_SHL1	translate.c	/^    OP_SHL1, \/* undocumented *\/$/;"	e	enum:__anon16	file:
+OP_SHR	translate.c	/^    OP_SHR,$/;"	e	enum:__anon16	file:
+OP_SUBL	translate.c	/^    OP_SUBL,$/;"	e	enum:__anon15	file:
+OP_XORL	translate.c	/^    OP_XORL,$/;"	e	enum:__anon15	file:
+OR_A0	translate.c	/^    OR_A0, \/* temporary register used when doing address evaluation *\/$/;"	e	enum:__anon19	file:
+OR_EAX	translate.c	/^    OR_EAX,   \/* MUST be even numbered *\/$/;"	e	enum:__anon19	file:
+OR_EBP	translate.c	/^    OR_EBP,$/;"	e	enum:__anon19	file:
+OR_EBX	translate.c	/^    OR_EBX,$/;"	e	enum:__anon19	file:
+OR_ECX	translate.c	/^    OR_ECX,$/;"	e	enum:__anon19	file:
+OR_EDI	translate.c	/^    OR_EDI,$/;"	e	enum:__anon19	file:
+OR_EDX	translate.c	/^    OR_EDX,$/;"	e	enum:__anon19	file:
+OR_ESI	translate.c	/^    OR_ESI,$/;"	e	enum:__anon19	file:
+OR_ESP	translate.c	/^    OR_ESP,$/;"	e	enum:__anon19	file:
+OR_TMP0	translate.c	/^    OR_TMP0 = 16,    \/* temporary operand register *\/$/;"	e	enum:__anon19	file:
+OR_TMP1	translate.c	/^    OR_TMP1,$/;"	e	enum:__anon19	file:
+OT_BYTE	translate.c	/^    OT_BYTE = 0,$/;"	e	enum:__anon18	file:
+OT_LONG	translate.c	/^    OT_LONG,$/;"	e	enum:__anon18	file:
+OT_QUAD	translate.c	/^    OT_QUAD,$/;"	e	enum:__anon18	file:
+OT_WORD	translate.c	/^    OT_WORD,$/;"	e	enum:__anon18	file:
+PAGE_BITS	rev_sem/taint.c	21;"	d	file:
+PAGE_NUM	rev_sem/taint.c	23;"	d	file:
+PAGE_SIZE	rev_sem/taint.c	22;"	d	file:
+PARSE_OPRAND_H	rev_sem/parse_operand.h	2;"	d
+PCLMULQDQ_OP	translate.c	3152;"	d	file:
+PEMU_DEBUG	rev_sem/config_pemu.h	4;"	d
+PEMU_EXEC_STATS	rev_sem/pemu.h	/^struct PEMU_EXEC_STATS {$/;"	s
+PEMU_H	rev_sem/pemu.h	2;"	d
+PEMU_INST	rev_sem/pemu.h	/^struct PEMU_INST {$/;"	s
+PEMU_already_flush	rev_sem/pemu.h	/^	uint32_t PEMU_already_flush;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_binary_name	rev_sem/pemu.h	/^	char PEMU_binary_name[100];$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_cr3	rev_sem/pemu.h	/^	uint32_t PEMU_cr3;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_dis_pc	rev_sem/pemu.h	/^	target_ulong PEMU_dis_pc;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_dstate	rev_sem/pemu.h	/^	xed_state_t PEMU_dstate;$/;"	m	struct:PEMU_INST
+PEMU_exec_pc	rev_sem/pemu.h	/^	target_ulong PEMU_exec_pc;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_find_process	rev_sem/linux.c	/^int PEMU_find_process(void *opaque)$/;"	f
+PEMU_get_cr3	rev_sem/qemu-pemu.c	/^uint32_t PEMU_get_cr3()$/;"	f
+PEMU_get_reg	rev_sem/qemu-pemu.c	/^uint32_t PEMU_get_reg(xed_reg_enum_t reg_id)$/;"	f
+PEMU_guest_os	rev_sem/linux.h	/^struct PEMU_guest_os{$/;"	s
+PEMU_img_end	rev_sem/pemu.h	/^	target_ulong PEMU_img_end;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_img_start	rev_sem/pemu.h	/^	target_ulong PEMU_img_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_init	rev_sem/pemu.c	/^int PEMU_init(void *env)$/;"	f
+PEMU_inst_buf	rev_sem/pemu.h	/^	char PEMU_inst_buf[15];$/;"	m	struct:PEMU_INST
+PEMU_inst_pc	rev_sem/pemu.h	/^	target_ulong PEMU_inst_pc;$/;"	m	struct:PEMU_INST
+PEMU_inst_str	rev_sem/pemu.h	/^	char PEMU_inst_str[128];$/;"	m	struct:PEMU_INST
+PEMU_int_level	rev_sem/pemu.h	/^	int PEMU_int_level;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_iret_target_pc	rev_sem/pemu.h	/^	target_ulong PEMU_iret_target_pc;	$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_libc_end	rev_sem/pemu.h	/^	target_ulong PEMU_libc_end;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_libc_start	rev_sem/pemu.h	/^	target_ulong PEMU_libc_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_main_start	rev_sem/pemu.h	/^	target_ulong PEMU_main_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_pid	rev_sem/pemu.h	/^	uint32_t PEMU_pid;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_plugin_name	rev_sem/pemu.h	/^	char PEMU_plugin_name[100];$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_read_mem	rev_sem/qemu-pemu.c	/^int PEMU_read_mem(uint32_t vaddr, int len, void *buf)$/;"	f
+PEMU_start	rev_sem/pemu.h	/^	uint32_t PEMU_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_start_main	rev_sem/pemu.h	/^	int PEMU_start_main;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_start_trace_syscall	rev_sem/pemu.h	/^	int PEMU_start_trace_syscall;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_task_addr	rev_sem/pemu.h	/^	target_ulong PEMU_task_addr;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_xedd_g	rev_sem/pemu.h	/^	xed_decoded_inst_t PEMU_xedd_g;$/;"	m	struct:PEMU_INST
+PENTIUM2_FEATURES	cpu.c	384;"	d	file:
+PENTIUM3_FEATURES	cpu.c	387;"	d	file:
+PENTIUM_FEATURES	cpu.c	382;"	d	file:
+PG_ACCESSED_BIT	cpu.h	246;"	d
+PG_ACCESSED_MASK	cpu.h	257;"	d
+PG_DIRTY_BIT	cpu.h	247;"	d
+PG_DIRTY_MASK	cpu.h	258;"	d
+PG_ERROR_I_D_MASK	cpu.h	270;"	d
+PG_ERROR_P_MASK	cpu.h	266;"	d
+PG_ERROR_RSVD_MASK	cpu.h	269;"	d
+PG_ERROR_U_MASK	cpu.h	268;"	d
+PG_ERROR_W_BIT	cpu.h	264;"	d
+PG_ERROR_W_MASK	cpu.h	267;"	d
+PG_GLOBAL_BIT	cpu.h	249;"	d
+PG_GLOBAL_MASK	cpu.h	260;"	d
+PG_HI_USER_MASK	cpu.h	261;"	d
+PG_NX_BIT	cpu.h	250;"	d
+PG_NX_MASK	cpu.h	262;"	d
+PG_PCD_BIT	cpu.h	245;"	d
+PG_PCD_MASK	cpu.h	256;"	d
+PG_PRESENT_BIT	cpu.h	241;"	d
+PG_PRESENT_MASK	cpu.h	252;"	d
+PG_PSE_BIT	cpu.h	248;"	d
+PG_PSE_MASK	cpu.h	259;"	d
+PG_PWT_BIT	cpu.h	244;"	d
+PG_PWT_MASK	cpu.h	255;"	d
+PG_RW_BIT	cpu.h	242;"	d
+PG_RW_MASK	cpu.h	253;"	d
+PG_USER_BIT	cpu.h	243;"	d
+PG_USER_MASK	cpu.h	254;"	d
+PHYS_ADDR_MASK	helper.c	525;"	d	file:
+PHYS_ADDR_MASK	helper.c	527;"	d	file:
+PLM4_ADDR_MASK	arch_memory_mapping.c	78;"	d	file:
+POPCOUNT	ops_sse.h	2158;"	d
+POPL	seg_helper.c	551;"	d	file:
+POPMASK	ops_sse.h	2157;"	d
+POPQ	seg_helper.c	781;"	d	file:
+POPW	seg_helper.c	545;"	d	file:
+PPRO_FEATURES	cpu.c	388;"	d	file:
+PREFIX_ADR	translate.c	39;"	d	file:
+PREFIX_DATA	translate.c	38;"	d	file:
+PREFIX_LOCK	translate.c	37;"	d	file:
+PREFIX_REPNZ	translate.c	36;"	d	file:
+PREFIX_REPZ	translate.c	35;"	d	file:
+PREFIX_VEX	translate.c	40;"	d	file:
+PUSHL	seg_helper.c	539;"	d	file:
+PUSHQ	seg_helper.c	775;"	d	file:
+PUSHW	seg_helper.c	533;"	d	file:
+Q	ops_sse.h	2301;"	d
+Q	ops_sse.h	26;"	d
+Q	ops_sse.h	34;"	d
+QEMUCPUSTATE_VERSION	arch_dump.c	244;"	d	file:
+QEMUCPUSegment	arch_dump.c	/^struct QEMUCPUSegment {$/;"	s	file:
+QEMUCPUSegment	arch_dump.c	/^typedef struct QEMUCPUSegment QEMUCPUSegment;$/;"	t	typeref:struct:QEMUCPUSegment	file:
+QEMUCPUState	arch_dump.c	/^struct QEMUCPUState {$/;"	s	file:
+QEMUCPUState	arch_dump.c	/^typedef struct QEMUCPUState QEMUCPUState;$/;"	t	typeref:struct:QEMUCPUState	file:
+QEMU_HW_HYPERV_H	hyperv.h	14;"	d
+QEMU_I386_CPU_QOM_H	cpu-qom.h	21;"	d
+QEMU_KVM_I386_H	kvm_i386.h	12;"	d
+QEMU_PEMU_H	rev_sem/qemu-pemu.h	2;"	d
+RBT_STATUS_DUPLICATE_KEY	rev_sem/heap_shadow.h	/^    RBT_STATUS_DUPLICATE_KEY,$/;"	e	enum:__anon13
+RBT_STATUS_KEY_NOT_FOUND	rev_sem/heap_shadow.h	/^    RBT_STATUS_KEY_NOT_FOUND$/;"	e	enum:__anon13
+RBT_STATUS_MEM_EXHAUSTED	rev_sem/heap_shadow.h	/^    RBT_STATUS_MEM_EXHAUSTED,$/;"	e	enum:__anon13
+RBT_STATUS_OK	rev_sem/heap_shadow.h	/^    RBT_STATUS_OK,$/;"	e	enum:__anon13
+RBT_STATUS_REALLOC_LARGE	rev_sem/heap_shadow.h	/^    RBT_STATUS_REALLOC_LARGE,$/;"	e	enum:__anon13
+RBT_STATUS_REALLOC_SMALL	rev_sem/heap_shadow.h	/^    RBT_STATUS_REALLOC_SMALL,$/;"	e	enum:__anon13
+RB_CALLBACK	rev_sem/heap_shadow.h	/^typedef void(*RB_CALLBACK)(NodeType*, void*);$/;"	t
+RED	rev_sem/heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	e	enum:__anon14
+REGISTER	cpu.c	207;"	d	file:
+REGISTER	cpu.c	219;"	d	file:
+REG_B_OFFSET	translate.c	341;"	d	file:
+REG_B_OFFSET	translate.c	347;"	d	file:
+REG_H_OFFSET	translate.c	342;"	d	file:
+REG_H_OFFSET	translate.c	348;"	d	file:
+REG_LH_OFFSET	translate.c	345;"	d	file:
+REG_LH_OFFSET	translate.c	351;"	d	file:
+REG_L_OFFSET	translate.c	344;"	d	file:
+REG_L_OFFSET	translate.c	350;"	d	file:
+REG_W_OFFSET	translate.c	343;"	d	file:
+REG_W_OFFSET	translate.c	349;"	d	file:
+REX_B	translate.c	45;"	d	file:
+REX_B	translate.c	49;"	d	file:
+REX_X	translate.c	44;"	d	file:
+REX_X	translate.c	48;"	d	file:
+RF_MASK	cpu.h	117;"	d
+R_AH	cpu.h	64;"	d
+R_AL	cpu.h	60;"	d
+R_BH	cpu.h	67;"	d
+R_BL	cpu.h	63;"	d
+R_CH	cpu.h	65;"	d
+R_CL	cpu.h	61;"	d
+R_CS	cpu.h	70;"	d
+R_DH	cpu.h	66;"	d
+R_DL	cpu.h	62;"	d
+R_DS	cpu.h	72;"	d
+R_EAX	cpu.h	51;"	d
+R_EBP	cpu.h	56;"	d
+R_EBX	cpu.h	54;"	d
+R_ECX	cpu.h	52;"	d
+R_EDI	cpu.h	58;"	d
+R_EDX	cpu.h	53;"	d
+R_ES	cpu.h	69;"	d
+R_ESI	cpu.h	57;"	d
+R_ESP	cpu.h	55;"	d
+R_FS	cpu.h	73;"	d
+R_GS	cpu.h	74;"	d
+R_SS	cpu.h	71;"	d
+RbtStatus	rev_sem/heap_shadow.h	/^} RbtStatus;$/;"	t	typeref:enum:__anon13
+Reg	ops_sse.h	21;"	d
+Reg	ops_sse.h	2297;"	d
+Reg	ops_sse.h	29;"	d
+Reg	ops_sse_header.h	/^DEF_HELPER_2(glue(movl_mm_T0, SUFFIX), void, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_2(glue(movq_mm_T0, SUFFIX), void, Reg, i64)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(aesdec, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(aesdeclast, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(aesenc, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(aesenclast, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(aesimc, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(blendvpd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(blendvps, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(packssdw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(packsswb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(packusdw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(packuswb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pblendvb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pcmpeqq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pcmpgtq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phminposuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaddubsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaddwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxud, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pminsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pminsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pminud, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pminuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxwq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxwq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmuldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmulhrsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmulld, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pmuludq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psadbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pshufb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pshufw, SUFFIX), void, Reg, Reg, int)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psignb, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psignd, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psignw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pslld, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(pslldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psllq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psllw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psrad, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psraw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psrld, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psrldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psrlq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(psrlw, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(ptest, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(punpckhqdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_3(glue(punpcklqdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(aeskeygenassist, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(blendpd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(blendps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(dppd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(dpps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(maskmov, SUFFIX), void, env, Reg, Reg, tl)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(mpsadbw, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(palignr, SUFFIX), void, env, Reg, Reg, s32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pblendw, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pclmulqdq, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpestri, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpestrm, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpistri, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpistrm, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(roundpd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(roundps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(roundsd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	/^DEF_HELPER_4(glue(roundss, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+Reg	ops_sse_header.h	20;"	d
+Reg	ops_sse_header.h	23;"	d
+Reg	ops_sse_header.h	351;"	d
+SEG_ADDL	seg_helper.c	530;"	d	file:
+SENTINEL	rev_sem/rb_tree.c	9;"	d	file:
+SET_ESP	seg_helper.c	509;"	d	file:
+SET_ESP	seg_helper.c	521;"	d	file:
+SET_TAINT	rev_sem/hook_inst.c	54;"	d	file:
+SHIFT	cc_helper.c	58;"	d	file:
+SHIFT	cc_helper.c	60;"	d	file:
+SHIFT	cc_helper.c	62;"	d	file:
+SHIFT	cc_helper.c	64;"	d	file:
+SHIFT	cc_helper.c	66;"	d	file:
+SHIFT	cc_helper.c	68;"	d	file:
+SHIFT	cc_helper.c	72;"	d	file:
+SHIFT	cc_helper.c	74;"	d	file:
+SHIFT	fpu_helper.c	1287;"	d	file:
+SHIFT	fpu_helper.c	1290;"	d	file:
+SHIFT	helper.h	212;"	d
+SHIFT	helper.h	214;"	d
+SHIFT	int_helper.c	455;"	d	file:
+SHIFT	int_helper.c	457;"	d	file:
+SHIFT	int_helper.c	459;"	d	file:
+SHIFT	int_helper.c	461;"	d	file:
+SHIFT	int_helper.c	463;"	d	file:
+SHIFT	int_helper.c	465;"	d	file:
+SHIFT	int_helper.c	468;"	d	file:
+SHIFT	int_helper.c	470;"	d	file:
+SHIFT	mem_helper.c	116;"	d	file:
+SHIFT	mem_helper.c	119;"	d	file:
+SHIFT	mem_helper.c	122;"	d	file:
+SHIFT	mem_helper.c	125;"	d	file:
+SHIFT	ops_sse.h	2295;"	d
+SHIFT	ops_sse_header.h	350;"	d
+SHIFT1_MASK	shift_helper_template.h	105;"	d
+SHIFT1_MASK	shift_helper_template.h	23;"	d
+SHIFT1_MASK	shift_helper_template.h	25;"	d
+SHIFT_MASK	shift_helper_template.h	104;"	d
+SHIFT_MASK	shift_helper_template.h	21;"	d
+SHR	ops_sse.h	1515;"	d
+SHR	ops_sse.h	1529;"	d
+SIGND	fpu_helper.c	42;"	d	file:
+SIGND1	machine.c	96;"	d	file:
+SIGN_MASK	cc_helper_template.h	239;"	d
+SIGN_MASK	cc_helper_template.h	38;"	d
+SMM_REVISION_ID	smm_helper.c	38;"	d	file:
+SMM_REVISION_ID	smm_helper.c	40;"	d	file:
+SSE41_OP	translate.c	3149;"	d	file:
+SSE41_SPECIAL	translate.c	3151;"	d	file:
+SSE42_OP	translate.c	3150;"	d	file:
+SSEFunc_0_epi	translate.c	/^typedef void (*SSEFunc_0_epi)(TCGv_ptr env, TCGv_ptr reg, TCGv_i32 val);$/;"	t	file:
+SSEFunc_0_epl	translate.c	/^typedef void (*SSEFunc_0_epl)(TCGv_ptr env, TCGv_ptr reg, TCGv_i64 val);$/;"	t	file:
+SSEFunc_0_epp	translate.c	/^typedef void (*SSEFunc_0_epp)(TCGv_ptr env, TCGv_ptr reg_a, TCGv_ptr reg_b);$/;"	t	file:
+SSEFunc_0_eppi	translate.c	/^typedef void (*SSEFunc_0_eppi)(TCGv_ptr env, TCGv_ptr reg_a, TCGv_ptr reg_b,$/;"	t	file:
+SSEFunc_0_eppt	translate.c	/^typedef void (*SSEFunc_0_eppt)(TCGv_ptr env, TCGv_ptr reg_a, TCGv_ptr reg_b,$/;"	t	file:
+SSEFunc_0_ppi	translate.c	/^typedef void (*SSEFunc_0_ppi)(TCGv_ptr reg_a, TCGv_ptr reg_b, TCGv_i32 val);$/;"	t	file:
+SSEFunc_i_ep	translate.c	/^typedef void (*SSEFunc_i_ep)(TCGv_i32 val, TCGv_ptr env, TCGv_ptr reg);$/;"	t	file:
+SSEFunc_l_ep	translate.c	/^typedef void (*SSEFunc_l_ep)(TCGv_i64 val, TCGv_ptr env, TCGv_ptr reg);$/;"	t	file:
+SSEOpHelper_epp	translate.c	/^struct SSEOpHelper_epp {$/;"	s	file:
+SSEOpHelper_eppi	translate.c	/^struct SSEOpHelper_eppi {$/;"	s	file:
+SSE_DAZ	fpu_helper.c	1224;"	d	file:
+SSE_DUMMY	translate.c	2919;"	d	file:
+SSE_FOP	translate.c	2922;"	d	file:
+SSE_FZ	fpu_helper.c	1230;"	d	file:
+SSE_HELPER_B	ops_sse.h	234;"	d
+SSE_HELPER_B	ops_sse_header.h	354;"	d
+SSE_HELPER_B	ops_sse_header.h	51;"	d
+SSE_HELPER_CMP	ops_sse.h	944;"	d
+SSE_HELPER_CMP	ops_sse_header.h	204;"	d
+SSE_HELPER_CMP	ops_sse_header.h	359;"	d
+SSE_HELPER_F	ops_sse.h	1614;"	d
+SSE_HELPER_I	ops_sse.h	1565;"	d
+SSE_HELPER_L	ops_sse.h	272;"	d
+SSE_HELPER_L	ops_sse_header.h	356;"	d
+SSE_HELPER_L	ops_sse_header.h	57;"	d
+SSE_HELPER_Q	ops_sse.h	283;"	d
+SSE_HELPER_Q	ops_sse_header.h	357;"	d
+SSE_HELPER_Q	ops_sse_header.h	60;"	d
+SSE_HELPER_S	ops_sse.h	579;"	d
+SSE_HELPER_S	ops_sse_header.h	136;"	d
+SSE_HELPER_S	ops_sse_header.h	358;"	d
+SSE_HELPER_V	ops_sse.h	1538;"	d
+SSE_HELPER_W	ops_sse.h	257;"	d
+SSE_HELPER_W	ops_sse_header.h	355;"	d
+SSE_HELPER_W	ops_sse_header.h	54;"	d
+SSE_RC_CHOP	fpu_helper.c	1229;"	d	file:
+SSE_RC_DOWN	fpu_helper.c	1227;"	d	file:
+SSE_RC_MASK	fpu_helper.c	1225;"	d	file:
+SSE_RC_NEAR	fpu_helper.c	1226;"	d	file:
+SSE_RC_UP	fpu_helper.c	1228;"	d	file:
+SSE_SPECIAL	translate.c	2918;"	d	file:
+SSSE3_OP	translate.c	3148;"	d	file:
+ST	cpu.h	1122;"	d
+ST0	cpu.h	1121;"	d
+ST1	cpu.h	1123;"	d
+SUFFIX	cc_helper_template.h	23;"	d
+SUFFIX	cc_helper_template.h	242;"	d
+SUFFIX	cc_helper_template.h	26;"	d
+SUFFIX	cc_helper_template.h	29;"	d
+SUFFIX	cc_helper_template.h	32;"	d
+SUFFIX	ops_sse.h	2302;"	d
+SUFFIX	ops_sse.h	27;"	d
+SUFFIX	ops_sse.h	35;"	d
+SUFFIX	ops_sse_header.h	21;"	d
+SUFFIX	ops_sse_header.h	24;"	d
+SUFFIX	ops_sse_header.h	352;"	d
+SUFFIX	shift_helper_template.h	108;"	d
+SUFFIX	shift_helper_template.h	29;"	d
+SUFFIX	shift_helper_template.h	32;"	d
+SUFFIX	shift_helper_template.h	35;"	d
+SUFFIX	shift_helper_template.h	38;"	d
+SVM_CR0_SELECTIVE_MASK	svm.h	131;"	d
+SVM_EVTINJ_TYPE_EXEPT	svm.h	41;"	d
+SVM_EVTINJ_TYPE_INTR	svm.h	39;"	d
+SVM_EVTINJ_TYPE_MASK	svm.h	37;"	d
+SVM_EVTINJ_TYPE_NMI	svm.h	40;"	d
+SVM_EVTINJ_TYPE_SHIFT	svm.h	36;"	d
+SVM_EVTINJ_TYPE_SOFT	svm.h	42;"	d
+SVM_EVTINJ_VALID	svm.h	44;"	d
+SVM_EVTINJ_VALID_ERR	svm.h	45;"	d
+SVM_EVTINJ_VEC_MASK	svm.h	34;"	d
+SVM_EXITINTINFO_TYPE_EXEPT	svm.h	51;"	d
+SVM_EXITINTINFO_TYPE_INTR	svm.h	49;"	d
+SVM_EXITINTINFO_TYPE_NMI	svm.h	50;"	d
+SVM_EXITINTINFO_TYPE_SOFT	svm.h	52;"	d
+SVM_EXITINTINFO_VALID	svm.h	54;"	d
+SVM_EXITINTINFO_VALID_ERR	svm.h	55;"	d
+SVM_EXITINTINFO_VEC_MASK	svm.h	47;"	d
+SVM_EXIT_CLGI	svm.h	119;"	d
+SVM_EXIT_CPUID	svm.h	100;"	d
+SVM_EXIT_CR0_SEL_WRITE	svm.h	87;"	d
+SVM_EXIT_ERR	svm.h	129;"	d
+SVM_EXIT_EXCP_BASE	svm.h	81;"	d
+SVM_EXIT_FERR_FREEZE	svm.h	112;"	d
+SVM_EXIT_GDTR_READ	svm.h	89;"	d
+SVM_EXIT_GDTR_WRITE	svm.h	93;"	d
+SVM_EXIT_HLT	svm.h	106;"	d
+SVM_EXIT_ICEBP	svm.h	122;"	d
+SVM_EXIT_IDTR_READ	svm.h	88;"	d
+SVM_EXIT_IDTR_WRITE	svm.h	92;"	d
+SVM_EXIT_INIT	svm.h	85;"	d
+SVM_EXIT_INTR	svm.h	82;"	d
+SVM_EXIT_INVD	svm.h	104;"	d
+SVM_EXIT_INVLPG	svm.h	107;"	d
+SVM_EXIT_INVLPGA	svm.h	108;"	d
+SVM_EXIT_IOIO	svm.h	109;"	d
+SVM_EXIT_IRET	svm.h	102;"	d
+SVM_EXIT_LDTR_READ	svm.h	90;"	d
+SVM_EXIT_LDTR_WRITE	svm.h	94;"	d
+SVM_EXIT_MONITOR	svm.h	125;"	d
+SVM_EXIT_MSR	svm.h	110;"	d
+SVM_EXIT_MWAIT	svm.h	126;"	d
+SVM_EXIT_NMI	svm.h	83;"	d
+SVM_EXIT_NPF	svm.h	127;"	d
+SVM_EXIT_PAUSE	svm.h	105;"	d
+SVM_EXIT_POPF	svm.h	99;"	d
+SVM_EXIT_PUSHF	svm.h	98;"	d
+SVM_EXIT_RDPMC	svm.h	97;"	d
+SVM_EXIT_RDTSC	svm.h	96;"	d
+SVM_EXIT_RDTSCP	svm.h	121;"	d
+SVM_EXIT_READ_CR0	svm.h	57;"	d
+SVM_EXIT_READ_CR3	svm.h	58;"	d
+SVM_EXIT_READ_CR4	svm.h	59;"	d
+SVM_EXIT_READ_CR8	svm.h	60;"	d
+SVM_EXIT_READ_DR0	svm.h	65;"	d
+SVM_EXIT_READ_DR1	svm.h	66;"	d
+SVM_EXIT_READ_DR2	svm.h	67;"	d
+SVM_EXIT_READ_DR3	svm.h	68;"	d
+SVM_EXIT_READ_DR4	svm.h	69;"	d
+SVM_EXIT_READ_DR5	svm.h	70;"	d
+SVM_EXIT_READ_DR6	svm.h	71;"	d
+SVM_EXIT_READ_DR7	svm.h	72;"	d
+SVM_EXIT_RSM	svm.h	101;"	d
+SVM_EXIT_SHUTDOWN	svm.h	113;"	d
+SVM_EXIT_SKINIT	svm.h	120;"	d
+SVM_EXIT_SMI	svm.h	84;"	d
+SVM_EXIT_STGI	svm.h	118;"	d
+SVM_EXIT_SWINT	svm.h	103;"	d
+SVM_EXIT_TASK_SWITCH	svm.h	111;"	d
+SVM_EXIT_TR_READ	svm.h	91;"	d
+SVM_EXIT_TR_WRITE	svm.h	95;"	d
+SVM_EXIT_VINTR	svm.h	86;"	d
+SVM_EXIT_VMLOAD	svm.h	116;"	d
+SVM_EXIT_VMMCALL	svm.h	115;"	d
+SVM_EXIT_VMRUN	svm.h	114;"	d
+SVM_EXIT_VMSAVE	svm.h	117;"	d
+SVM_EXIT_WBINVD	svm.h	123;"	d
+SVM_EXIT_WRITE_CR0	svm.h	61;"	d
+SVM_EXIT_WRITE_CR3	svm.h	62;"	d
+SVM_EXIT_WRITE_CR4	svm.h	63;"	d
+SVM_EXIT_WRITE_CR8	svm.h	64;"	d
+SVM_EXIT_WRITE_DR0	svm.h	73;"	d
+SVM_EXIT_WRITE_DR1	svm.h	74;"	d
+SVM_EXIT_WRITE_DR2	svm.h	75;"	d
+SVM_EXIT_WRITE_DR3	svm.h	76;"	d
+SVM_EXIT_WRITE_DR4	svm.h	77;"	d
+SVM_EXIT_WRITE_DR5	svm.h	78;"	d
+SVM_EXIT_WRITE_DR6	svm.h	79;"	d
+SVM_EXIT_WRITE_DR7	svm.h	80;"	d
+SVM_INTERRUPT_SHADOW_MASK	svm.h	21;"	d
+SVM_IOIO_ASIZE_MASK	svm.h	32;"	d
+SVM_IOIO_ASIZE_SHIFT	svm.h	26;"	d
+SVM_IOIO_REP_MASK	svm.h	30;"	d
+SVM_IOIO_REP_SHIFT	svm.h	24;"	d
+SVM_IOIO_SIZE_MASK	svm.h	31;"	d
+SVM_IOIO_SIZE_SHIFT	svm.h	25;"	d
+SVM_IOIO_STR_MASK	svm.h	29;"	d
+SVM_IOIO_STR_SHIFT	svm.h	23;"	d
+SVM_IOIO_TYPE_MASK	svm.h	28;"	d
+SWITCH_TSS_CALL	seg_helper.c	202;"	d	file:
+SWITCH_TSS_IRET	seg_helper.c	201;"	d	file:
+SWITCH_TSS_JMP	seg_helper.c	200;"	d	file:
+SecMap	rev_sem/taint.c	/^} SecMap;$/;"	t	typeref:struct:__anon12	file:
+SegmentCache	cpu.h	/^typedef struct SegmentCache {$/;"	s
+SegmentCache	cpu.h	/^} SegmentCache;$/;"	t	typeref:struct:SegmentCache
+Short	rev_sem/taint.h	/^typedef    signed short  Short;$/;"	t
+TAINTED	rev_sem/taint.h	17;"	d
+TARGET_HAS_ICE	cpu.h	37;"	d
+TARGET_HAS_PRECISE_SMC	cpu.h	35;"	d
+TARGET_HAS_SMC	cpu.h	32;"	d
+TARGET_I386_TOPOLOGY_H	topology.h	25;"	d
+TARGET_LONG_BITS	cpu.h	26;"	d
+TARGET_LONG_BITS	cpu.h	28;"	d
+TARGET_PAGE_BITS	cpu.h	1062;"	d
+TARGET_PHYS_ADDR_SPACE_BITS	cpu.h	1065;"	d
+TARGET_PHYS_ADDR_SPACE_BITS	cpu.h	1071;"	d
+TARGET_VIRT_ADDR_SPACE_BITS	cpu.h	1069;"	d
+TARGET_VIRT_ADDR_SPACE_BITS	cpu.h	1072;"	d
+TCG_7_0_EBX_FEATURES	cpu.c	422;"	d	file:
+TCG_EXT2_FEATURES	cpu.c	414;"	d	file:
+TCG_EXT3_FEATURES	cpu.c	419;"	d	file:
+TCG_EXT_FEATURES	cpu.c	403;"	d	file:
+TCG_FEATURES	cpu.c	393;"	d	file:
+TCG_SVM_FEATURES	cpu.c	421;"	d	file:
+TF_MASK	cpu.h	112;"	d
+TF_SHIFT	cpu.h	108;"	d
+TLB_CONTROL_DO_NOTHING	svm.h	4;"	d
+TLB_CONTROL_FLUSH_ALL_ASID	svm.h	5;"	d
+TPRAccess	cpu.h	/^typedef enum TPRAccess {$/;"	g
+TPRAccess	cpu.h	/^} TPRAccess;$/;"	t	typeref:enum:TPRAccess
+TPR_ACCESS_READ	cpu.h	/^    TPR_ACCESS_READ,$/;"	e	enum:TPRAccess
+TPR_ACCESS_WRITE	cpu.h	/^    TPR_ACCESS_WRITE,$/;"	e	enum:TPRAccess
+TYPE_X86_CPU	cpu-qom.h	28;"	d
+TYPE_X86_CPU	cpu-qom.h	30;"	d
+UChar	rev_sem/taint.h	/^typedef  unsigned char   UChar;$/;"	t
+UINT	rev_sem/taint.h	34;"	d
+UInt	rev_sem/heap_shadow.h	57;"	d
+UInt	rev_sem/rb_tree.c	11;"	d	file:
+UInt	rev_sem/taint.h	33;"	d
+UNPCK_OP	ops_sse.h	1162;"	d
+UNPCK_OP	ops_sse_header.h	231;"	d
+UNPCK_OP	ops_sse_header.h	360;"	d
+UNTAINTED	rev_sem/taint.h	18;"	d
+USES_CC_DST	translate.c	/^    USES_CC_DST  = 1,$/;"	e	enum:__anon20	file:
+USES_CC_SRC	translate.c	/^    USES_CC_SRC  = 2,$/;"	e	enum:__anon20	file:
+USES_CC_SRC2	translate.c	/^    USES_CC_SRC2 = 4,$/;"	e	enum:__anon20	file:
+USES_CC_SRCT	translate.c	/^    USES_CC_SRCT = 8,$/;"	e	enum:__anon20	file:
+UShort	rev_sem/taint.h	/^typedef  unsigned short  UShort;$/;"	t
+UnimplementedInstruction	rev_sem/hook_inst.c	/^static void UnimplementedInstruction(INS ins) $/;"	f	file:
+VGM_BYTE_INVALID	rev_sem/taint.h	16;"	d
+VIF_MASK	cpu.h	120;"	d
+VIP_MASK	cpu.h	121;"	d
+VMSTATE_FP_REGS	machine.c	202;"	d	file:
+VMSTATE_HACK_UINT32	machine.c	237;"	d	file:
+VMSTATE_MTRR_VARS	machine.c	78;"	d	file:
+VMSTATE_SEGMENT	machine.c	23;"	d	file:
+VMSTATE_SEGMENT_ARRAY	machine.c	32;"	d	file:
+VMSTATE_XMM_REGS	machine.c	47;"	d	file:
+VMSTATE_YMMH_REGS_VARS	machine.c	63;"	d	file:
+VMX_INVALID_GUEST_STATE	kvm.c	2127;"	d	file:
+VM_MASK	cpu.h	118;"	d
+VM_SHIFT	cpu.h	110;"	d
+V_IGN_TPR_MASK	svm.h	16;"	d
+V_IGN_TPR_SHIFT	svm.h	15;"	d
+V_INTR_MASKING_MASK	svm.h	19;"	d
+V_INTR_MASKING_SHIFT	svm.h	18;"	d
+V_INTR_PRIO_MASK	svm.h	13;"	d
+V_INTR_PRIO_SHIFT	svm.h	12;"	d
+V_IRQ_MASK	svm.h	10;"	d
+V_IRQ_SHIFT	svm.h	9;"	d
+V_TPR_MASK	svm.h	7;"	d
+ValType	rev_sem/heap_shadow.h	/^typedef heap_shadow_node_t ValType;$/;"	t
+W	ops_sse.h	2299;"	d
+W	ops_sse.h	24;"	d
+W	ops_sse.h	32;"	d
+X86CPU	cpu-qom.h	/^typedef struct X86CPU {$/;"	s
+X86CPU	cpu-qom.h	/^} X86CPU;$/;"	t	typeref:struct:X86CPU
+X86CPUClass	cpu-qom.h	/^typedef struct X86CPUClass {$/;"	s
+X86CPUClass	cpu-qom.h	/^} X86CPUClass;$/;"	t	typeref:struct:X86CPUClass
+X86RegisterInfo32	cpu.c	/^typedef struct X86RegisterInfo32 {$/;"	s	file:
+X86RegisterInfo32	cpu.c	/^} X86RegisterInfo32;$/;"	t	typeref:struct:X86RegisterInfo32	file:
+X86_CPU	cpu-qom.h	35;"	d
+X86_CPU_CLASS	cpu-qom.h	33;"	d
+X86_CPU_GET_CLASS	cpu-qom.h	37;"	d
+XMM0	ops_sse.h	1535;"	d
+XMMReg	cpu.h	/^} XMMReg;$/;"	t	typeref:union:__anon6
+XMM_B	cpu.h	678;"	d
+XMM_B	cpu.h	690;"	d
+XMM_D	cpu.h	683;"	d
+XMM_D	cpu.h	695;"	d
+XMM_L	cpu.h	680;"	d
+XMM_L	cpu.h	692;"	d
+XMM_ONLY	ops_sse.h	2296;"	d
+XMM_ONLY	ops_sse.h	22;"	d
+XMM_ONLY	ops_sse.h	30;"	d
+XMM_Q	cpu.h	682;"	d
+XMM_Q	cpu.h	694;"	d
+XMM_S	cpu.h	681;"	d
+XMM_S	cpu.h	693;"	d
+XMM_W	cpu.h	679;"	d
+XMM_W	cpu.h	691;"	d
+XSAVE_CWD_RDP	kvm.c	932;"	d	file:
+XSAVE_CWD_RIP	kvm.c	931;"	d	file:
+XSAVE_FCW_FSW	kvm.c	929;"	d	file:
+XSAVE_FTW_FOP	kvm.c	930;"	d	file:
+XSAVE_MXCSR	kvm.c	933;"	d	file:
+XSAVE_ST_SPACE	kvm.c	934;"	d	file:
+XSAVE_XMM_SPACE	kvm.c	935;"	d	file:
+XSAVE_XSTATE_BV	kvm.c	936;"	d	file:
+XSAVE_YMMH_SPACE	kvm.c	937;"	d	file:
+_Libc_item	rev_sem/linux.h	/^typedef struct _Libc_item{$/;"	s
+__HEAP_SHADOW_H	rev_sem/heap_shadow.h	2;"	d
+__LINUX_H__	rev_sem/linux.h	2;"	d
+__SVM_H	svm.h	2;"	d
+__UTILITY_H	rev_sem/taint.h	14;"	d
+__cs	arch_dump.c	/^    unsigned short cs, __cs;$/;"	m	struct:__anon3	file:
+__ds	arch_dump.c	/^    unsigned short ds, __ds, es, __es;$/;"	m	struct:__anon3	file:
+__es	arch_dump.c	/^    unsigned short ds, __ds, es, __es;$/;"	m	struct:__anon3	file:
+__fs	arch_dump.c	/^    unsigned short fs, __fs, gs, __gs;$/;"	m	struct:__anon3	file:
+__gs	arch_dump.c	/^    unsigned short fs, __fs, gs, __gs;$/;"	m	struct:__anon3	file:
+__ss	arch_dump.c	/^    unsigned short ss, __ss;$/;"	m	struct:__anon3	file:
+_b	cpu.h	/^    uint8_t _b[16];$/;"	m	union:__anon6
+_b	cpu.h	/^    uint8_t _b[8];$/;"	m	union:__anon7
+_d	cpu.h	/^    float64 _d[2];$/;"	m	union:__anon6
+_l	cpu.h	/^    uint32_t _l[2];$/;"	m	union:__anon7
+_l	cpu.h	/^    uint32_t _l[4];$/;"	m	union:__anon6
+_q	cpu.h	/^    uint64_t _q[2];$/;"	m	union:__anon6
+_s	cpu.h	/^    float32 _s[2];$/;"	m	union:__anon7
+_s	cpu.h	/^    float32 _s[4];$/;"	m	union:__anon6
+_w	cpu.h	/^    uint16_t _w[4];$/;"	m	union:__anon7
+_w	cpu.h	/^    uint16_t _w[8];$/;"	m	union:__anon6
+a20_mask	cpu.h	/^    int32_t a20_mask;$/;"	m	struct:CPUX86State
+abs1	ops_sse.h	/^static inline int abs1(int a)$/;"	f
+add128	int_helper.c	/^static void add128(uint64_t *plow, uint64_t *phigh, uint64_t a, uint64_t b)$/;"	f	file:
+add_flagname_to_bitmaps	cpu.c	/^static void add_flagname_to_bitmaps(const char *flagname,$/;"	f	file:
+addr	helper.c	/^    uint64_t addr;$/;"	m	struct:MCEInjectionParams	file:
+addr	kvm.c	/^    target_ulong addr;$/;"	m	struct:__anon11	file:
+addseg	translate.c	/^    int addseg; \/* non zero if either DS\/ES\/SS have a non zero base *\/$/;"	m	struct:DisasContext	file:
+aes_ishifts	ops_sse.h	/^static const uint8_t aes_ishifts[16] = {$/;"	v
+aes_shifts	ops_sse.h	/^static const uint8_t aes_shifts[16] = {$/;"	v
+aflag	translate.c	/^    int aflag, dflag;$/;"	m	struct:DisasContext	file:
+alloc_secondary_map	rev_sem/taint.c	/^static SecMap* alloc_secondary_map ()$/;"	f	file:
+altcmp	cpu.c	/^static int altcmp(const char *s, const char *e, const char *altstr)$/;"	f	file:
+apic_id_t	topology.h	/^typedef uint32_t apic_id_t;$/;"	t
+apic_state	cpu.h	/^    struct DeviceState *apic_state;$/;"	m	struct:CPUX86State	typeref:struct:CPUX86State::DeviceState
+apicid_bitwidth_for_count	topology.h	/^static unsigned apicid_bitwidth_for_count(unsigned count)$/;"	f
+apicid_core_offset	topology.h	/^static inline unsigned apicid_core_offset(unsigned nr_cores,$/;"	f
+apicid_core_width	topology.h	/^static inline unsigned apicid_core_width(unsigned nr_cores, unsigned nr_threads)$/;"	f
+apicid_from_topo_ids	topology.h	/^static inline apic_id_t apicid_from_topo_ids(unsigned nr_cores,$/;"	f
+apicid_pkg_offset	topology.h	/^static inline unsigned apicid_pkg_offset(unsigned nr_cores, unsigned nr_threads)$/;"	f
+apicid_smt_width	topology.h	/^static inline unsigned apicid_smt_width(unsigned nr_cores, unsigned nr_threads)$/;"	f
+arch_query_cpu_definitions	cpu.c	/^CpuDefinitionInfoList *arch_query_cpu_definitions(Error **errp)$/;"	f
+asid	svm.h	/^	uint32_t asid;$/;"	m	struct:vmcb_control_area
+async_pf_en_msr	cpu.h	/^    uint64_t async_pf_en_msr;$/;"	m	struct:CPUX86State
+async_pf_msr_needed	machine.c	/^static bool async_pf_msr_needed(void *opaque)$/;"	f	file:
+attrib	svm.h	/^	uint16_t attrib;$/;"	m	struct:vmcb_seg
+bank	helper.c	/^    int bank;$/;"	m	struct:MCEInjectionParams	file:
+base	arch_dump.c	/^    uint64_t base;$/;"	m	struct:QEMUCPUSegment	file:
+base	cpu.h	/^    target_ulong base;$/;"	m	struct:SegmentCache
+base	cpu.h	/^    uint64_t base;$/;"	m	struct:__anon9
+base	svm.h	/^	uint64_t base;$/;"	m	struct:vmcb_seg
+br_from	svm.h	/^	uint64_t br_from;$/;"	m	struct:vmcb_save_area
+br_to	svm.h	/^	uint64_t br_to;$/;"	m	struct:vmcb_save_area
+breakpoint_handler	helper.c	/^void breakpoint_handler(CPUX86State *env)$/;"	f
+builtin_x86_defs	cpu.c	/^static x86_def_t builtin_x86_defs[] = {$/;"	v	file:
+byte	rev_sem/taint.c	/^   unsigned int byte[PAGE_SIZE];$/;"	m	struct:__anon12	file:
+byte_reg_is_xH	translate.c	/^static inline bool byte_reg_is_xH(int reg)$/;"	f	file:
+cap	kvm.c	/^    int cap;$/;"	m	struct:kvm_para_features	file:
+cc_dst	cpu.h	/^    target_ulong cc_dst;$/;"	m	struct:CPUX86State
+cc_op	cpu.h	/^    uint32_t cc_op;$/;"	m	struct:CPUX86State
+cc_op	translate.c	/^    CCOp cc_op;  \/* current CC operation *\/$/;"	m	struct:DisasContext	file:
+cc_op_dirty	translate.c	/^    bool cc_op_dirty;$/;"	m	struct:DisasContext	file:
+cc_op_live	translate.c	/^static const uint8_t cc_op_live[CC_OP_NB] = {$/;"	v	file:
+cc_op_str	helper.c	/^static const char *cc_op_str[CC_OP_NB] = {$/;"	v	file:
+cc_src	cpu.h	/^    target_ulong cc_src;$/;"	m	struct:CPUX86State
+cc_src2	cpu.h	/^    target_ulong cc_src2;$/;"	m	struct:CPUX86State
+check_cpuid	cpu.c	/^int check_cpuid = 0;$/;"	v
+check_exception	excp_helper.c	/^static int check_exception(CPUX86State *env, int intno, int *error_code)$/;"	f	file:
+check_hw_breakpoints	helper.c	/^bool check_hw_breakpoints(CPUX86State *env, bool force_dr6_update)$/;"	f
+check_io	misc_helper.c	/^static inline void check_io(CPUX86State *env, int addr, int size)$/;"	f	file:
+clear_calldata	rev_sem/callstack.cpp	/^void clear_calldata(void)$/;"	f
+clear_taint_source_heaps	rev_sem/hook_inst.c	/^void clear_taint_source_heaps(uint32_t addr, int len)$/;"	f
+clztl	int_helper.c	412;"	d	file:
+clztl	int_helper.c	415;"	d	file:
+clztl	translate.c	54;"	d	file:
+clztl	translate.c	57;"	d	file:
+code32	translate.c	/^    int code32; \/* 32 bit code segment *\/$/;"	m	struct:DisasContext	file:
+code64	translate.c	/^    int code64; \/* 64 bit code segment *\/$/;"	m	struct:DisasContext	file:
+color	rev_sem/heap_shadow.h	/^    nodeColor color;            \/\/ node color (BLACK, RED)$/;"	m	struct:NodeTag
+comis_eflags	ops_sse.h	/^static const int comis_eflags[4] = {CC_C, CC_Z, 0, CC_Z | CC_P | CC_C};$/;"	v
+commoffset	rev_sem/linux.h	/^	int commoffset;$/;"	m	struct:PEMU_guest_os
+commoffset	rev_sem/linux.h	/^    int commoffset; $/;"	m	struct:koffset
+commsize	rev_sem/linux.h	/^	int commsize;$/;"	m	struct:PEMU_guest_os
+commsize	rev_sem/linux.h	/^    int commsize; $/;"	m	struct:koffset
+compEQ	rev_sem/heap_shadow.h	26;"	d
+compLT	rev_sem/heap_shadow.h	25;"	d
+compat_apic_id_mode	cpu.c	/^static bool compat_apic_id_mode;$/;"	v	file:
+compute_all_adcox	cc_helper.c	/^static target_ulong compute_all_adcox(target_ulong dst, target_ulong src1,$/;"	f	file:
+compute_all_adcx	cc_helper.c	/^static target_ulong compute_all_adcx(target_ulong dst, target_ulong src1,$/;"	f	file:
+compute_all_adox	cc_helper.c	/^static target_ulong compute_all_adox(target_ulong dst, target_ulong src1,$/;"	f	file:
+cond	translate.c	/^    TCGCond cond;$/;"	m	struct:CCPrepare	file:
+control	svm.h	/^	struct vmcb_control_area control;$/;"	m	struct:vmcb	typeref:struct:vmcb::vmcb_control_area
+copy_segment	arch_dump.c	/^static void copy_segment(QEMUCPUSegment *d, SegmentCache *s)$/;"	f	file:
+cpl	svm.h	/^	uint8_t cpl;$/;"	m	struct:vmcb_save_area
+cpl	translate.c	/^    int cpl;$/;"	m	struct:DisasContext	file:
+cpu	helper.c	/^    X86CPU *cpu;$/;"	m	struct:MCEInjectionParams	file:
+cpu_A0	translate.c	/^static TCGv cpu_A0;$/;"	v	file:
+cpu_T	translate.c	/^static TCGv cpu_T[2];$/;"	v	file:
+cpu_breakpoint	cpu.h	/^        CPUBreakpoint *cpu_breakpoint[4];$/;"	m	union:CPUX86State::__anon10
+cpu_cc_compute_all	cc_helper.c	/^uint32_t cpu_cc_compute_all(CPUX86State *env, int op)$/;"	f
+cpu_cc_dst	translate.c	/^static TCGv cpu_cc_dst, cpu_cc_src, cpu_cc_src2, cpu_cc_srcT;$/;"	v	file:
+cpu_cc_op	translate.c	/^static TCGv_i32 cpu_cc_op;$/;"	v	file:
+cpu_cc_src	translate.c	/^static TCGv cpu_cc_dst, cpu_cc_src, cpu_cc_src2, cpu_cc_srcT;$/;"	v	file:
+cpu_cc_src2	translate.c	/^static TCGv cpu_cc_dst, cpu_cc_src, cpu_cc_src2, cpu_cc_srcT;$/;"	v	file:
+cpu_cc_srcT	translate.c	/^static TCGv cpu_cc_dst, cpu_cc_src, cpu_cc_src2, cpu_cc_srcT;$/;"	v	file:
+cpu_clear_apic_feature	cpu.c	/^void cpu_clear_apic_feature(CPUX86State *env)$/;"	f
+cpu_compute_eflags	cpu.h	/^static inline uint32_t cpu_compute_eflags(CPUX86State *env)$/;"	f
+cpu_env	translate.c	/^static TCGv_ptr cpu_env;$/;"	v	file:
+cpu_exec	cpu.h	1084;"	d
+cpu_gen_code	cpu.h	1085;"	d
+cpu_get_dump_info	arch_dump.c	/^int cpu_get_dump_info(ArchDumpInfo *info,$/;"	f
+cpu_get_fp80	fpu_helper.c	/^void cpu_get_fp80(uint64_t *pmant, uint16_t *pexp, floatx80 f)$/;"	f
+cpu_get_note_size	arch_dump.c	/^ssize_t cpu_get_note_size(int class, int machine, int nr_cpus)$/;"	f
+cpu_get_tb_cpu_state	cpu.h	/^static inline void cpu_get_tb_cpu_state(CPUX86State *env, target_ulong *pc,$/;"	f
+cpu_handle_mmu_fault	cpu.h	1018;"	d
+cpu_has_work	cpu.h	/^static inline bool cpu_has_work(CPUState *cs)$/;"	f
+cpu_inb	ioport-user.c	/^uint8_t cpu_inb(pio_addr_t addr)$/;"	f
+cpu_init	cpu.h	/^static inline CPUX86State *cpu_init(const char *cpu_model)$/;"	f
+cpu_inl	ioport-user.c	/^uint32_t cpu_inl(pio_addr_t addr)$/;"	f
+cpu_inw	ioport-user.c	/^uint16_t cpu_inw(pio_addr_t addr)$/;"	f
+cpu_is_bsp	cpu.c	/^bool cpu_is_bsp(X86CPU *cpu)$/;"	f
+cpu_list	cpu.h	1087;"	d
+cpu_load_efer	cpu.h	/^static inline void cpu_load_efer(CPUX86State *env, uint64_t val)$/;"	f
+cpu_load_eflags	cpu.h	/^static inline void cpu_load_eflags(CPUX86State *env, int eflags,$/;"	f
+cpu_mmu_index	cpu.h	/^static inline int cpu_mmu_index (CPUX86State *env)$/;"	f
+cpu_outb	ioport-user.c	/^void cpu_outb(pio_addr_t addr, uint8_t val)$/;"	f
+cpu_outl	ioport-user.c	/^void cpu_outl(pio_addr_t addr, uint32_t val)$/;"	f
+cpu_outw	ioport-user.c	/^void cpu_outw(pio_addr_t addr, uint16_t val)$/;"	f
+cpu_post_load	machine.c	/^static int cpu_post_load(void *opaque, int version_id)$/;"	f	file:
+cpu_pre_save	machine.c	/^static void cpu_pre_save(void *opaque)$/;"	f	file:
+cpu_ptr0	translate.c	/^static TCGv_ptr cpu_ptr0, cpu_ptr1;$/;"	v	file:
+cpu_ptr1	translate.c	/^static TCGv_ptr cpu_ptr0, cpu_ptr1;$/;"	v	file:
+cpu_regs	translate.c	/^static TCGv cpu_regs[CPU_NB_REGS];$/;"	v	file:
+cpu_report_tpr_access	helper.c	/^void cpu_report_tpr_access(CPUX86State *env, TPRAccess access)$/;"	f
+cpu_set_fp80	fpu_helper.c	/^floatx80 cpu_set_fp80(uint64_t mant, uint16_t upper)$/;"	f
+cpu_signal_handler	cpu.h	1086;"	d
+cpu_svm_check_intercept_param	svm_helper.c	/^void cpu_svm_check_intercept_param(CPUX86State *env, uint32_t type,$/;"	f
+cpu_tmp0	translate.c	/^static TCGv cpu_tmp0, cpu_tmp4;$/;"	v	file:
+cpu_tmp1_i64	translate.c	/^static TCGv_i64 cpu_tmp1_i64;$/;"	v	file:
+cpu_tmp2_i32	translate.c	/^static TCGv_i32 cpu_tmp2_i32, cpu_tmp3_i32;$/;"	v	file:
+cpu_tmp3_i32	translate.c	/^static TCGv_i32 cpu_tmp2_i32, cpu_tmp3_i32;$/;"	v	file:
+cpu_tmp4	translate.c	/^static TCGv cpu_tmp0, cpu_tmp4;$/;"	v	file:
+cpu_update_state	kvm.c	/^static void cpu_update_state(void *opaque, int running, RunState state)$/;"	f	file:
+cpu_vmexit	svm_helper.c	/^void cpu_vmexit(CPUX86State *env, uint32_t exit_code, uint64_t exit_info_1)$/;"	f
+cpu_vmexit	svm_helper.c	/^void cpu_vmexit(CPUX86State *nenv, uint32_t exit_code, uint64_t exit_info_1)$/;"	f
+cpu_watchpoint	cpu.h	/^        CPUWatchpoint *cpu_watchpoint[4];$/;"	m	union:CPUX86State::__anon10
+cpu_write_qemu_note	arch_dump.c	/^static inline int cpu_write_qemu_note(WriteCoreDumpFunction f,$/;"	f	file:
+cpu_x86_cpuid	cpu.c	/^void cpu_x86_cpuid(CPUX86State *env, uint32_t index, uint32_t count,$/;"	f
+cpu_x86_create	cpu.c	/^X86CPU *cpu_x86_create(const char *cpu_model, DeviceState *icc_bridge,$/;"	f
+cpu_x86_dump_seg_cache	helper.c	/^cpu_x86_dump_seg_cache(CPUX86State *env, FILE *f, fprintf_function cpu_fprintf,$/;"	f	file:
+cpu_x86_fill_model_id	cpu.c	/^static int cpu_x86_fill_model_id(char *str)$/;"	f	file:
+cpu_x86_find_by_name	cpu.c	/^static int cpu_x86_find_by_name(X86CPU *cpu, x86_def_t *x86_cpu_def,$/;"	f	file:
+cpu_x86_frstor	fpu_helper.c	/^void cpu_x86_frstor(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+cpu_x86_fsave	fpu_helper.c	/^void cpu_x86_fsave(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+cpu_x86_get_descr_debug	helper.c	/^int cpu_x86_get_descr_debug(CPUX86State *env, unsigned int selector,$/;"	f
+cpu_x86_handle_mmu_fault	helper.c	/^int cpu_x86_handle_mmu_fault(CPUX86State *env, target_ulong addr,$/;"	f
+cpu_x86_init	cpu.c	/^X86CPU *cpu_x86_init(const char *cpu_model)$/;"	f
+cpu_x86_inject_mce	helper.c	/^void cpu_x86_inject_mce(Monitor *mon, X86CPU *cpu, int bank,$/;"	f
+cpu_x86_load_seg	seg_helper.c	/^void cpu_x86_load_seg(CPUX86State *env, int seg_reg, int selector)$/;"	f
+cpu_x86_load_seg_cache	cpu.h	/^static inline void cpu_x86_load_seg_cache(CPUX86State *env,$/;"	f
+cpu_x86_load_seg_cache_sipi	cpu.h	/^static inline void cpu_x86_load_seg_cache_sipi(X86CPU *cpu,$/;"	f
+cpu_x86_parse_featurestr	cpu.c	/^static void cpu_x86_parse_featurestr(X86CPU *cpu, char *features, Error **errp)$/;"	f	file:
+cpu_x86_register	cpu.c	/^static void cpu_x86_register(X86CPU *cpu, const char *name, Error **errp)$/;"	f	file:
+cpu_x86_set_cpl	cpu.h	/^static inline void cpu_x86_set_cpl(CPUX86State *s, int cpl)$/;"	f
+cpu_x86_support_mca_broadcast	helper.c	/^int cpu_x86_support_mca_broadcast(CPUX86State *env)$/;"	f
+cpu_x86_update_cr0	helper.c	/^void cpu_x86_update_cr0(CPUX86State *env, uint32_t new_cr0)$/;"	f
+cpu_x86_update_cr3	helper.c	/^void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)$/;"	f
+cpu_x86_update_cr4	helper.c	/^void cpu_x86_update_cr4(CPUX86State *env, uint32_t new_cr4)$/;"	f
+cpu_x86_version	helper.c	/^static void cpu_x86_version(CPUX86State *env, int *family, int *model)$/;"	f	file:
+cpudef_setup	cpu.h	1088;"	d
+cpuid_7_0_ebx_feature_name	cpu.c	/^static const char *cpuid_7_0_ebx_feature_name[] = {$/;"	v	file:
+cpuid_7_0_ebx_features	translate.c	/^    int cpuid_7_0_ebx_features;$/;"	m	struct:DisasContext	file:
+cpuid_apic_id	cpu.h	/^    uint32_t cpuid_apic_id;$/;"	m	struct:CPUX86State
+cpuid_eax	cpu.c	/^    uint32_t cpuid_eax;   \/* Input EAX for CPUID *\/$/;"	m	struct:FeatureWordInfo	file:
+cpuid_ecx	cpu.c	/^    uint32_t cpuid_ecx;   \/* Input ECX value for CPUID *\/$/;"	m	struct:FeatureWordInfo	file:
+cpuid_entry_get_reg	kvm.c	/^static uint32_t cpuid_entry_get_reg(struct kvm_cpuid_entry2 *entry, int reg)$/;"	f	file:
+cpuid_ext2_features	translate.c	/^    int cpuid_ext2_features;$/;"	m	struct:DisasContext	file:
+cpuid_ext3_features	translate.c	/^    int cpuid_ext3_features;$/;"	m	struct:DisasContext	file:
+cpuid_ext_features	translate.c	/^    int cpuid_ext_features;$/;"	m	struct:DisasContext	file:
+cpuid_features	translate.c	/^    int cpuid_features;$/;"	m	struct:DisasContext	file:
+cpuid_find_entry	kvm.c	/^static struct kvm_cpuid_entry2 *cpuid_find_entry(struct kvm_cpuid2 *cpuid,$/;"	f	file:
+cpuid_level	cpu.h	/^    uint32_t cpuid_level;$/;"	m	struct:CPUX86State
+cpuid_model	cpu.h	/^    uint32_t cpuid_model[12];$/;"	m	struct:CPUX86State
+cpuid_needs_ecx	cpu.c	/^    bool cpuid_needs_ecx; \/* CPUID instruction uses ECX as input *\/$/;"	m	struct:FeatureWordInfo	file:
+cpuid_reg	cpu.c	/^    int cpuid_reg;        \/* output register (R_* constant) *\/$/;"	m	struct:FeatureWordInfo	file:
+cpuid_vendor1	cpu.h	/^    uint32_t cpuid_vendor1;$/;"	m	struct:CPUX86State
+cpuid_vendor2	cpu.h	/^    uint32_t cpuid_vendor2;$/;"	m	struct:CPUX86State
+cpuid_vendor3	cpu.h	/^    uint32_t cpuid_vendor3;$/;"	m	struct:CPUX86State
+cpuid_version	cpu.h	/^    uint32_t cpuid_version;$/;"	m	struct:CPUX86State
+cpuid_xlevel	cpu.h	/^    uint32_t cpuid_xlevel;$/;"	m	struct:CPUX86State
+cpuid_xlevel2	cpu.h	/^    uint32_t cpuid_xlevel2;$/;"	m	struct:CPUX86State
+cr	arch_dump.c	/^    uint64_t cr[5];$/;"	m	struct:QEMUCPUState	file:
+cr	cpu.h	/^    target_ulong cr[5]; \/* NOTE: cr1 is unused *\/$/;"	m	struct:CPUX86State
+cr0	svm.h	/^	uint64_t cr0;$/;"	m	struct:vmcb_save_area
+cr2	svm.h	/^	uint64_t cr2;$/;"	m	struct:vmcb_save_area
+cr3	svm.h	/^	uint64_t cr3;$/;"	m	struct:vmcb_save_area
+cr4	svm.h	/^	uint64_t cr4;$/;"	m	struct:vmcb_save_area
+cs	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+cs	arch_dump.c	/^    target_ulong rip, cs, eflags;$/;"	m	struct:__anon1	file:
+cs	arch_dump.c	/^    unsigned short cs, __cs;$/;"	m	struct:__anon3	file:
+cs	svm.h	/^	struct vmcb_seg cs;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+cs_base	translate.c	/^    target_ulong cs_base; \/* base of CS segment *\/$/;"	m	struct:DisasContext	file:
+cstar	cpu.h	/^    target_ulong cstar;$/;"	m	struct:CPUX86State
+cstar	svm.h	/^	uint64_t cstar;$/;"	m	struct:vmcb_save_area
+ctztl	int_helper.c	411;"	d	file:
+ctztl	int_helper.c	414;"	d	file:
+ctztl	translate.c	53;"	d	file:
+ctztl	translate.c	56;"	d	file:
+d	cpu.h	/^    floatx80 d __attribute__((aligned(16)));$/;"	m	union:__anon8
+dbgctl	svm.h	/^	uint64_t dbgctl;$/;"	m	struct:vmcb_save_area
+deleteFixup	rev_sem/rb_tree.c	/^static void deleteFixup(NodeType *x) {$/;"	f	file:
+delete_callsite	rev_sem/callstack.cpp	/^void delete_callsite(void)$/;"	f
+delete_callstack	rev_sem/callstack.cpp	/^void delete_callstack(void)$/;"	f
+delete_retaddr	rev_sem/callstack.cpp	/^void delete_retaddr(unsigned int pc)$/;"	f
+dentryoffset	rev_sem/linux.h	/^	int dentryoffset;$/;"	m	struct:PEMU_guest_os
+dentryoffset	rev_sem/linux.h	/^    int dentryoffset; $/;"	m	struct:koffset
+df	cpu.h	/^    int32_t df; \/* D flag : 1 if D = 0, -1 if D = 1 *\/$/;"	m	struct:CPUX86State
+dflag	translate.c	/^    int aflag, dflag;$/;"	m	struct:DisasContext	file:
+dh_alias_MMXReg	ops_sse_header.h	29;"	d
+dh_alias_Reg	ops_sse_header.h	27;"	d
+dh_alias_XMMReg	ops_sse_header.h	28;"	d
+dh_ctype_MMXReg	ops_sse_header.h	32;"	d
+dh_ctype_Reg	ops_sse_header.h	30;"	d
+dh_ctype_XMMReg	ops_sse_header.h	31;"	d
+dh_is_signed_MMXReg	ops_sse_header.h	35;"	d
+dh_is_signed_Reg	ops_sse_header.h	33;"	d
+dh_is_signed_XMMReg	ops_sse_header.h	34;"	d
+dinameoffset	rev_sem/linux.h	/^	int dinameoffset;$/;"	m	struct:PEMU_guest_os
+dinameoffset	rev_sem/linux.h	/^    int dinameoffset;$/;"	m	struct:koffset
+disable_kvm_pv_eoi	cpu.c	/^void disable_kvm_pv_eoi(void)$/;"	f
+disas_insn	translate.c	/^static target_ulong disas_insn(CPUX86State *env, DisasContext *s,$/;"	f	file:
+disas_one_inst_ex	rev_sem/disas.c	/^xed_error_enum_t disas_one_inst_ex(target_ulong pc, struct PEMU_INST *inst)$/;"	f
+distinguished_secondary_map	rev_sem/taint.c	/^static SecMap distinguished_secondary_map;$/;"	v	file:
+div64	int_helper.c	/^static int div64(uint64_t *plow, uint64_t *phigh, uint64_t b)$/;"	f	file:
+dnameoffset	rev_sem/linux.h	/^	int dnameoffset;$/;"	m	struct:PEMU_guest_os
+dnameoffset	rev_sem/linux.h	/^    int dnameoffset; $/;"	m	struct:koffset
+do_cpu_init	helper.c	/^void do_cpu_init(X86CPU *cpu)$/;"	f
+do_cpu_sipi	helper.c	/^void do_cpu_sipi(X86CPU *cpu)$/;"	f
+do_hlt	misc_helper.c	/^static void do_hlt(X86CPU *cpu)$/;"	f	file:
+do_inject_x86_mce	helper.c	/^static void do_inject_x86_mce(void *data)$/;"	f	file:
+do_interrupt64	seg_helper.c	/^static void do_interrupt64(CPUX86State *env, int intno, int is_int,$/;"	f	file:
+do_interrupt_all	seg_helper.c	/^static void do_interrupt_all(X86CPU *cpu, int intno, int is_int,$/;"	f	file:
+do_interrupt_protected	seg_helper.c	/^static void do_interrupt_protected(CPUX86State *env, int intno, int is_int,$/;"	f	file:
+do_interrupt_real	seg_helper.c	/^static void do_interrupt_real(CPUX86State *env, int intno, int is_int,$/;"	f	file:
+do_interrupt_user	seg_helper.c	/^static void do_interrupt_user(CPUX86State *env, int intno, int is_int,$/;"	f	file:
+do_interrupt_x86_hardirq	seg_helper.c	/^void do_interrupt_x86_hardirq(CPUX86State *env, int intno, int is_hw)$/;"	f
+do_smm_enter	smm_helper.c	/^void do_smm_enter(X86CPU *cpu)$/;"	f
+double_to_floatx80	fpu_helper.c	/^static inline floatx80 double_to_floatx80(CPUX86State *env, double a)$/;"	f	file:
+dr	cpu.h	/^    target_ulong dr[8]; \/* debug registers *\/$/;"	m	struct:CPUX86State
+dr6	svm.h	/^	uint64_t dr6;$/;"	m	struct:vmcb_save_area
+dr7	svm.h	/^	uint64_t dr7;$/;"	m	struct:vmcb_save_area
+ds	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+ds	arch_dump.c	/^    target_ulong ds, es, fs, gs;$/;"	m	struct:__anon1	file:
+ds	arch_dump.c	/^    unsigned short ds, __ds, es, __es;$/;"	m	struct:__anon3	file:
+ds	svm.h	/^	struct vmcb_seg ds;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+ds_code_delete_rb	rev_sem/rb_tree.c	/^int ds_code_delete_rb(UInt start_addr)$/;"	f
+ds_code_handle_mem_access0	rev_sem/hook_inst.c	/^static void ds_code_handle_mem_access0(INS ins)$/;"	f	file:
+ds_code_handle_mem_access1	rev_sem/hook_inst.c	/^static void ds_code_handle_mem_access1(INS ins)$/;"	f	file:
+ds_code_insert_rb	rev_sem/rb_tree.c	/^void ds_code_insert_rb(UInt start_addr, UInt size, long type){$/;"	f
+ds_code_load_rb	rev_sem/rb_tree.c	/^void ds_code_load_rb(void)$/;"	f
+ds_code_rbtFind2	rev_sem/rb_tree.c	/^NodeType *ds_code_rbtFind2(KeyType key)$/;"	f
+ds_code_traverse	rev_sem/rb_tree.c	/^void ds_code_traverse(RB_CALLBACK callback, void* p)$/;"	f
+dump_callsites	rev_sem/callstack.cpp	/^void dump_callsites(void)$/;"	f
+dump_callstacks	rev_sem/callstack.cpp	/^void dump_callstacks(void)$/;"	f
+eax	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+ebp	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+ebx	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+ecx	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+edi	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+edx	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+efer	cpu.h	/^    uint64_t efer;$/;"	m	struct:CPUX86State
+efer	svm.h	/^	uint64_t efer;$/;"	m	struct:vmcb_save_area
+eflags	arch_dump.c	/^    target_ulong rip, cs, eflags;$/;"	m	struct:__anon1	file:
+eflags	arch_dump.c	/^    uint32_t eflags, esp;$/;"	m	struct:__anon3	file:
+eflags	cpu.h	/^    target_ulong eflags; \/* eflags register. During CPU emulation, CC$/;"	m	struct:CPUX86State
+eip	arch_dump.c	/^    uint32_t orig_eax, eip;$/;"	m	struct:__anon3	file:
+eip	cpu.h	/^    target_ulong eip;$/;"	m	struct:CPUX86State
+enable_compat_apic_id_mode	cpu.c	/^void enable_compat_apic_id_mode(void)$/;"	f
+enable_pmu	cpu-qom.h	/^    bool enable_pmu;$/;"	m	struct:X86CPU
+enforce_cpuid	cpu.c	/^int enforce_cpuid = 0;$/;"	v
+env	cpu-qom.h	/^    CPUX86State env;$/;"	m	struct:X86CPU
+env	ops_sse_header.h	/^DEF_HELPER_2(glue(pmovmskb, SUFFIX), i32, env, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(aesdec, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(aesdeclast, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(aesenc, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(aesenclast, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(aesimc, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(blendvpd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(blendvps, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pabsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(packssdw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(packsswb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(packusdw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(packuswb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pblendvb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pcmpeqq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pcmpgtq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phaddw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phminposuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(phsubw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaddubsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaddwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxud, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmaxuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pminsb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pminsd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pminud, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pminuw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovsxwq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxwd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmovzxwq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmuldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmulhrsw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmulld, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pmuludq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psadbw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pshufb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psignb, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psignd, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psignw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pslld, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(pslldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psllq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psllw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psrad, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psraw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psrld, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psrldq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psrlq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(psrlw, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(ptest, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(punpckhqdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_3(glue(punpcklqdq, SUFFIX), void, env, Reg, Reg)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(aeskeygenassist, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(blendpd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(blendps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(dppd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(dpps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(maskmov, SUFFIX), void, env, Reg, Reg, tl)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(mpsadbw, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(palignr, SUFFIX), void, env, Reg, Reg, s32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pblendw, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pclmulqdq, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpestri, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpestrm, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpistri, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(pcmpistrm, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(roundpd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(roundps, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(roundsd, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+env	ops_sse_header.h	/^DEF_HELPER_4(glue(roundss, SUFFIX), void, env, Reg, Reg, i32)$/;"	v
+error_code	cpu.h	/^    int error_code;$/;"	m	struct:CPUX86State
+es	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+es	arch_dump.c	/^    target_ulong ds, es, fs, gs;$/;"	m	struct:__anon1	file:
+es	arch_dump.c	/^    unsigned short ds, __ds, es, __es;$/;"	m	struct:__anon3	file:
+es	svm.h	/^	struct vmcb_seg es;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+esi	arch_dump.c	/^    uint32_t ebx, ecx, edx, esi, edi, ebp, eax;$/;"	m	struct:__anon3	file:
+esp	arch_dump.c	/^    uint32_t eflags, esp;$/;"	m	struct:__anon3	file:
+event_inj	svm.h	/^	uint32_t event_inj;$/;"	m	struct:vmcb_control_area
+event_inj_err	svm.h	/^	uint32_t event_inj_err;$/;"	m	struct:vmcb_control_area
+exception_has_error_code	seg_helper.c	/^static int exception_has_error_code(int intno)$/;"	f	file:
+exception_injected	cpu.h	/^    int32_t exception_injected;$/;"	m	struct:CPUX86State
+exception_is_int	cpu.h	/^    int exception_is_int;$/;"	m	struct:CPUX86State
+exception_next_eip	cpu.h	/^    target_ulong exception_next_eip;$/;"	m	struct:CPUX86State
+exit_code	svm.h	/^	uint64_t exit_code;$/;"	m	struct:vmcb_control_area
+exit_info_1	svm.h	/^	uint64_t exit_info_1;$/;"	m	struct:vmcb_control_area
+exit_info_2	svm.h	/^	uint64_t exit_info_2;$/;"	m	struct:vmcb_control_area
+exit_int_info	svm.h	/^	uint32_t exit_int_info;$/;"	m	struct:vmcb_control_area
+exit_int_info_err	svm.h	/^	uint32_t exit_int_info_err;$/;"	m	struct:vmcb_control_area
+exp	machine.c	/^    uint16_t exp;$/;"	m	union:x86_longdouble	file:
+ext2_feature_name	cpu.c	/^static const char *ext2_feature_name[] = {$/;"	v	file:
+ext3_feature_name	cpu.c	/^static const char *ext3_feature_name[] = {$/;"	v	file:
+ext4_feature_name	cpu.c	/^static const char *ext4_feature_name[] = {$/;"	v	file:
+ext_feature_name	cpu.c	/^static const char *ext_feature_name[] = {$/;"	v	file:
+ext_mask	translate.c	/^    uint32_t ext_mask;$/;"	m	struct:SSEOpHelper_epp	file:
+ext_mask	translate.c	/^    uint32_t ext_mask;$/;"	m	struct:SSEOpHelper_eppi	file:
+f_st	translate.c	/^    int f_st;   \/* currently unused *\/$/;"	m	struct:DisasContext	file:
+family	cpu.c	/^    int family;$/;"	m	struct:x86_def_t	file:
+fcom_ccval	fpu_helper.c	/^static const int fcom_ccval[4] = {0x0100, 0x4000, 0x0000, 0x4500};$/;"	v	file:
+fcomi_ccval	fpu_helper.c	/^static const int fcomi_ccval[4] = {CC_C, CC_Z, 0, CC_Z | CC_P | CC_C};$/;"	v	file:
+feat2prop	cpu.c	/^static inline void feat2prop(char *s)$/;"	f	file:
+feat_names	cpu.c	/^    const char **feat_names;$/;"	m	struct:FeatureWordInfo	file:
+feat_word	cpu.c	/^    FeatureWord feat_word;$/;"	m	struct:model_features_t	file:
+feature	kvm.c	/^    int feature;$/;"	m	struct:kvm_para_features	file:
+feature_name	cpu.c	/^static const char *feature_name[] = {$/;"	v	file:
+feature_word_info	cpu.c	/^static FeatureWordInfo feature_word_info[FEATURE_WORDS] = {$/;"	v	file:
+features	cpu.c	/^    FeatureWordArray features;$/;"	m	struct:x86_def_t	file:
+features	cpu.h	/^    FeatureWordArray features;$/;"	m	struct:CPUX86State
+filter_features_for_kvm	cpu.c	/^static void filter_features_for_kvm(X86CPU *cpu)$/;"	f	file:
+filtered_features	cpu-qom.h	/^    uint32_t filtered_features[FEATURE_WORDS];$/;"	m	struct:X86CPU
+find_hw_breakpoint	kvm.c	/^static int find_hw_breakpoint(target_ulong addr, int len, int type)$/;"	f	file:
+flags	arch_dump.c	/^    uint32_t flags;$/;"	m	struct:QEMUCPUSegment	file:
+flags	cpu.h	/^    uint32_t flags;$/;"	m	struct:SegmentCache
+flags	helper.c	/^    int flags;$/;"	m	struct:MCEInjectionParams	file:
+flags	translate.c	/^    uint64_t flags; \/* all execution flags *\/$/;"	m	struct:DisasContext	file:
+floatx80_l2e	fpu_helper.c	59;"	d	file:
+floatx80_l2t	fpu_helper.c	60;"	d	file:
+floatx80_lg2	fpu_helper.c	58;"	d	file:
+floatx80_to_double	fpu_helper.c	/^static inline double floatx80_to_double(CPUX86State *env, floatx80 a)$/;"	f	file:
+fmask	cpu.h	/^    target_ulong fmask;$/;"	m	struct:CPUX86State
+fp64_to_fp80	machine.c	/^static void fp64_to_fp80(union x86_longdouble *p, uint64_t temp)$/;"	f	file:
+fp_status	cpu.h	/^    float_status fp_status;$/;"	m	struct:CPUX86State
+fpdp	cpu.h	/^    uint64_t fpdp;$/;"	m	struct:CPUX86State
+fpip	cpu.h	/^    uint64_t fpip;$/;"	m	struct:CPUX86State
+fpop	cpu.h	/^    uint16_t fpop;$/;"	m	struct:CPUX86State
+fpop	fpu_helper.c	/^static inline void fpop(CPUX86State *env)$/;"	f	file:
+fpop_ip_dp_needed	machine.c	/^static bool fpop_ip_dp_needed(void *opaque)$/;"	f	file:
+fpregs	cpu.h	/^    FPReg fpregs[8];$/;"	m	struct:CPUX86State
+fpregs_format_vmstate	cpu.h	/^    uint16_t fpregs_format_vmstate;$/;"	m	struct:CPUX86State
+fpregs_is_0	machine.c	/^static bool fpregs_is_0(void *opaque, int version_id)$/;"	f	file:
+fpregs_is_1_mmx	machine.c	/^static bool fpregs_is_1_mmx(void *opaque, int version_id)$/;"	f	file:
+fpregs_is_1_no_mmx	machine.c	/^static bool fpregs_is_1_no_mmx(void *opaque, int version_id)$/;"	f	file:
+fpstt	cpu.h	/^    unsigned int fpstt; \/* top of stack index *\/$/;"	m	struct:CPUX86State
+fptag_vmstate	cpu.h	/^    uint16_t fptag_vmstate;$/;"	m	struct:CPUX86State
+fptags	cpu.h	/^    uint8_t fptags[8];   \/* 0 = valid, 1 = empty *\/$/;"	m	struct:CPUX86State
+fpu_raise_exception	fpu_helper.c	/^static void fpu_raise_exception(CPUX86State *env)$/;"	f	file:
+fpu_set_exception	fpu_helper.c	/^static void fpu_set_exception(CPUX86State *env, int mask)$/;"	f	file:
+fpuc	cpu.h	/^    uint16_t fpuc;$/;"	m	struct:CPUX86State
+fpus	cpu.h	/^    uint16_t fpus;$/;"	m	struct:CPUX86State
+fpus_vmstate	cpu.h	/^    uint16_t fpus_vmstate;$/;"	m	struct:CPUX86State
+fpush	fpu_helper.c	/^static inline void fpush(CPUX86State *env)$/;"	f	file:
+free_shadow_memory	rev_sem/taint.c	/^void free_shadow_memory(void)$/;"	f
+fs	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+fs	arch_dump.c	/^    target_ulong ds, es, fs, gs;$/;"	m	struct:__anon1	file:
+fs	arch_dump.c	/^    unsigned short fs, __fs, gs, __gs;$/;"	m	struct:__anon3	file:
+fs	svm.h	/^	struct vmcb_seg fs;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+fs_base	arch_dump.c	/^    target_ulong fs_base, gs_base;$/;"	m	struct:__anon1	file:
+ft0	cpu.h	/^    floatx80 ft0;$/;"	m	struct:CPUX86State
+g_callsite	rev_sem/callstack.cpp	/^static list<unsigned int> g_callsite;$/;"	v	file:
+g_callstack	rev_sem/callstack.cpp	/^static list<unsigned int> g_callstack;$/;"	v	file:
+g_inst_name	rev_sem/hook_inst.c	/^char g_inst_name[1024];$/;"	v
+g_opcode	rev_sem/hook_inst.c	/^xed_iclass_enum_t g_opcode;$/;"	v
+g_pat	svm.h	/^	uint64_t g_pat;$/;"	m	struct:vmcb_save_area
+g_pc	rev_sem/hook_inst.c	/^uint32_t g_pc;$/;"	v
+g_ret_stack	rev_sem/callstack.cpp	/^static stack<unsigned int> g_ret_stack;$/;"	v	file:
+g_taint	rev_sem/hook_inst.c	/^unsigned int g_taint;$/;"	v
+gdt	arch_dump.c	/^    QEMUCPUSegment ldt, tr, gdt, idt;$/;"	m	struct:QEMUCPUState	file:
+gdt	cpu.h	/^    SegmentCache gdt; \/* only base and limit are used *\/$/;"	m	struct:CPUX86State
+gdtr	svm.h	/^	struct vmcb_seg gdtr;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+gen_add_A0_ds_seg	translate.c	/^static void gen_add_A0_ds_seg(DisasContext *s)$/;"	f	file:
+gen_add_A0_im	translate.c	/^static void gen_add_A0_im(DisasContext *s, int val)$/;"	f	file:
+gen_check_io	translate.c	/^static void gen_check_io(DisasContext *s, int ot, target_ulong cur_eip,$/;"	f	file:
+gen_cmovcc1	translate.c	/^static void gen_cmovcc1(CPUX86State *env, DisasContext *s, int ot, int b,$/;"	f	file:
+gen_cmps	translate.c	/^static inline void gen_cmps(DisasContext *s, int ot)$/;"	f	file:
+gen_compute_eflags	translate.c	/^static void gen_compute_eflags(DisasContext *s)$/;"	f	file:
+gen_compute_eflags_c	translate.c	/^static inline void gen_compute_eflags_c(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_debug	translate.c	/^static void gen_debug(DisasContext *s, target_ulong cur_eip)$/;"	f	file:
+gen_enter	translate.c	/^static void gen_enter(DisasContext *s, int esp_addend, int level)$/;"	f	file:
+gen_eob	translate.c	/^static void gen_eob(DisasContext *s)$/;"	f	file:
+gen_exception	translate.c	/^static void gen_exception(DisasContext *s, int trapno, target_ulong cur_eip)$/;"	f	file:
+gen_ext_tl	translate.c	/^static TCGv gen_ext_tl(TCGv dst, TCGv src, int size, bool sign)$/;"	f	file:
+gen_exts	translate.c	/^static void gen_exts(int ot, TCGv reg)$/;"	f	file:
+gen_extu	translate.c	/^static void gen_extu(int ot, TCGv reg)$/;"	f	file:
+gen_goto_tb	translate.c	/^static inline void gen_goto_tb(DisasContext *s, int tb_num, target_ulong eip)$/;"	f	file:
+gen_helper_fp_arith_ST0_FT0	translate.c	/^static void gen_helper_fp_arith_ST0_FT0(int op)$/;"	f	file:
+gen_helper_fp_arith_STN_ST0	translate.c	/^static void gen_helper_fp_arith_STN_ST0(int op, int opreg)$/;"	f	file:
+gen_helper_in_func	translate.c	/^static void gen_helper_in_func(int ot, TCGv v, TCGv_i32 n)$/;"	f	file:
+gen_helper_out_func	translate.c	/^static void gen_helper_out_func(int ot, TCGv_i32 v, TCGv_i32 n)$/;"	f	file:
+gen_inc	translate.c	/^static void gen_inc(DisasContext *s1, int ot, int d, int c)$/;"	f	file:
+gen_ins	translate.c	/^static inline void gen_ins(DisasContext *s, int ot)$/;"	f	file:
+gen_intermediate_code	translate.c	/^void gen_intermediate_code(CPUX86State *env, TranslationBlock *tb)$/;"	f
+gen_intermediate_code_internal	translate.c	/^static inline void gen_intermediate_code_internal(X86CPU *cpu,$/;"	f	file:
+gen_intermediate_code_pc	translate.c	/^void gen_intermediate_code_pc(CPUX86State *env, TranslationBlock *tb)$/;"	f
+gen_interrupt	translate.c	/^static void gen_interrupt(DisasContext *s, int intno,$/;"	f	file:
+gen_jcc	translate.c	/^static inline void gen_jcc(DisasContext *s, int b,$/;"	f	file:
+gen_jcc1	translate.c	/^static inline void gen_jcc1(DisasContext *s, int b, int l1)$/;"	f	file:
+gen_jcc1_noeob	translate.c	/^static inline void gen_jcc1_noeob(DisasContext *s, int b, int l1)$/;"	f	file:
+gen_jmp	translate.c	/^static void gen_jmp(DisasContext *s, target_ulong eip)$/;"	f	file:
+gen_jmp_im	translate.c	/^static inline void gen_jmp_im(target_ulong pc)$/;"	f	file:
+gen_jmp_tb	translate.c	/^static void gen_jmp_tb(DisasContext *s, target_ulong eip, int tb_num)$/;"	f	file:
+gen_jz_ecx_string	translate.c	/^static int gen_jz_ecx_string(DisasContext *s, target_ulong next_eip)$/;"	f	file:
+gen_ldo_env_A0	translate.c	/^static inline void gen_ldo_env_A0(int idx, int offset)$/;"	f	file:
+gen_ldq_env_A0	translate.c	/^static inline void gen_ldq_env_A0(int idx, int offset)$/;"	f	file:
+gen_ldst_modrm	translate.c	/^static void gen_ldst_modrm(CPUX86State *env, DisasContext *s, int modrm,$/;"	f	file:
+gen_lea_modrm	translate.c	/^static void gen_lea_modrm(CPUX86State *env, DisasContext *s, int modrm,$/;"	f	file:
+gen_lods	translate.c	/^static inline void gen_lods(DisasContext *s, int ot)$/;"	f	file:
+gen_movl_seg_T0	translate.c	/^static void gen_movl_seg_T0(DisasContext *s, int seg_reg, target_ulong cur_eip)$/;"	f	file:
+gen_movs	translate.c	/^static inline void gen_movs(DisasContext *s, int ot)$/;"	f	file:
+gen_movtl_T0_im	translate.c	/^static inline void gen_movtl_T0_im(target_ulong val)$/;"	f	file:
+gen_movtl_T1_im	translate.c	/^static inline void gen_movtl_T1_im(target_ulong val)$/;"	f	file:
+gen_nop_modrm	translate.c	/^static void gen_nop_modrm(CPUX86State *env, DisasContext *s, int modrm)$/;"	f	file:
+gen_op	translate.c	/^static void gen_op(DisasContext *s1, int op, int ot, int d)$/;"	f	file:
+gen_op_add_reg_T0	translate.c	/^static inline void gen_op_add_reg_T0(int size, int reg)$/;"	f	file:
+gen_op_add_reg_im	translate.c	/^static inline void gen_op_add_reg_im(int size, int reg, int32_t val)$/;"	f	file:
+gen_op_addl_A0_im	translate.c	/^static inline void gen_op_addl_A0_im(int32_t val)$/;"	f	file:
+gen_op_addl_A0_reg_sN	translate.c	/^static inline void gen_op_addl_A0_reg_sN(int shift, int reg)$/;"	f	file:
+gen_op_addl_A0_seg	translate.c	/^static inline void gen_op_addl_A0_seg(DisasContext *s, int reg)$/;"	f	file:
+gen_op_addl_T0_T1	translate.c	/^static inline void gen_op_addl_T0_T1(void)$/;"	f	file:
+gen_op_addq_A0_im	translate.c	/^static inline void gen_op_addq_A0_im(int64_t val)$/;"	f	file:
+gen_op_addq_A0_reg_sN	translate.c	/^static inline void gen_op_addq_A0_reg_sN(int shift, int reg)$/;"	f	file:
+gen_op_addq_A0_seg	translate.c	/^static inline void gen_op_addq_A0_seg(int reg)$/;"	f	file:
+gen_op_andl_A0_ffff	translate.c	/^static inline void gen_op_andl_A0_ffff(void)$/;"	f	file:
+gen_op_andl_T0_ffff	translate.c	/^static inline void gen_op_andl_T0_ffff(void)$/;"	f	file:
+gen_op_andl_T0_im	translate.c	/^static inline void gen_op_andl_T0_im(uint32_t val)$/;"	f	file:
+gen_op_jmp_T0	translate.c	/^static inline void gen_op_jmp_T0(void)$/;"	f	file:
+gen_op_jnz_ecx	translate.c	/^static inline void gen_op_jnz_ecx(int size, int label1)$/;"	f	file:
+gen_op_jz_ecx	translate.c	/^static inline void gen_op_jz_ecx(int size, int label1)$/;"	f	file:
+gen_op_ld_T0_A0	translate.c	/^static inline void gen_op_ld_T0_A0(int idx)$/;"	f	file:
+gen_op_ld_T1_A0	translate.c	/^static inline void gen_op_ld_T1_A0(int idx)$/;"	f	file:
+gen_op_ld_v	translate.c	/^static inline void gen_op_ld_v(int idx, TCGv t0, TCGv a0)$/;"	f	file:
+gen_op_lds_T0_A0	translate.c	/^static inline void gen_op_lds_T0_A0(int idx)$/;"	f	file:
+gen_op_ldu_T0_A0	translate.c	/^static inline void gen_op_ldu_T0_A0(int idx)$/;"	f	file:
+gen_op_mov_TN_reg	translate.c	/^static inline void gen_op_mov_TN_reg(int ot, int t_index, int reg)$/;"	f	file:
+gen_op_mov_reg_A0	translate.c	/^static inline void gen_op_mov_reg_A0(int size, int reg)$/;"	f	file:
+gen_op_mov_reg_T0	translate.c	/^static inline void gen_op_mov_reg_T0(int ot, int reg)$/;"	f	file:
+gen_op_mov_reg_T1	translate.c	/^static inline void gen_op_mov_reg_T1(int ot, int reg)$/;"	f	file:
+gen_op_mov_reg_v	translate.c	/^static inline void gen_op_mov_reg_v(int ot, int reg, TCGv t0)$/;"	f	file:
+gen_op_mov_v_reg	translate.c	/^static inline void gen_op_mov_v_reg(int ot, TCGv t0, int reg)$/;"	f	file:
+gen_op_movl	translate.c	/^static inline void gen_op_movl(int d_offset, int s_offset)$/;"	f	file:
+gen_op_movl_A0_im	translate.c	/^static inline void gen_op_movl_A0_im(uint32_t val)$/;"	f	file:
+gen_op_movl_A0_reg	translate.c	/^static inline void gen_op_movl_A0_reg(int reg)$/;"	f	file:
+gen_op_movl_A0_seg	translate.c	/^static inline void gen_op_movl_A0_seg(int reg)$/;"	f	file:
+gen_op_movl_T0_0	translate.c	/^static inline void gen_op_movl_T0_0(void)$/;"	f	file:
+gen_op_movl_T0_Dshift	translate.c	/^static inline void gen_op_movl_T0_Dshift(int ot) $/;"	f	file:
+gen_op_movl_T0_T1	translate.c	/^static inline void gen_op_movl_T0_T1(void)$/;"	f	file:
+gen_op_movl_T0_im	translate.c	/^static inline void gen_op_movl_T0_im(int32_t val)$/;"	f	file:
+gen_op_movl_T0_imu	translate.c	/^static inline void gen_op_movl_T0_imu(uint32_t val)$/;"	f	file:
+gen_op_movl_T0_seg	translate.c	/^static inline void gen_op_movl_T0_seg(int seg_reg)$/;"	f	file:
+gen_op_movl_T1_im	translate.c	/^static inline void gen_op_movl_T1_im(int32_t val)$/;"	f	file:
+gen_op_movl_T1_imu	translate.c	/^static inline void gen_op_movl_T1_imu(uint32_t val)$/;"	f	file:
+gen_op_movl_seg_T0_vm	translate.c	/^static inline void gen_op_movl_seg_T0_vm(int seg_reg)$/;"	f	file:
+gen_op_movo	translate.c	/^static inline void gen_op_movo(int d_offset, int s_offset)$/;"	f	file:
+gen_op_movq	translate.c	/^static inline void gen_op_movq(int d_offset, int s_offset)$/;"	f	file:
+gen_op_movq_A0_im	translate.c	/^static inline void gen_op_movq_A0_im(int64_t val)$/;"	f	file:
+gen_op_movq_A0_reg	translate.c	/^static inline void gen_op_movq_A0_reg(int reg)$/;"	f	file:
+gen_op_movq_A0_seg	translate.c	/^static inline void gen_op_movq_A0_seg(int reg)$/;"	f	file:
+gen_op_movq_env_0	translate.c	/^static inline void gen_op_movq_env_0(int d_offset)$/;"	f	file:
+gen_op_st_T0_A0	translate.c	/^static inline void gen_op_st_T0_A0(int idx)$/;"	f	file:
+gen_op_st_T1_A0	translate.c	/^static inline void gen_op_st_T1_A0(int idx)$/;"	f	file:
+gen_op_st_v	translate.c	/^static inline void gen_op_st_v(int idx, TCGv t0, TCGv a0)$/;"	f	file:
+gen_op_testl_T0_T1_cc	translate.c	/^static inline void gen_op_testl_T0_T1_cc(void)$/;"	f	file:
+gen_op_update1_cc	translate.c	/^static void gen_op_update1_cc(void)$/;"	f	file:
+gen_op_update2_cc	translate.c	/^static void gen_op_update2_cc(void)$/;"	f	file:
+gen_op_update3_cc	translate.c	/^static void gen_op_update3_cc(TCGv reg)$/;"	f	file:
+gen_op_update_neg_cc	translate.c	/^static void gen_op_update_neg_cc(void)$/;"	f	file:
+gen_opc_cc_op	translate.c	/^static uint8_t gen_opc_cc_op[OPC_BUF_SIZE];$/;"	v	file:
+gen_outs	translate.c	/^static inline void gen_outs(DisasContext *s, int ot)$/;"	f	file:
+gen_pop_T0	translate.c	/^static void gen_pop_T0(DisasContext *s)$/;"	f	file:
+gen_pop_update	translate.c	/^static void gen_pop_update(DisasContext *s)$/;"	f	file:
+gen_popa	translate.c	/^static void gen_popa(DisasContext *s)$/;"	f	file:
+gen_prepare_cc	translate.c	/^static CCPrepare gen_prepare_cc(DisasContext *s, int b, TCGv reg)$/;"	f	file:
+gen_prepare_eflags_c	translate.c	/^static CCPrepare gen_prepare_eflags_c(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_prepare_eflags_o	translate.c	/^static CCPrepare gen_prepare_eflags_o(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_prepare_eflags_p	translate.c	/^static CCPrepare gen_prepare_eflags_p(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_prepare_eflags_s	translate.c	/^static CCPrepare gen_prepare_eflags_s(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_prepare_eflags_z	translate.c	/^static CCPrepare gen_prepare_eflags_z(DisasContext *s, TCGv reg)$/;"	f	file:
+gen_push_T0	translate.c	/^static void gen_push_T0(DisasContext *s)$/;"	f	file:
+gen_push_T1	translate.c	/^static void gen_push_T1(DisasContext *s)$/;"	f	file:
+gen_pusha	translate.c	/^static void gen_pusha(DisasContext *s)$/;"	f	file:
+gen_rot_rm_T1	translate.c	/^static void gen_rot_rm_T1(DisasContext *s, int ot, int op1, int is_right)$/;"	f	file:
+gen_rot_rm_im	translate.c	/^static void gen_rot_rm_im(DisasContext *s, int ot, int op1, int op2,$/;"	f	file:
+gen_rotc_rm_T1	translate.c	/^static void gen_rotc_rm_T1(DisasContext *s, int ot, int op1, $/;"	f	file:
+gen_scas	translate.c	/^static inline void gen_scas(DisasContext *s, int ot)$/;"	f	file:
+gen_setcc1	translate.c	/^static void gen_setcc1(DisasContext *s, int b, TCGv reg)$/;"	f	file:
+gen_shift	translate.c	/^static void gen_shift(DisasContext *s1, int op, int ot, int d, int s)$/;"	f	file:
+gen_shift_flags	translate.c	/^static void gen_shift_flags(DisasContext *s, int ot, TCGv result, TCGv shm1,$/;"	f	file:
+gen_shift_rm_T1	translate.c	/^static void gen_shift_rm_T1(DisasContext *s, int ot, int op1, $/;"	f	file:
+gen_shift_rm_im	translate.c	/^static void gen_shift_rm_im(DisasContext *s, int ot, int op1, int op2,$/;"	f	file:
+gen_shiftd_rm_T1	translate.c	/^static void gen_shiftd_rm_T1(DisasContext *s, int ot, int op1,$/;"	f	file:
+gen_shifti	translate.c	/^static void gen_shifti(DisasContext *s1, int op, int ot, int d, int c)$/;"	f	file:
+gen_sse	translate.c	/^static void gen_sse(CPUX86State *env, DisasContext *s, int b,$/;"	f	file:
+gen_stack_A0	translate.c	/^static void gen_stack_A0(DisasContext *s)$/;"	f	file:
+gen_stack_update	translate.c	/^static inline void gen_stack_update(DisasContext *s, int addend)$/;"	f	file:
+gen_sto_env_A0	translate.c	/^static inline void gen_sto_env_A0(int idx, int offset)$/;"	f	file:
+gen_stos	translate.c	/^static inline void gen_stos(DisasContext *s, int ot)$/;"	f	file:
+gen_stq_env_A0	translate.c	/^static inline void gen_stq_env_A0(int idx, int offset)$/;"	f	file:
+gen_string_movl_A0_EDI	translate.c	/^static inline void gen_string_movl_A0_EDI(DisasContext *s)$/;"	f	file:
+gen_string_movl_A0_ESI	translate.c	/^static inline void gen_string_movl_A0_ESI(DisasContext *s)$/;"	f	file:
+gen_svm_check_intercept	translate.c	/^gen_svm_check_intercept(DisasContext *s, target_ulong pc_start, uint64_t type)$/;"	f	file:
+gen_svm_check_intercept_param	translate.c	/^gen_svm_check_intercept_param(DisasContext *s, target_ulong pc_start,$/;"	f	file:
+gen_update_cc_op	translate.c	/^static void gen_update_cc_op(DisasContext *s)$/;"	f	file:
+get_callDest	rev_sem/parse_operand.c	/^uint32_t get_callDest(const xed_decoded_inst_t* xedd, uint32_t cur_pc)$/;"	f
+get_cpuid_vendor	cpu.c	/^static void get_cpuid_vendor(CPUX86State *env, uint32_t *ebx,$/;"	f	file:
+get_first_mmap	rev_sem/linux.c	/^static uint32_t get_first_mmap(uint32_t addr)$/;"	f	file:
+get_fpreg	machine.c	/^static int get_fpreg(QEMUFile *f, void *opaque, size_t size)$/;"	f	file:
+get_fpreg_1_mmx	machine.c	/^static int get_fpreg_1_mmx(QEMUFile *f, void *opaque, size_t size)$/;"	f	file:
+get_fpreg_1_no_mmx	machine.c	/^static int get_fpreg_1_no_mmx(QEMUFile *f, void *opaque, size_t size)$/;"	f	file:
+get_mem_operand_size	rev_sem/parse_operand.c	/^int get_mem_operand_size(const xed_operand_enum_t op_name, uint32_t operand_i){$/;"	f
+get_mem_taint	rev_sem/taint.c	/^unsigned int  get_mem_taint( Addr a )$/;"	f
+get_mod_name	rev_sem/linux.c	/^static void get_mod_name(uint32_t addr, char *name, int size)$/;"	f	file:
+get_name	rev_sem/linux.c	/^static void get_name(uint32_t addr, int size, char *buf)$/;"	f	file:
+get_next_mmap	rev_sem/linux.c	/^static uint32_t get_next_mmap(uint32_t addr)$/;"	f	file:
+get_para_features	kvm.c	/^static int get_para_features(KVMState *s)$/;"	f	file:
+get_pgd	rev_sem/linux.c	/^static uint32_t get_pgd(uint32_t addr)$/;"	f	file:
+get_pid	rev_sem/linux.c	/^static uint32_t get_pid(uint32_t addr)$/;"	f	file:
+get_reg_taint	rev_sem/taint.c	/^unsigned int get_reg_taint(xed_reg_enum_t reg)$/;"	f
+get_reg_taint_fd	rev_sem/taint.c	/^unsigned int get_reg_taint_fd(xed_reg_enum_t reg)$/;"	f
+get_register_name_32	cpu.c	/^const char *get_register_name_32(unsigned int reg)$/;"	f
+get_rsp_from_tss	seg_helper.c	/^static inline target_ulong get_rsp_from_tss(CPUX86State *env, int level)$/;"	f	file:
+get_seg	kvm.c	/^static void get_seg(SegmentCache *lhs, const struct kvm_segment *rhs)$/;"	f	file:
+get_seg_base	seg_helper.c	/^static inline uint32_t get_seg_base(uint32_t e1, uint32_t e2)$/;"	f	file:
+get_seg_limit	seg_helper.c	/^static inline unsigned int get_seg_limit(uint32_t e1, uint32_t e2)$/;"	f	file:
+get_sp_mask	seg_helper.c	/^static inline unsigned int get_sp_mask(unsigned int e2)$/;"	f	file:
+get_ss_esp_from_tss	seg_helper.c	/^static inline void get_ss_esp_from_tss(CPUX86State *env, uint32_t *ss_ptr,$/;"	f	file:
+get_supported_cpuid	kvm.c	/^static struct kvm_cpuid2 *get_supported_cpuid(KVMState *s)$/;"	f	file:
+get_uint64_as_uint32	machine.c	/^static int get_uint64_as_uint32(QEMUFile *f, void *pv, size_t size)$/;"	f	file:
+get_vmend	rev_sem/linux.c	/^static uint32_t get_vmend(uint32_t addr)$/;"	f	file:
+get_vmflags	rev_sem/linux.c	/^static uint32_t get_vmflags(uint32_t addr)$/;"	f	file:
+get_vmstart	rev_sem/linux.c	/^static uint32_t get_vmstart(uint32_t addr)$/;"	f	file:
+global_cpu_lock	mem_helper.c	/^static spinlock_t global_cpu_lock = SPIN_LOCK_UNLOCKED;$/;"	v	file:
+glue	cc_helper_template.h	/^static int glue(compute_all_adc, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1,$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_add, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_bmilg, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_dec, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_inc, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_logic, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_mul, SUFFIX)(DATA_TYPE dst, target_long src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_sar, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_sbb, SUFFIX)(DATA_TYPE dst, DATA_TYPE src2,$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_shl, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_all_sub, SUFFIX)(DATA_TYPE dst, DATA_TYPE src2)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_adc, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1,$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_add, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_bmilg, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_sbb, SUFFIX)(DATA_TYPE dst, DATA_TYPE src2,$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_shl, SUFFIX)(DATA_TYPE dst, DATA_TYPE src1)$/;"	f
+glue	cc_helper_template.h	/^static int glue(compute_c_sub, SUFFIX)(DATA_TYPE dst, DATA_TYPE src2)$/;"	f
+glue	ops_sse.h	/^uint32_t glue(helper_pmovmskb, SUFFIX)(CPUX86State *env, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aesdec, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aesdeclast, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aesenc, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aesenclast, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aesimc, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_aeskeygenassist, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_dppd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s, uint32_t mask)$/;"	f
+glue	ops_sse.h	/^void glue(helper_dpps, SUFFIX)(CPUX86State *env, Reg *d, Reg *s, uint32_t mask)$/;"	f
+glue	ops_sse.h	/^void glue(helper_maskmov, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_movl_mm_T0, SUFFIX)(Reg *d, uint32_t val)$/;"	f
+glue	ops_sse.h	/^void glue(helper_movq_mm_T0, SUFFIX)(Reg *d, uint64_t val)$/;"	f
+glue	ops_sse.h	/^void glue(helper_mpsadbw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_packssdw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_packsswb, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_packusdw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_packuswb, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_palignr, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_pclmulqdq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_pcmpestri, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_pcmpestrm, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_pcmpistri, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_pcmpistrm, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_phaddd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phaddsw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phaddw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phminposuw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phsubd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phsubsw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_phsubw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pmaddubsw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pmaddwd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pmuldq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pmuludq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psadbw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pshufb, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pshufd, SUFFIX)(Reg *d, Reg *s, int order)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pshufhw, SUFFIX)(Reg *d, Reg *s, int order)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pshuflw, SUFFIX)(Reg *d, Reg *s, int order)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pshufw, SUFFIX)(Reg *d, Reg *s, int order)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pslld, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_pslldq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psllq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psllw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psrad, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psraw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psrld, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psrldq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psrlq, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_psrlw, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_ptest, SUFFIX)(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+glue	ops_sse.h	/^void glue(helper_roundpd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_roundps, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_roundsd, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	ops_sse.h	/^void glue(helper_roundss, SUFFIX)(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+glue	shift_helper_template.h	/^target_ulong glue(helper_rcl, SUFFIX)(CPUX86State *env, target_ulong t0,$/;"	f
+glue	shift_helper_template.h	/^target_ulong glue(helper_rcr, SUFFIX)(CPUX86State *env, target_ulong t0,$/;"	f
+gpr_map	gdbstub.c	/^static const int gpr_map[16] = {$/;"	v	file:
+gpr_map	gdbstub.c	30;"	d	file:
+gpr_map32	gdbstub.c	/^static const int gpr_map32[8] = { 0, 1, 2, 3, 4, 5, 6, 7 };$/;"	v	file:
+gs	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+gs	arch_dump.c	/^    target_ulong ds, es, fs, gs;$/;"	m	struct:__anon1	file:
+gs	arch_dump.c	/^    unsigned short fs, __fs, gs, __gs;$/;"	m	struct:__anon3	file:
+gs	svm.h	/^	struct vmcb_seg gs;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+gs_base	arch_dump.c	/^    target_ulong fs_base, gs_base;$/;"	m	struct:__anon1	file:
+guest_feat	cpu.c	/^    uint32_t *guest_feat;$/;"	m	struct:model_features_t	file:
+handle_control_target	rev_sem/hook_inst.c	/^static unsigned int handle_control_target(INS xi)$/;"	f	file:
+handle_even_inj	seg_helper.c	/^static void handle_even_inj(CPUX86State *env, int intno, int is_int,$/;"	f	file:
+hardware_memory_error	kvm.c	/^static void hardware_memory_error(void)$/;"	f	file:
+has_error_code	cpu.h	/^    uint8_t has_error_code;$/;"	m	struct:CPUX86State
+has_msr_async_pf_en	kvm.c	/^static bool has_msr_async_pf_en;$/;"	v	file:
+has_msr_hsave_pa	kvm.c	/^static bool has_msr_hsave_pa;$/;"	v	file:
+has_msr_kvm_steal_time	kvm.c	/^static bool has_msr_kvm_steal_time;$/;"	v	file:
+has_msr_misc_enable	kvm.c	/^static bool has_msr_misc_enable;$/;"	v	file:
+has_msr_pv_eoi_en	kvm.c	/^static bool has_msr_pv_eoi_en;$/;"	v	file:
+has_msr_star	kvm.c	/^static bool has_msr_star;$/;"	v	file:
+has_msr_tsc_adjust	kvm.c	/^static bool has_msr_tsc_adjust;$/;"	v	file:
+has_msr_tsc_deadline	kvm.c	/^static bool has_msr_tsc_deadline;$/;"	v	file:
+heap_shadow_node_t	rev_sem/heap_shadow.h	/^} heap_shadow_node_t;$/;"	t	typeref:struct:shadow_heap_node
+helper_aaa	int_helper.c	/^void helper_aaa(CPUX86State *env)$/;"	f
+helper_aad	int_helper.c	/^void helper_aad(CPUX86State *env, int base)$/;"	f
+helper_aam	int_helper.c	/^void helper_aam(CPUX86State *env, int base)$/;"	f
+helper_aas	int_helper.c	/^void helper_aas(CPUX86State *env)$/;"	f
+helper_addsubpd	ops_sse.h	/^void helper_addsubpd(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_addsubps	ops_sse.h	/^void helper_addsubps(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_boundl	mem_helper.c	/^void helper_boundl(CPUX86State *env, target_ulong a0, int v)$/;"	f
+helper_boundw	mem_helper.c	/^void helper_boundw(CPUX86State *env, target_ulong a0, int v)$/;"	f
+helper_callstack_call	rev_sem/main.c	/^void helper_callstack_call(int pc_start)$/;"	f
+helper_callstack_hook	rev_sem/main.c	/^void helper_callstack_hook(int pc_start)$/;"	f
+helper_callstack_ret	rev_sem/main.c	/^void helper_callstack_ret(int pc_start)$/;"	f
+helper_cc_compute_all	cc_helper.c	/^target_ulong helper_cc_compute_all(target_ulong dst, target_ulong src1,$/;"	f
+helper_cc_compute_c	cc_helper.c	/^target_ulong helper_cc_compute_c(target_ulong dst, target_ulong src1,$/;"	f
+helper_check_iob	misc_helper.c	/^void helper_check_iob(CPUX86State *env, uint32_t t0)$/;"	f
+helper_check_iol	misc_helper.c	/^void helper_check_iol(CPUX86State *env, uint32_t t0)$/;"	f
+helper_check_iow	misc_helper.c	/^void helper_check_iow(CPUX86State *env, uint32_t t0)$/;"	f
+helper_clac	cc_helper.c	/^void helper_clac(CPUX86State *env)$/;"	f
+helper_clgi	svm_helper.c	/^void helper_clgi(CPUX86State *env)$/;"	f
+helper_cli	cc_helper.c	/^void helper_cli(CPUX86State *env)$/;"	f
+helper_clts	cc_helper.c	/^void helper_clts(CPUX86State *env)$/;"	f
+helper_clz	int_helper.c	/^target_ulong helper_clz(target_ulong t0)$/;"	f
+helper_cmpxchg16b	mem_helper.c	/^void helper_cmpxchg16b(CPUX86State *env, target_ulong a0)$/;"	f
+helper_cmpxchg8b	mem_helper.c	/^void helper_cmpxchg8b(CPUX86State *env, target_ulong a0)$/;"	f
+helper_comisd	ops_sse.h	/^void helper_comisd(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_comiss	ops_sse.h	/^void helper_comiss(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cpuid	misc_helper.c	/^void helper_cpuid(CPUX86State *env)$/;"	f
+helper_crc32	ops_sse.h	/^target_ulong helper_crc32(uint32_t crc1, target_ulong msg, uint32_t len)$/;"	f
+helper_ctz	int_helper.c	/^target_ulong helper_ctz(target_ulong t0)$/;"	f
+helper_cvtdq2pd	ops_sse.h	/^void helper_cvtdq2pd(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtdq2ps	ops_sse.h	/^void helper_cvtdq2ps(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtpd2dq	ops_sse.h	/^void helper_cvtpd2dq(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_cvtpd2pi	ops_sse.h	/^void helper_cvtpd2pi(CPUX86State *env, MMXReg *d, XMMReg *s)$/;"	f
+helper_cvtpd2ps	ops_sse.h	/^void helper_cvtpd2ps(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtpi2pd	ops_sse.h	/^void helper_cvtpi2pd(CPUX86State *env, XMMReg *d, MMXReg *s)$/;"	f
+helper_cvtpi2ps	ops_sse.h	/^void helper_cvtpi2ps(CPUX86State *env, XMMReg *d, MMXReg *s)$/;"	f
+helper_cvtps2dq	ops_sse.h	/^void helper_cvtps2dq(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_cvtps2pd	ops_sse.h	/^void helper_cvtps2pd(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtps2pi	ops_sse.h	/^void helper_cvtps2pi(CPUX86State *env, MMXReg *d, XMMReg *s)$/;"	f
+helper_cvtsd2si	ops_sse.h	/^int32_t helper_cvtsd2si(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvtsd2sq	ops_sse.h	/^int64_t helper_cvtsd2sq(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvtsd2ss	ops_sse.h	/^void helper_cvtsd2ss(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtsi2sd	ops_sse.h	/^void helper_cvtsi2sd(CPUX86State *env, XMMReg *d, uint32_t val)$/;"	f
+helper_cvtsi2ss	ops_sse.h	/^void helper_cvtsi2ss(CPUX86State *env, XMMReg *d, uint32_t val)$/;"	f
+helper_cvtsq2sd	ops_sse.h	/^void helper_cvtsq2sd(CPUX86State *env, XMMReg *d, uint64_t val)$/;"	f
+helper_cvtsq2ss	ops_sse.h	/^void helper_cvtsq2ss(CPUX86State *env, XMMReg *d, uint64_t val)$/;"	f
+helper_cvtss2sd	ops_sse.h	/^void helper_cvtss2sd(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_cvtss2si	ops_sse.h	/^int32_t helper_cvtss2si(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvtss2sq	ops_sse.h	/^int64_t helper_cvtss2sq(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvttpd2dq	ops_sse.h	/^void helper_cvttpd2dq(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_cvttpd2pi	ops_sse.h	/^void helper_cvttpd2pi(CPUX86State *env, MMXReg *d, XMMReg *s)$/;"	f
+helper_cvttps2dq	ops_sse.h	/^void helper_cvttps2dq(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_cvttps2pi	ops_sse.h	/^void helper_cvttps2pi(CPUX86State *env, MMXReg *d, XMMReg *s)$/;"	f
+helper_cvttsd2si	ops_sse.h	/^int32_t helper_cvttsd2si(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvttsd2sq	ops_sse.h	/^int64_t helper_cvttsd2sq(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvttss2si	ops_sse.h	/^int32_t helper_cvttss2si(CPUX86State *env, XMMReg *s)$/;"	f
+helper_cvttss2sq	ops_sse.h	/^int64_t helper_cvttss2sq(CPUX86State *env, XMMReg *s)$/;"	f
+helper_daa	int_helper.c	/^void helper_daa(CPUX86State *env)$/;"	f
+helper_das	int_helper.c	/^void helper_das(CPUX86State *env)$/;"	f
+helper_debug	misc_helper.c	/^void helper_debug(CPUX86State *env)$/;"	f
+helper_divb_AL	int_helper.c	/^void helper_divb_AL(CPUX86State *env, target_ulong t0)$/;"	f
+helper_divl_EAX	int_helper.c	/^void helper_divl_EAX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_divq_EAX	int_helper.c	/^void helper_divq_EAX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_divw_AX	int_helper.c	/^void helper_divw_AX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_emms	fpu_helper.c	/^void helper_emms(CPUX86State *env)$/;"	f
+helper_enter64_level	seg_helper.c	/^void helper_enter64_level(CPUX86State *env, int level, int data64,$/;"	f
+helper_enter_level	seg_helper.c	/^void helper_enter_level(CPUX86State *env, int level, int data32,$/;"	f
+helper_enter_mmx	fpu_helper.c	/^void helper_enter_mmx(CPUX86State *env)$/;"	f
+helper_extrq	ops_sse.h	/^static inline uint64_t helper_extrq(uint64_t src, int shift, int len)$/;"	f
+helper_extrq_i	ops_sse.h	/^void helper_extrq_i(CPUX86State *env, XMMReg *d, int index, int length)$/;"	f
+helper_extrq_r	ops_sse.h	/^void helper_extrq_r(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_f2xm1	fpu_helper.c	/^void helper_f2xm1(CPUX86State *env)$/;"	f
+helper_fabs_ST0	fpu_helper.c	/^void helper_fabs_ST0(CPUX86State *env)$/;"	f
+helper_fadd_ST0_FT0	fpu_helper.c	/^void helper_fadd_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fadd_STN_ST0	fpu_helper.c	/^void helper_fadd_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fbld_ST0	fpu_helper.c	/^void helper_fbld_ST0(CPUX86State *env, target_ulong ptr)$/;"	f
+helper_fbst_ST0	fpu_helper.c	/^void helper_fbst_ST0(CPUX86State *env, target_ulong ptr)$/;"	f
+helper_fchs_ST0	fpu_helper.c	/^void helper_fchs_ST0(CPUX86State *env)$/;"	f
+helper_fclex	fpu_helper.c	/^void helper_fclex(CPUX86State *env)$/;"	f
+helper_fcom_ST0_FT0	fpu_helper.c	/^void helper_fcom_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fcomi_ST0_FT0	fpu_helper.c	/^void helper_fcomi_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fcos	fpu_helper.c	/^void helper_fcos(CPUX86State *env)$/;"	f
+helper_fdecstp	fpu_helper.c	/^void helper_fdecstp(CPUX86State *env)$/;"	f
+helper_fdiv	fpu_helper.c	/^static inline floatx80 helper_fdiv(CPUX86State *env, floatx80 a, floatx80 b)$/;"	f	file:
+helper_fdiv_ST0_FT0	fpu_helper.c	/^void helper_fdiv_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fdiv_STN_ST0	fpu_helper.c	/^void helper_fdiv_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fdivr_ST0_FT0	fpu_helper.c	/^void helper_fdivr_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fdivr_STN_ST0	fpu_helper.c	/^void helper_fdivr_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_ffree_STN	fpu_helper.c	/^void helper_ffree_STN(CPUX86State *env, int st_index)$/;"	f
+helper_fildl_FT0	fpu_helper.c	/^void helper_fildl_FT0(CPUX86State *env, int32_t val)$/;"	f
+helper_fildl_ST0	fpu_helper.c	/^void helper_fildl_ST0(CPUX86State *env, int32_t val)$/;"	f
+helper_fildll_ST0	fpu_helper.c	/^void helper_fildll_ST0(CPUX86State *env, int64_t val)$/;"	f
+helper_fincstp	fpu_helper.c	/^void helper_fincstp(CPUX86State *env)$/;"	f
+helper_fist_ST0	fpu_helper.c	/^int32_t helper_fist_ST0(CPUX86State *env)$/;"	f
+helper_fistl_ST0	fpu_helper.c	/^int32_t helper_fistl_ST0(CPUX86State *env)$/;"	f
+helper_fistll_ST0	fpu_helper.c	/^int64_t helper_fistll_ST0(CPUX86State *env)$/;"	f
+helper_fistt_ST0	fpu_helper.c	/^int32_t helper_fistt_ST0(CPUX86State *env)$/;"	f
+helper_fisttl_ST0	fpu_helper.c	/^int32_t helper_fisttl_ST0(CPUX86State *env)$/;"	f
+helper_fisttll_ST0	fpu_helper.c	/^int64_t helper_fisttll_ST0(CPUX86State *env)$/;"	f
+helper_fld1_ST0	fpu_helper.c	/^void helper_fld1_ST0(CPUX86State *env)$/;"	f
+helper_fldcw	fpu_helper.c	/^void helper_fldcw(CPUX86State *env, uint32_t val)$/;"	f
+helper_fldenv	fpu_helper.c	/^void helper_fldenv(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+helper_fldl2e_ST0	fpu_helper.c	/^void helper_fldl2e_ST0(CPUX86State *env)$/;"	f
+helper_fldl2t_ST0	fpu_helper.c	/^void helper_fldl2t_ST0(CPUX86State *env)$/;"	f
+helper_fldl_FT0	fpu_helper.c	/^void helper_fldl_FT0(CPUX86State *env, uint64_t val)$/;"	f
+helper_fldl_ST0	fpu_helper.c	/^void helper_fldl_ST0(CPUX86State *env, uint64_t val)$/;"	f
+helper_fldlg2_ST0	fpu_helper.c	/^void helper_fldlg2_ST0(CPUX86State *env)$/;"	f
+helper_fldln2_ST0	fpu_helper.c	/^void helper_fldln2_ST0(CPUX86State *env)$/;"	f
+helper_fldpi_ST0	fpu_helper.c	/^void helper_fldpi_ST0(CPUX86State *env)$/;"	f
+helper_flds_FT0	fpu_helper.c	/^void helper_flds_FT0(CPUX86State *env, uint32_t val)$/;"	f
+helper_flds_ST0	fpu_helper.c	/^void helper_flds_ST0(CPUX86State *env, uint32_t val)$/;"	f
+helper_fldt	fpu_helper.c	/^static inline floatx80 helper_fldt(CPUX86State *env, target_ulong ptr)$/;"	f	file:
+helper_fldt_ST0	fpu_helper.c	/^void helper_fldt_ST0(CPUX86State *env, target_ulong ptr)$/;"	f
+helper_fldz_FT0	fpu_helper.c	/^void helper_fldz_FT0(CPUX86State *env)$/;"	f
+helper_fldz_ST0	fpu_helper.c	/^void helper_fldz_ST0(CPUX86State *env)$/;"	f
+helper_fmov_FT0_STN	fpu_helper.c	/^void helper_fmov_FT0_STN(CPUX86State *env, int st_index)$/;"	f
+helper_fmov_ST0_FT0	fpu_helper.c	/^void helper_fmov_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fmov_ST0_STN	fpu_helper.c	/^void helper_fmov_ST0_STN(CPUX86State *env, int st_index)$/;"	f
+helper_fmov_STN_ST0	fpu_helper.c	/^void helper_fmov_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fmul_ST0_FT0	fpu_helper.c	/^void helper_fmul_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fmul_STN_ST0	fpu_helper.c	/^void helper_fmul_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fninit	fpu_helper.c	/^void helper_fninit(CPUX86State *env)$/;"	f
+helper_fnstcw	fpu_helper.c	/^uint32_t helper_fnstcw(CPUX86State *env)$/;"	f
+helper_fnstsw	fpu_helper.c	/^uint32_t helper_fnstsw(CPUX86State *env)$/;"	f
+helper_fpatan	fpu_helper.c	/^void helper_fpatan(CPUX86State *env)$/;"	f
+helper_fpop	fpu_helper.c	/^void helper_fpop(CPUX86State *env)$/;"	f
+helper_fprem	fpu_helper.c	/^void helper_fprem(CPUX86State *env)$/;"	f
+helper_fprem1	fpu_helper.c	/^void helper_fprem1(CPUX86State *env)$/;"	f
+helper_fptan	fpu_helper.c	/^void helper_fptan(CPUX86State *env)$/;"	f
+helper_fpush	fpu_helper.c	/^void helper_fpush(CPUX86State *env)$/;"	f
+helper_frndint	fpu_helper.c	/^void helper_frndint(CPUX86State *env)$/;"	f
+helper_frstor	fpu_helper.c	/^void helper_frstor(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+helper_fsave	fpu_helper.c	/^void helper_fsave(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+helper_fscale	fpu_helper.c	/^void helper_fscale(CPUX86State *env)$/;"	f
+helper_fsin	fpu_helper.c	/^void helper_fsin(CPUX86State *env)$/;"	f
+helper_fsincos	fpu_helper.c	/^void helper_fsincos(CPUX86State *env)$/;"	f
+helper_fsqrt	fpu_helper.c	/^void helper_fsqrt(CPUX86State *env)$/;"	f
+helper_fstenv	fpu_helper.c	/^void helper_fstenv(CPUX86State *env, target_ulong ptr, int data32)$/;"	f
+helper_fstl_ST0	fpu_helper.c	/^uint64_t helper_fstl_ST0(CPUX86State *env)$/;"	f
+helper_fsts_ST0	fpu_helper.c	/^uint32_t helper_fsts_ST0(CPUX86State *env)$/;"	f
+helper_fstt	fpu_helper.c	/^static inline void helper_fstt(CPUX86State *env, floatx80 f, target_ulong ptr)$/;"	f	file:
+helper_fstt_ST0	fpu_helper.c	/^void helper_fstt_ST0(CPUX86State *env, target_ulong ptr)$/;"	f
+helper_fsub_ST0_FT0	fpu_helper.c	/^void helper_fsub_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fsub_STN_ST0	fpu_helper.c	/^void helper_fsub_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fsubr_ST0_FT0	fpu_helper.c	/^void helper_fsubr_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fsubr_STN_ST0	fpu_helper.c	/^void helper_fsubr_STN_ST0(CPUX86State *env, int st_index)$/;"	f
+helper_fucom_ST0_FT0	fpu_helper.c	/^void helper_fucom_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fucomi_ST0_FT0	fpu_helper.c	/^void helper_fucomi_ST0_FT0(CPUX86State *env)$/;"	f
+helper_fwait	fpu_helper.c	/^void helper_fwait(CPUX86State *env)$/;"	f
+helper_fxam_ST0	fpu_helper.c	/^void helper_fxam_ST0(CPUX86State *env)$/;"	f
+helper_fxchg_ST0_STN	fpu_helper.c	/^void helper_fxchg_ST0_STN(CPUX86State *env, int st_index)$/;"	f
+helper_fxrstor	fpu_helper.c	/^void helper_fxrstor(CPUX86State *env, target_ulong ptr, int data64)$/;"	f
+helper_fxsave	fpu_helper.c	/^void helper_fxsave(CPUX86State *env, target_ulong ptr, int data64)$/;"	f
+helper_fxtract	fpu_helper.c	/^void helper_fxtract(CPUX86State *env)$/;"	f
+helper_fyl2x	fpu_helper.c	/^void helper_fyl2x(CPUX86State *env)$/;"	f
+helper_fyl2xp1	fpu_helper.c	/^void helper_fyl2xp1(CPUX86State *env)$/;"	f
+helper_haddpd	ops_sse.h	/^void helper_haddpd(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_haddps	ops_sse.h	/^void helper_haddps(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_hlt	misc_helper.c	/^void helper_hlt(CPUX86State *env, int next_eip_addend)$/;"	f
+helper_hsubpd	ops_sse.h	/^void helper_hsubpd(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_hsubps	ops_sse.h	/^void helper_hsubps(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_idivb_AL	int_helper.c	/^void helper_idivb_AL(CPUX86State *env, target_ulong t0)$/;"	f
+helper_idivl_EAX	int_helper.c	/^void helper_idivl_EAX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_idivq_EAX	int_helper.c	/^void helper_idivq_EAX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_idivw_AX	int_helper.c	/^void helper_idivw_AX(CPUX86State *env, target_ulong t0)$/;"	f
+helper_inb	misc_helper.c	/^target_ulong helper_inb(uint32_t port)$/;"	f
+helper_inl	misc_helper.c	/^target_ulong helper_inl(uint32_t port)$/;"	f
+helper_insertq	ops_sse.h	/^static inline uint64_t helper_insertq(uint64_t src, int shift, int len)$/;"	f
+helper_insertq_i	ops_sse.h	/^void helper_insertq_i(CPUX86State *env, XMMReg *d, int index, int length)$/;"	f
+helper_insertq_r	ops_sse.h	/^void helper_insertq_r(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_into	misc_helper.c	/^void helper_into(CPUX86State *env, int next_eip_addend)$/;"	f
+helper_invlpg	misc_helper.c	/^void helper_invlpg(CPUX86State *env, target_ulong addr)$/;"	f
+helper_invlpga	svm_helper.c	/^void helper_invlpga(CPUX86State *env, int aflag)$/;"	f
+helper_inw	misc_helper.c	/^target_ulong helper_inw(uint32_t port)$/;"	f
+helper_iret_protected	seg_helper.c	/^void helper_iret_protected(CPUX86State *env, int shift, int next_eip)$/;"	f
+helper_iret_real	seg_helper.c	/^void helper_iret_real(CPUX86State *env, int shift)$/;"	f
+helper_lar	seg_helper.c	/^target_ulong helper_lar(CPUX86State *env, target_ulong selector1)$/;"	f
+helper_lcall_protected	seg_helper.c	/^void helper_lcall_protected(CPUX86State *env, int new_cs, target_ulong new_eip,$/;"	f
+helper_lcall_real	seg_helper.c	/^void helper_lcall_real(CPUX86State *env, int new_cs, target_ulong new_eip1,$/;"	f
+helper_ldmxcsr	fpu_helper.c	/^void helper_ldmxcsr(CPUX86State *env, uint32_t val)$/;"	f
+helper_ljmp_protected	seg_helper.c	/^void helper_ljmp_protected(CPUX86State *env, int new_cs, target_ulong new_eip,$/;"	f
+helper_lldt	seg_helper.c	/^void helper_lldt(CPUX86State *env, int selector)$/;"	f
+helper_lmsw	misc_helper.c	/^void helper_lmsw(CPUX86State *env, target_ulong t0)$/;"	f
+helper_load_seg	seg_helper.c	/^void helper_load_seg(CPUX86State *env, int seg_reg, int selector)$/;"	f
+helper_lock	mem_helper.c	/^void helper_lock(void)$/;"	f
+helper_lret_protected	seg_helper.c	/^void helper_lret_protected(CPUX86State *env, int shift, int addend)$/;"	f
+helper_lsl	seg_helper.c	/^target_ulong helper_lsl(CPUX86State *env, target_ulong selector1)$/;"	f
+helper_ltr	seg_helper.c	/^void helper_ltr(CPUX86State *env, int selector)$/;"	f
+helper_monitor	misc_helper.c	/^void helper_monitor(CPUX86State *env, target_ulong ptr)$/;"	f
+helper_movl_drN_T0	misc_helper.c	/^void helper_movl_drN_T0(CPUX86State *env, int reg, target_ulong t0)$/;"	f
+helper_movmskpd	ops_sse.h	/^uint32_t helper_movmskpd(CPUX86State *env, Reg *s)$/;"	f
+helper_movmskps	ops_sse.h	/^uint32_t helper_movmskps(CPUX86State *env, Reg *s)$/;"	f
+helper_movq	fpu_helper.c	/^void helper_movq(CPUX86State *env, void *d, void *s)$/;"	f
+helper_mwait	misc_helper.c	/^void helper_mwait(CPUX86State *env, int next_eip_addend)$/;"	f
+helper_outb	misc_helper.c	/^void helper_outb(uint32_t port, uint32_t data)$/;"	f
+helper_outl	misc_helper.c	/^void helper_outl(uint32_t port, uint32_t data)$/;"	f
+helper_outw	misc_helper.c	/^void helper_outw(uint32_t port, uint32_t data)$/;"	f
+helper_pdep	int_helper.c	/^target_ulong helper_pdep(target_ulong src, target_ulong mask)$/;"	f
+helper_pext	int_helper.c	/^target_ulong helper_pext(target_ulong src, target_ulong mask)$/;"	f
+helper_pf2id	ops_sse.h	/^void helper_pf2id(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pf2iw	ops_sse.h	/^void helper_pf2iw(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfacc	ops_sse.h	/^void helper_pfacc(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfadd	ops_sse.h	/^void helper_pfadd(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfcmpeq	ops_sse.h	/^void helper_pfcmpeq(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfcmpge	ops_sse.h	/^void helper_pfcmpge(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfcmpgt	ops_sse.h	/^void helper_pfcmpgt(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfmax	ops_sse.h	/^void helper_pfmax(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfmin	ops_sse.h	/^void helper_pfmin(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfmul	ops_sse.h	/^void helper_pfmul(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfnacc	ops_sse.h	/^void helper_pfnacc(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfpnacc	ops_sse.h	/^void helper_pfpnacc(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfrcp	ops_sse.h	/^void helper_pfrcp(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfrsqrt	ops_sse.h	/^void helper_pfrsqrt(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfsub	ops_sse.h	/^void helper_pfsub(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pfsubr	ops_sse.h	/^void helper_pfsubr(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pi2fd	ops_sse.h	/^void helper_pi2fd(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_pi2fw	ops_sse.h	/^void helper_pi2fw(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_popcnt	ops_sse.h	/^target_ulong helper_popcnt(CPUX86State *env, target_ulong n, uint32_t type)$/;"	f
+helper_pswapd	ops_sse.h	/^void helper_pswapd(CPUX86State *env, MMXReg *d, MMXReg *s)$/;"	f
+helper_raise_exception	excp_helper.c	/^void helper_raise_exception(CPUX86State *env, int exception_index)$/;"	f
+helper_raise_interrupt	excp_helper.c	/^void helper_raise_interrupt(CPUX86State *env, int intno, int next_eip_addend)$/;"	f
+helper_rcpps	ops_sse.h	/^void helper_rcpps(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_rcpss	ops_sse.h	/^void helper_rcpss(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_rdmsr	misc_helper.c	/^void helper_rdmsr(CPUX86State *env)$/;"	f
+helper_rdpmc	misc_helper.c	/^void helper_rdpmc(CPUX86State *env)$/;"	f
+helper_rdtsc	misc_helper.c	/^void helper_rdtsc(CPUX86State *env)$/;"	f
+helper_rdtscp	misc_helper.c	/^void helper_rdtscp(CPUX86State *env)$/;"	f
+helper_read_crN	misc_helper.c	/^target_ulong helper_read_crN(CPUX86State *env, int reg)$/;"	f
+helper_read_eflags	cc_helper.c	/^target_ulong helper_read_eflags(CPUX86State *env)$/;"	f
+helper_reset_inhibit_irq	cc_helper.c	/^void helper_reset_inhibit_irq(CPUX86State *env)$/;"	f
+helper_reset_rf	cc_helper.c	/^void helper_reset_rf(CPUX86State *env)$/;"	f
+helper_ret_protected	seg_helper.c	/^static inline void helper_ret_protected(CPUX86State *env, int shift,$/;"	f	file:
+helper_rsm	smm_helper.c	/^void helper_rsm(CPUX86State *env)$/;"	f
+helper_rsqrtps	ops_sse.h	/^void helper_rsqrtps(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_rsqrtss	ops_sse.h	/^void helper_rsqrtss(CPUX86State *env, XMMReg *d, XMMReg *s)$/;"	f
+helper_set_inhibit_irq	cc_helper.c	/^void helper_set_inhibit_irq(CPUX86State *env)$/;"	f
+helper_shufpd	ops_sse.h	/^void helper_shufpd(Reg *d, Reg *s, int order)$/;"	f
+helper_shufps	ops_sse.h	/^void helper_shufps(Reg *d, Reg *s, int order)$/;"	f
+helper_single_step	misc_helper.c	/^void helper_single_step(CPUX86State *env)$/;"	f
+helper_skinit	svm_helper.c	/^void helper_skinit(CPUX86State *env)$/;"	f
+helper_stac	cc_helper.c	/^void helper_stac(CPUX86State *env)$/;"	f
+helper_stgi	svm_helper.c	/^void helper_stgi(CPUX86State *env)$/;"	f
+helper_sti	cc_helper.c	/^void helper_sti(CPUX86State *env)$/;"	f
+helper_svm_check_intercept_param	svm_helper.c	/^void helper_svm_check_intercept_param(CPUX86State *env, uint32_t type,$/;"	f
+helper_svm_check_io	svm_helper.c	/^void helper_svm_check_io(CPUX86State *env, uint32_t port, uint32_t param,$/;"	f
+helper_syscall	seg_helper.c	/^void helper_syscall(CPUX86State *env, int next_eip_addend)$/;"	f
+helper_sysenter	seg_helper.c	/^void helper_sysenter(CPUX86State *env)$/;"	f
+helper_sysexit	seg_helper.c	/^void helper_sysexit(CPUX86State *env, int dflag)$/;"	f
+helper_sysret	seg_helper.c	/^void helper_sysret(CPUX86State *env, int dflag)$/;"	f
+helper_ucomisd	ops_sse.h	/^void helper_ucomisd(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_ucomiss	ops_sse.h	/^void helper_ucomiss(CPUX86State *env, Reg *d, Reg *s)$/;"	f
+helper_unlock	mem_helper.c	/^void helper_unlock(void)$/;"	f
+helper_verr	seg_helper.c	/^void helper_verr(CPUX86State *env, target_ulong selector1)$/;"	f
+helper_verw	seg_helper.c	/^void helper_verw(CPUX86State *env, target_ulong selector1)$/;"	f
+helper_vmexit	svm_helper.c	/^void helper_vmexit(CPUX86State *env, uint32_t exit_code, uint64_t exit_info_1)$/;"	f
+helper_vmload	svm_helper.c	/^void helper_vmload(CPUX86State *env, int aflag)$/;"	f
+helper_vmmcall	svm_helper.c	/^void helper_vmmcall(CPUX86State *env)$/;"	f
+helper_vmrun	svm_helper.c	/^void helper_vmrun(CPUX86State *env, int aflag, int next_eip_addend)$/;"	f
+helper_vmsave	svm_helper.c	/^void helper_vmsave(CPUX86State *env, int aflag)$/;"	f
+helper_write_crN	misc_helper.c	/^void helper_write_crN(CPUX86State *env, int reg, target_ulong t0)$/;"	f
+helper_write_eflags	cc_helper.c	/^void helper_write_eflags(CPUX86State *env, target_ulong t0,$/;"	f
+helper_wrmsr	misc_helper.c	/^void helper_wrmsr(CPUX86State *env)$/;"	f
+hflags	cpu.h	/^    uint32_t hflags; \/* TB flags, see HF_xxx constants. These flags$/;"	m	struct:CPUX86State
+hflags2	cpu.h	/^    uint32_t hflags2; \/* various other flags, see HF2_xxx constants. *\/$/;"	m	struct:CPUX86State
+hookingpoint	rev_sem/linux.h	/^	unsigned int hookingpoint;$/;"	m	struct:PEMU_guest_os
+hookingpoint	rev_sem/linux.h	/^    unsigned int hookingpoint;$/;"	m	struct:koffset
+hookingpoint2	rev_sem/linux.h	/^	unsigned int hookingpoint2;$/;"	m	struct:PEMU_guest_os
+hookingpoint2	rev_sem/linux.h	/^    unsigned int hookingpoint2; $/;"	m	struct:koffset
+host_cpuid	cpu.c	/^void host_cpuid(uint32_t function, uint32_t count,$/;"	f
+host_feat	cpu.c	/^    uint32_t *host_feat;$/;"	m	struct:model_features_t	file:
+host_supports_vmx	kvm.c	/^static bool host_supports_vmx(void)$/;"	f	file:
+hw_breakpoint	kvm.c	/^} hw_breakpoint[4];$/;"	v	typeref:struct:__anon11	file:
+hw_breakpoint_enabled	cpu.h	/^static inline bool hw_breakpoint_enabled(unsigned long dr7, int index)$/;"	f
+hw_breakpoint_insert	helper.c	/^void hw_breakpoint_insert(CPUX86State *env, int index)$/;"	f
+hw_breakpoint_len	cpu.h	/^static inline int hw_breakpoint_len(unsigned long dr7, int index)$/;"	f
+hw_breakpoint_remove	helper.c	/^void hw_breakpoint_remove(CPUX86State *env, int index)$/;"	f
+hw_breakpoint_type	cpu.h	/^static inline int hw_breakpoint_type(unsigned long dr7, int index)$/;"	f
+hw_global_breakpoint_enabled	cpu.h	/^static inline bool hw_global_breakpoint_enabled(unsigned long dr7, int index)$/;"	f
+hw_local_breakpoint_enabled	cpu.h	/^static inline bool hw_local_breakpoint_enabled(unsigned long dr7, int index)$/;"	f
+hw_watchpoint	kvm.c	/^static CPUWatchpoint hw_watchpoint;$/;"	v	file:
+hyperv_enable_relaxed_timing	hyperv.c	/^void hyperv_enable_relaxed_timing(bool val)$/;"	f
+hyperv_enable_relaxed_timing	hyperv.h	/^static inline void hyperv_enable_relaxed_timing(bool val) { }$/;"	f
+hyperv_enable_vapic_recommended	hyperv.c	/^void hyperv_enable_vapic_recommended(bool val)$/;"	f
+hyperv_enable_vapic_recommended	hyperv.h	/^static inline void hyperv_enable_vapic_recommended(bool val) { }$/;"	f
+hyperv_enabled	hyperv.c	/^bool hyperv_enabled(void)$/;"	f
+hyperv_get_spinlock_retries	hyperv.c	/^int hyperv_get_spinlock_retries(void)$/;"	f
+hyperv_hypercall_available	hyperv.c	/^bool hyperv_hypercall_available(void)$/;"	f
+hyperv_relaxed_timing	hyperv.c	/^static bool hyperv_relaxed_timing;$/;"	v	file:
+hyperv_relaxed_timing_enabled	hyperv.c	/^bool hyperv_relaxed_timing_enabled(void)$/;"	f
+hyperv_set_spinlock_retries	hyperv.c	/^void hyperv_set_spinlock_retries(int val)$/;"	f
+hyperv_set_spinlock_retries	hyperv.h	/^static inline void hyperv_set_spinlock_retries(int val) { }$/;"	f
+hyperv_spinlock_attempts	hyperv.c	/^static int hyperv_spinlock_attempts = HYPERV_SPINLOCK_NEVER_RETRY;$/;"	v	file:
+hyperv_vapic	hyperv.c	/^static bool hyperv_vapic;$/;"	v	file:
+hyperv_vapic_recommended	hyperv.c	/^bool hyperv_vapic_recommended(void)$/;"	f
+i32	ops_sse_header.h	/^DEF_HELPER_2(glue(pmovmskb, SUFFIX), i32, env, Reg)$/;"	v
+idiv64	int_helper.c	/^static int idiv64(uint64_t *plow, uint64_t *phigh, int64_t b)$/;"	f	file:
+idt	arch_dump.c	/^    QEMUCPUSegment ldt, tr, gdt, idt;$/;"	m	struct:QEMUCPUState	file:
+idt	cpu.h	/^    SegmentCache idt; \/* only base and limit are used *\/$/;"	m	struct:CPUX86State
+idtr	svm.h	/^	struct vmcb_seg idtr;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+ii_primary_map	rev_sem/taint.c	/^static SecMap * ii_primary_map[PAGE_NUM];$/;"	v	file:
+imm	translate.c	/^    target_ulong imm;$/;"	m	struct:CCPrepare	file:
+init_inst	rev_sem/pemu.c	/^void init_inst(void)$/;"	f
+init_kernel_offsets	rev_sem/linux.c	/^int init_kernel_offsets(void)$/;"	f
+init_shadow_memory	rev_sem/taint.c	/^void init_shadow_memory(void)$/;"	f
+insertFixup	rev_sem/rb_tree.c	/^static void insertFixup(NodeType *x) {$/;"	f	file:
+insert_callsite	rev_sem/callstack.cpp	/^void insert_callsite(unsigned int pc)$/;"	f
+insert_callstack	rev_sem/callstack.cpp	/^void insert_callstack(unsigned int pc)$/;"	f
+insert_retaddr	rev_sem/callstack.cpp	/^void insert_retaddr(unsigned int pc)$/;"	f
+insn_const_size	translate.c	/^static inline int insn_const_size(unsigned int ot)$/;"	f	file:
+insn_get	translate.c	/^static inline uint32_t insn_get(CPUX86State *env, DisasContext *s, int ot)$/;"	f	file:
+instrument_functions	rev_sem/hook_inst.c	/^InstrumentFunction instrument_functions[XED_ICLASS_LAST];$/;"	v
+int_ctl	svm.h	/^	uint32_t int_ctl;$/;"	m	struct:vmcb_control_area
+int_state	svm.h	/^	uint32_t int_state;$/;"	m	struct:vmcb_control_area
+int_vector	svm.h	/^	uint32_t int_vector;$/;"	m	struct:vmcb_control_area
+intercept	cpu.h	/^    uint64_t intercept;$/;"	m	struct:CPUX86State
+intercept	svm.h	/^	uint64_t intercept;$/;"	m	struct:vmcb_control_area
+intercept_cr_read	cpu.h	/^    uint16_t intercept_cr_read;$/;"	m	struct:CPUX86State
+intercept_cr_read	svm.h	/^	uint16_t intercept_cr_read;$/;"	m	struct:vmcb_control_area
+intercept_cr_write	cpu.h	/^    uint16_t intercept_cr_write;$/;"	m	struct:CPUX86State
+intercept_cr_write	svm.h	/^	uint16_t intercept_cr_write;$/;"	m	struct:vmcb_control_area
+intercept_dr_read	cpu.h	/^    uint16_t intercept_dr_read;$/;"	m	struct:CPUX86State
+intercept_dr_read	svm.h	/^	uint16_t intercept_dr_read;$/;"	m	struct:vmcb_control_area
+intercept_dr_write	cpu.h	/^    uint16_t intercept_dr_write;$/;"	m	struct:CPUX86State
+intercept_dr_write	svm.h	/^	uint16_t intercept_dr_write;$/;"	m	struct:vmcb_control_area
+intercept_exceptions	cpu.h	/^    uint32_t intercept_exceptions;$/;"	m	struct:CPUX86State
+intercept_exceptions	svm.h	/^	uint32_t intercept_exceptions;$/;"	m	struct:vmcb_control_area
+interrupt_injected	cpu.h	/^    int32_t interrupt_injected;$/;"	m	struct:CPUX86State
+iopl	translate.c	/^    int iopl;$/;"	m	struct:DisasContext	file:
+iopm_base_pa	svm.h	/^	uint64_t iopm_base_pa;$/;"	m	struct:vmcb_control_area
+is_af_set	rev_sem/condition.h	/^static inline int is_af_set(){$/;"	f
+is_cf_set	rev_sem/condition.h	/^static inline int is_cf_set(){$/;"	f
+is_jmp	translate.c	/^    int is_jmp; \/* 1 = means jump (stop translation), 2 means CPU$/;"	m	struct:DisasContext	file:
+is_of_set	rev_sem/condition.h	/^static inline int is_of_set(){$/;"	f
+is_pf_set	rev_sem/condition.h	/^static inline int is_pf_set(){$/;"	f
+is_retaddr	rev_sem/callstack.cpp	/^int is_retaddr(unsigned int pc)$/;"	f
+is_sf_set	rev_sem/condition.h	/^static inline int is_sf_set(){$/;"	f
+is_special_inst	rev_sem/hook_inst.c	/^static inline int is_special_inst(const xed_decoded_inst_t *x)$/;"	f	file:
+is_zf_set	rev_sem/condition.h	/^static inline int is_zf_set(){$/;"	f
+iswhite	cpu.c	288;"	d	file:
+jmp_opt	translate.c	/^    int jmp_opt; \/* use direct block chaining for direct jumps *\/$/;"	m	struct:DisasContext	file:
+kernel_gs_base	svm.h	/^	uint64_t kernel_gs_base;$/;"	m	struct:vmcb_save_area
+kernel_table	rev_sem/linux.c	/^static struct koffset kernel_table[] = {$/;"	v	typeref:struct:koffset	file:
+kernelgsbase	cpu.h	/^    target_ulong kernelgsbase;$/;"	m	struct:CPUX86State
+key	rev_sem/heap_shadow.h	/^    KeyType key;                \/\/ key used for searching$/;"	m	struct:NodeTag
+kmem_cache_alloc_addr	rev_sem/linux.h	/^	unsigned int kmem_cache_alloc_addr;$/;"	m	struct:PEMU_guest_os
+kmem_cache_alloc_addr	rev_sem/linux.h	/^	unsigned int kmem_cache_alloc_addr;$/;"	m	struct:koffset
+kmem_cache_free_addr	rev_sem/linux.h	/^	unsigned int kmem_cache_free_addr;$/;"	m	struct:PEMU_guest_os
+kmem_cache_free_addr	rev_sem/linux.h	/^	unsigned int kmem_cache_free_addr;$/;"	m	struct:koffset
+koffset	rev_sem/linux.h	/^struct koffset {$/;"	s
+kvm_allows_irq0_override	kvm-stub.c	/^bool kvm_allows_irq0_override(void)$/;"	f
+kvm_allows_irq0_override	kvm.c	/^bool kvm_allows_irq0_override(void)$/;"	f
+kvm_arch_get_registers	kvm.c	/^int kvm_arch_get_registers(CPUState *cs)$/;"	f
+kvm_arch_get_supported_cpuid	kvm.c	/^uint32_t kvm_arch_get_supported_cpuid(KVMState *s, uint32_t function,$/;"	f
+kvm_arch_handle_exit	kvm.c	/^int kvm_arch_handle_exit(CPUState *cs, struct kvm_run *run)$/;"	f
+kvm_arch_init	kvm.c	/^int kvm_arch_init(KVMState *s)$/;"	f
+kvm_arch_init_irq_routing	kvm.c	/^void kvm_arch_init_irq_routing(KVMState *s)$/;"	f
+kvm_arch_init_vcpu	kvm.c	/^int kvm_arch_init_vcpu(CPUState *cs)$/;"	f
+kvm_arch_insert_hw_breakpoint	kvm.c	/^int kvm_arch_insert_hw_breakpoint(target_ulong addr,$/;"	f
+kvm_arch_insert_sw_breakpoint	kvm.c	/^int kvm_arch_insert_sw_breakpoint(CPUState *cs, struct kvm_sw_breakpoint *bp)$/;"	f
+kvm_arch_on_sigbus	kvm.c	/^int kvm_arch_on_sigbus(int code, void *addr)$/;"	f
+kvm_arch_on_sigbus_vcpu	kvm.c	/^int kvm_arch_on_sigbus_vcpu(CPUState *c, int code, void *addr)$/;"	f
+kvm_arch_post_run	kvm.c	/^void kvm_arch_post_run(CPUState *cpu, struct kvm_run *run)$/;"	f
+kvm_arch_pre_run	kvm.c	/^void kvm_arch_pre_run(CPUState *cpu, struct kvm_run *run)$/;"	f
+kvm_arch_process_async_events	kvm.c	/^int kvm_arch_process_async_events(CPUState *cs)$/;"	f
+kvm_arch_put_registers	kvm.c	/^int kvm_arch_put_registers(CPUState *cpu, int level)$/;"	f
+kvm_arch_remove_all_hw_breakpoints	kvm.c	/^void kvm_arch_remove_all_hw_breakpoints(void)$/;"	f
+kvm_arch_remove_hw_breakpoint	kvm.c	/^int kvm_arch_remove_hw_breakpoint(target_ulong addr,$/;"	f
+kvm_arch_remove_sw_breakpoint	kvm.c	/^int kvm_arch_remove_sw_breakpoint(CPUState *cs, struct kvm_sw_breakpoint *bp)$/;"	f
+kvm_arch_required_capabilities	kvm.c	/^const KVMCapabilityInfo kvm_arch_required_capabilities[] = {$/;"	v
+kvm_arch_reset_vcpu	kvm.c	/^void kvm_arch_reset_vcpu(CPUState *cs)$/;"	f
+kvm_arch_stop_on_emulation_error	kvm.c	/^bool kvm_arch_stop_on_emulation_error(CPUState *cs)$/;"	f
+kvm_arch_update_guest_debug	kvm.c	/^void kvm_arch_update_guest_debug(CPUState *cpu, struct kvm_guest_debug *dbg)$/;"	f
+kvm_arch_vcpu_id	kvm.c	/^unsigned long kvm_arch_vcpu_id(CPUState *cs)$/;"	f
+kvm_assign_irq_internal	kvm.c	/^static int kvm_assign_irq_internal(KVMState *s, uint32_t dev_id,$/;"	f	file:
+kvm_check_features_against_host	cpu.c	/^static int kvm_check_features_against_host(X86CPU *cpu)$/;"	f	file:
+kvm_cpu_fill_host	cpu.c	/^static void kvm_cpu_fill_host(x86_def_t *x86_cpu_def)$/;"	f	file:
+kvm_deassign_irq_internal	kvm.c	/^static int kvm_deassign_irq_internal(KVMState *s, uint32_t dev_id,$/;"	f	file:
+kvm_default_features	cpu.c	/^static uint32_t kvm_default_features = (1 << KVM_FEATURE_CLOCKSOURCE) |$/;"	v	file:
+kvm_device_intx_assign	kvm.c	/^int kvm_device_intx_assign(KVMState *s, uint32_t dev_id, bool use_host_msi,$/;"	f
+kvm_device_intx_deassign	kvm.c	/^int kvm_device_intx_deassign(KVMState *s, uint32_t dev_id, bool use_host_msi)$/;"	f
+kvm_device_intx_set_mask	kvm.c	/^int kvm_device_intx_set_mask(KVMState *s, uint32_t dev_id, bool masked)$/;"	f
+kvm_device_msi_assign	kvm.c	/^int kvm_device_msi_assign(KVMState *s, uint32_t dev_id, int virq)$/;"	f
+kvm_device_msi_deassign	kvm.c	/^int kvm_device_msi_deassign(KVMState *s, uint32_t dev_id)$/;"	f
+kvm_device_msix_assign	kvm.c	/^int kvm_device_msix_assign(KVMState *s, uint32_t dev_id)$/;"	f
+kvm_device_msix_deassign	kvm.c	/^int kvm_device_msix_deassign(KVMState *s, uint32_t dev_id)$/;"	f
+kvm_device_msix_init_vectors	kvm.c	/^int kvm_device_msix_init_vectors(KVMState *s, uint32_t dev_id,$/;"	f
+kvm_device_msix_set_vector	kvm.c	/^int kvm_device_msix_set_vector(KVMState *s, uint32_t dev_id, uint32_t vector,$/;"	f
+kvm_device_msix_supported	kvm.c	/^bool kvm_device_msix_supported(KVMState *s)$/;"	f
+kvm_device_pci_assign	kvm.c	/^int kvm_device_pci_assign(KVMState *s, PCIHostDeviceAddress *dev_addr,$/;"	f
+kvm_device_pci_deassign	kvm.c	/^int kvm_device_pci_deassign(KVMState *s, uint32_t dev_id)$/;"	f
+kvm_feature_name	cpu.c	/^static const char *kvm_feature_name[] = {$/;"	v	file:
+kvm_get_apic	kvm.c	/^static int kvm_get_apic(X86CPU *cpu)$/;"	f	file:
+kvm_get_debugregs	kvm.c	/^static int kvm_get_debugregs(X86CPU *cpu)$/;"	f	file:
+kvm_get_fpu	kvm.c	/^static int kvm_get_fpu(X86CPU *cpu)$/;"	f	file:
+kvm_get_mce_cap_supported	kvm.c	/^static int kvm_get_mce_cap_supported(KVMState *s, uint64_t *mce_cap,$/;"	f	file:
+kvm_get_mp_state	kvm.c	/^static int kvm_get_mp_state(X86CPU *cpu)$/;"	f	file:
+kvm_get_msrs	kvm.c	/^static int kvm_get_msrs(X86CPU *cpu)$/;"	f	file:
+kvm_get_sregs	kvm.c	/^static int kvm_get_sregs(X86CPU *cpu)$/;"	f	file:
+kvm_get_supported_msrs	kvm.c	/^static int kvm_get_supported_msrs(KVMState *s)$/;"	f	file:
+kvm_get_vcpu_events	kvm.c	/^static int kvm_get_vcpu_events(X86CPU *cpu)$/;"	f	file:
+kvm_get_xcrs	kvm.c	/^static int kvm_get_xcrs(X86CPU *cpu)$/;"	f	file:
+kvm_get_xsave	kvm.c	/^static int kvm_get_xsave(X86CPU *cpu)$/;"	f	file:
+kvm_getput_reg	kvm.c	/^static void kvm_getput_reg(__u64 *kvm_reg, target_ulong *qemu_reg, int set)$/;"	f	file:
+kvm_getput_regs	kvm.c	/^static int kvm_getput_regs(X86CPU *cpu, int set)$/;"	f	file:
+kvm_guest_debug_workarounds	kvm.c	/^static int kvm_guest_debug_workarounds(X86CPU *cpu)$/;"	f	file:
+kvm_handle_debug	kvm.c	/^static int kvm_handle_debug(X86CPU *cpu,$/;"	f	file:
+kvm_handle_halt	kvm.c	/^static int kvm_handle_halt(X86CPU *cpu)$/;"	f	file:
+kvm_handle_tpr_access	kvm.c	/^static int kvm_handle_tpr_access(X86CPU *cpu)$/;"	f	file:
+kvm_hwpoison_page_add	kvm.c	/^static void kvm_hwpoison_page_add(ram_addr_t ram_addr)$/;"	f	file:
+kvm_inject_mce_oldstyle	kvm.c	/^static int kvm_inject_mce_oldstyle(X86CPU *cpu)$/;"	f	file:
+kvm_mce_inject	kvm.c	/^static void kvm_mce_inject(X86CPU *cpu, hwaddr paddr, int code)$/;"	f	file:
+kvm_msr_entry_set	kvm.c	/^static void kvm_msr_entry_set(struct kvm_msr_entry *entry,$/;"	f	file:
+kvm_para_features	kvm.c	/^struct kvm_para_features {$/;"	s	file:
+kvm_put_apic	kvm.c	/^static int kvm_put_apic(X86CPU *cpu)$/;"	f	file:
+kvm_put_debugregs	kvm.c	/^static int kvm_put_debugregs(X86CPU *cpu)$/;"	f	file:
+kvm_put_fpu	kvm.c	/^static int kvm_put_fpu(X86CPU *cpu)$/;"	f	file:
+kvm_put_mp_state	kvm.c	/^static int kvm_put_mp_state(X86CPU *cpu)$/;"	f	file:
+kvm_put_msrs	kvm.c	/^static int kvm_put_msrs(X86CPU *cpu, int level)$/;"	f	file:
+kvm_put_sregs	kvm.c	/^static int kvm_put_sregs(X86CPU *cpu)$/;"	f	file:
+kvm_put_vcpu_events	kvm.c	/^static int kvm_put_vcpu_events(X86CPU *cpu, int level)$/;"	f	file:
+kvm_put_xcrs	kvm.c	/^static int kvm_put_xcrs(X86CPU *cpu)$/;"	f	file:
+kvm_put_xsave	kvm.c	/^static int kvm_put_xsave(X86CPU *cpu)$/;"	f	file:
+kvm_unpoison_all	kvm.c	/^static void kvm_unpoison_all(void *param)$/;"	f	file:
+kvm_xsave_buf	cpu.h	/^    void *kvm_xsave_buf;$/;"	m	struct:CPUX86State
+last_excp_from	svm.h	/^	uint64_t last_excp_from;$/;"	m	struct:vmcb_save_area
+last_excp_to	svm.h	/^	uint64_t last_excp_to;$/;"	m	struct:vmcb_save_area
+lbr_ctl	svm.h	/^	uint64_t lbr_ctl;$/;"	m	struct:vmcb_control_area
+ldt	arch_dump.c	/^    QEMUCPUSegment ldt, tr, gdt, idt;$/;"	m	struct:QEMUCPUState	file:
+ldt	cpu.h	/^    SegmentCache ldt;$/;"	m	struct:CPUX86State
+ldtr	svm.h	/^	struct vmcb_seg ldtr;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+left	rev_sem/heap_shadow.h	/^    struct NodeTag *left;       \/\/ left child$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+len	kvm.c	/^    int len;$/;"	m	struct:__anon11	file:
+less_than_7	machine.c	/^static bool less_than_7(void *opaque, int version_id)$/;"	f	file:
+level	cpu.c	/^    uint32_t level;$/;"	m	struct:x86_def_t	file:
+limit	arch_dump.c	/^    uint32_t limit;$/;"	m	struct:QEMUCPUSegment	file:
+limit	cpu.h	/^    uint32_t limit;$/;"	m	struct:SegmentCache
+limit	svm.h	/^	uint32_t limit;$/;"	m	struct:vmcb_seg
+listflags	cpu.c	/^static void listflags(char *buf, int bufsize, uint32_t fbits,$/;"	f	file:
+listoffset	rev_sem/linux.h	/^	int listoffset;$/;"	m	struct:PEMU_guest_os
+listoffset	rev_sem/linux.h	/^    int listoffset; $/;"	m	struct:koffset
+lm_capable_kernel	kvm.c	/^static int lm_capable_kernel;$/;"	v	file:
+lma	translate.c	/^    int lma;    \/* long mode active *\/$/;"	m	struct:DisasContext	file:
+load_seg_cache_raw_dt	seg_helper.c	/^static inline void load_seg_cache_raw_dt(SegmentCache *sc, uint32_t e1,$/;"	f	file:
+load_seg_vm	seg_helper.c	/^static inline void load_seg_vm(CPUX86State *env, int seg, int selector)$/;"	f	file:
+load_segment	seg_helper.c	/^static inline int load_segment(CPUX86State *env, uint32_t *e1_ptr,$/;"	f	file:
+lookup_feature	cpu.c	/^static bool lookup_feature(uint32_t *pval, const char *s, const char *e,$/;"	f	file:
+lshift	cpu.h	/^static inline target_long lshift(target_long x, int n)$/;"	f
+lstar	cpu.h	/^    target_ulong lstar;$/;"	m	struct:CPUX86State
+lstar	svm.h	/^	uint64_t lstar;$/;"	m	struct:vmcb_save_area
+mant	machine.c	/^    uint64_t mant;$/;"	m	union:x86_longdouble	file:
+mask	cpu.h	/^    uint64_t mask;$/;"	m	struct:__anon9
+mask	translate.c	/^    target_ulong mask;$/;"	m	struct:CCPrepare	file:
+mce_banks	cpu.h	/^    uint64_t mce_banks[MCE_BANKS_DEF*4];$/;"	m	struct:CPUX86State
+mce_init	cpu.c	/^static void mce_init(X86CPU *cpu)$/;"	f	file:
+mcg_cap	cpu.h	/^    uint64_t mcg_cap;$/;"	m	struct:CPUX86State
+mcg_ctl	cpu.h	/^    uint64_t mcg_ctl;$/;"	m	struct:CPUX86State
+mcg_status	cpu.h	/^    uint64_t mcg_status;$/;"	m	struct:CPUX86State
+mcg_status	helper.c	/^    uint64_t mcg_status;$/;"	m	struct:MCEInjectionParams	file:
+mem_index	translate.c	/^    int mem_index; \/* select memory access functions *\/$/;"	m	struct:DisasContext	file:
+mem_taint_format	rev_sem/taint.c	/^void mem_taint_format()$/;"	f
+misc	helper.c	/^    uint64_t misc;$/;"	m	struct:MCEInjectionParams	file:
+misc_enable_needed	machine.c	/^static bool misc_enable_needed(void *opaque)$/;"	f	file:
+mmoffset	rev_sem/linux.h	/^	int mmoffset;$/;"	m	struct:PEMU_guest_os
+mmoffset	rev_sem/linux.h	/^    int mmoffset; $/;"	m	struct:koffset
+mmx	cpu.h	/^    MMXReg mmx;$/;"	m	union:__anon8
+mmx_status	cpu.h	/^    float_status mmx_status; \/* for 3DNow! float ops *\/$/;"	m	struct:CPUX86State
+mmx_t0	cpu.h	/^    MMXReg mmx_t0;$/;"	m	struct:CPUX86State
+model	cpu.c	/^    int model;$/;"	m	struct:x86_def_t	file:
+model_features_t	cpu.c	/^typedef struct model_features_t {$/;"	s	file:
+model_features_t	cpu.c	/^} model_features_t;$/;"	t	typeref:struct:model_features_t	file:
+model_id	cpu.c	/^    char model_id[48];$/;"	m	struct:x86_def_t	file:
+mon	helper.c	/^    Monitor *mon;$/;"	m	struct:MCEInjectionParams	file:
+mp_state	cpu.h	/^    uint32_t mp_state;$/;"	m	struct:CPUX86State
+msr_ia32_misc_enable	cpu.h	/^    uint64_t msr_ia32_misc_enable;$/;"	m	struct:CPUX86State
+msrpm_base_pa	svm.h	/^	uint64_t msrpm_base_pa;$/;"	m	struct:vmcb_control_area
+mtrr_deftype	cpu.h	/^    uint64_t mtrr_deftype;$/;"	m	struct:CPUX86State
+mtrr_fixed	cpu.h	/^    uint64_t mtrr_fixed[11];$/;"	m	struct:CPUX86State
+mtrr_var	cpu.h	/^    MTRRVar mtrr_var[8];$/;"	m	struct:CPUX86State
+mxcsr	cpu.h	/^    uint32_t mxcsr;$/;"	m	struct:CPUX86State
+name	cpu.c	/^    const char *name;$/;"	m	struct:X86RegisterInfo32	file:
+name	cpu.c	/^    const char *name;$/;"	m	struct:x86_def_t	file:
+name	rev_sem/linux.h	/^	char name[100];$/;"	m	struct:_Libc_item
+nb_hw_breakpoint	kvm.c	/^static int nb_hw_breakpoint;$/;"	v	file:
+neg128	int_helper.c	/^static void neg128(uint64_t *plow, uint64_t *phigh)$/;"	f	file:
+nested_cr3	svm.h	/^	uint64_t nested_cr3;$/;"	m	struct:vmcb_control_area
+nested_ctl	svm.h	/^	uint64_t nested_ctl;$/;"	m	struct:vmcb_control_area
+next_task_struct	rev_sem/linux.c	/^static uint32_t next_task_struct(uint32_t addr)$/;"	f	file:
+nmi_injected	cpu.h	/^    uint8_t nmi_injected;$/;"	m	struct:CPUX86State
+nmi_pending	cpu.h	/^    uint8_t nmi_pending;$/;"	m	struct:CPUX86State
+no_setcond	translate.c	/^    bool no_setcond;$/;"	m	struct:CCPrepare	file:
+nodeColor	rev_sem/heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	t	typeref:enum:__anon14
+old_exception	cpu.h	/^    int old_exception;  \/* exception in flight *\/$/;"	m	struct:CPUX86State
+op	translate.c	/^    SSEFunc_0_epp op[2];$/;"	m	struct:SSEOpHelper_epp	file:
+op	translate.c	/^    SSEFunc_0_eppi op[2];$/;"	m	struct:SSEOpHelper_eppi	file:
+operand_is_imm	rev_sem/parse_operand.c	/^int operand_is_imm(const xed_operand_enum_t op_name, uint32_t *value) {$/;"	f
+operand_is_mem	rev_sem/parse_operand.c	/^int operand_is_mem(const xed_operand_enum_t op_name, uint32_t* mem_addr, $/;"	f
+operand_is_reg	rev_sem/parse_operand.c	/^int operand_is_reg(const xed_operand_enum_t op_name, xed_reg_enum_t * reg_id) $/;"	f
+operand_is_relbr	rev_sem/parse_operand.c	/^int operand_is_relbr(const xed_operand_enum_t op_name, uint32_t * branch) $/;"	f
+optimize_flags_init	translate.c	/^void optimize_flags_init(void)$/;"	f
+orig_eax	arch_dump.c	/^    uint32_t orig_eax, eip;$/;"	m	struct:__anon3	file:
+orig_rax	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+override	translate.c	/^    int override; \/* -1 if no override *\/$/;"	m	struct:DisasContext	file:
+pad	arch_dump.c	/^    uint32_t pad;$/;"	m	struct:QEMUCPUSegment	file:
+pad1	arch_dump.c	/^    char pad1[24];$/;"	m	struct:__anon4	file:
+pad1	arch_dump.c	/^    char pad1[32];$/;"	m	struct:__anon2	file:
+pad2	arch_dump.c	/^    char pad2[44];$/;"	m	struct:__anon4	file:
+pad2	arch_dump.c	/^    char pad2[76];$/;"	m	struct:__anon2	file:
+pad3	arch_dump.c	/^    char pad3[4];$/;"	m	struct:__anon4	file:
+pad3	arch_dump.c	/^    char pad3[8];$/;"	m	struct:__anon2	file:
+para_features	kvm.c	/^} para_features[] = {$/;"	v	typeref:struct:kvm_para_features
+parent	rev_sem/heap_shadow.h	/^    struct NodeTag *parent;     \/\/ parent$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+parent_class	cpu-qom.h	/^    CPUClass parent_class;$/;"	m	struct:X86CPUClass
+parent_obj	cpu-qom.h	/^    CPUState parent_obj;$/;"	m	struct:X86CPU
+parent_realize	cpu-qom.h	/^    DeviceRealize parent_realize;$/;"	m	struct:X86CPUClass
+parent_reset	cpu-qom.h	/^    void (*parent_reset)(CPUState *cpu);$/;"	m	struct:X86CPUClass
+parity_table	cc_helper.c	/^const uint8_t parity_table[256] = {$/;"	v
+pat	cpu.h	/^    uint64_t pat;$/;"	m	struct:CPUX86State
+pc	translate.c	/^    target_ulong pc; \/* pc = eip + cs_base *\/$/;"	m	struct:DisasContext	file:
+pcmp_elen	ops_sse.h	/^static inline int pcmp_elen(CPUX86State *env, int reg, uint32_t ctrl)$/;"	f
+pcmp_ilen	ops_sse.h	/^static inline int pcmp_ilen(Reg *r, uint8_t ctrl)$/;"	f
+pcmp_val	ops_sse.h	/^static inline int pcmp_val(Reg *r, uint8_t ctrl, int i)$/;"	f
+pcmpxstrx	ops_sse.h	/^static inline unsigned pcmpxstrx(CPUX86State *env, Reg *d, Reg *s,$/;"	f
+pe	translate.c	/^    int pe;     \/* protected mode *\/$/;"	m	struct:DisasContext	file:
+pemu_exec_stats	rev_sem/pemu.c	/^struct PEMU_EXEC_STATS pemu_exec_stats;$/;"	v	typeref:struct:PEMU_EXEC_STATS
+pemu_guest_os	rev_sem/linux.c	/^struct PEMU_guest_os pemu_guest_os;$/;"	v	typeref:struct:PEMU_guest_os
+pemu_inst	rev_sem/pemu.c	/^struct PEMU_INST pemu_inst;$/;"	v	typeref:struct:PEMU_INST
+pgdoffset	rev_sem/linux.h	/^	int pgdoffset;$/;"	m	struct:PEMU_guest_os
+pgdoffset	rev_sem/linux.h	/^    int pgdoffset; $/;"	m	struct:koffset
+pid	arch_dump.c	/^    uint32_t pid;$/;"	m	struct:__anon2	file:
+pid	arch_dump.c	/^    uint32_t pid;$/;"	m	struct:__anon4	file:
+pidoffset	rev_sem/linux.h	/^	int pidoffset;$/;"	m	struct:PEMU_guest_os
+pidoffset	rev_sem/linux.h	/^    int pidoffset; $/;"	m	struct:koffset
+popl_esp_hack	translate.c	/^    int popl_esp_hack; \/* for correct popl with esp base handling *\/$/;"	m	struct:DisasContext	file:
+prefix	translate.c	/^    int prefix;$/;"	m	struct:DisasContext	file:
+put_fpreg	machine.c	/^static void put_fpreg(QEMUFile *f, void *opaque, size_t size)$/;"	f	file:
+put_fpreg_error	machine.c	/^static void put_fpreg_error(QEMUFile *f, void *opaque, size_t size)$/;"	f	file:
+put_uint64_as_uint32	machine.c	/^static void put_uint64_as_uint32(QEMUFile *f, void *pv, size_t size)$/;"	f	file:
+pv_eoi_en_msr	cpu.h	/^    uint64_t pv_eoi_en_msr;$/;"	m	struct:CPUX86State
+pv_eoi_msr_needed	machine.c	/^static bool pv_eoi_msr_needed(void *opaque)$/;"	f	file:
+q	cpu.h	/^    uint64_t q;$/;"	m	union:__anon7
+qapi_enum	cpu.c	/^    X86CPURegister32 qapi_enum;$/;"	m	struct:X86RegisterInfo32	file:
+qemu_get_cpustate	arch_dump.c	/^static void qemu_get_cpustate(QEMUCPUState *s, CPUX86State *env)$/;"	f	file:
+r10	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r10	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r11	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r11	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r12	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r12	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r13	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r13	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r14	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r14	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r15	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+r15	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r8	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+r8	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+r9	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+r9	arch_dump.c	/^    uint64_t r8, r9, r10, r11, r12, r13, r14, r15;$/;"	m	struct:QEMUCPUState	file:
+raise_exception	excp_helper.c	/^void raise_exception(CPUX86State *env, int exception_index)$/;"	f
+raise_exception_err	excp_helper.c	/^void raise_exception_err(CPUX86State *env, int exception_index,$/;"	f
+raise_interrupt	excp_helper.c	/^void QEMU_NORETURN raise_interrupt(CPUX86State *env, int intno, int is_int,$/;"	f
+raise_interrupt2	excp_helper.c	/^static void QEMU_NORETURN raise_interrupt2(CPUX86State *env, int intno,$/;"	f	file:
+ram_addr	kvm.c	/^    ram_addr_t ram_addr;$/;"	m	struct:HWPoisonPage	file:
+rax	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+rax	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rax	svm.h	/^	uint64_t rax;$/;"	m	struct:vmcb_save_area
+rbp	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+rbp	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rbtDelete	rev_sem/rb_tree.c	/^static void rbtDelete(NodeType *p) {$/;"	f	file:
+rbtErase	rev_sem/rb_tree.c	/^static RbtStatus rbtErase(NodeType * z) {$/;"	f	file:
+rbtFind	rev_sem/rb_tree.c	/^static NodeType *rbtFind(KeyType key) {$/;"	f	file:
+rbtInorder	rev_sem/rb_tree.c	/^static void rbtInorder(NodeType *node, RB_CALLBACK callback, void* p) {$/;"	f	file:
+rbtInsert	rev_sem/rb_tree.c	/^static RbtStatus rbtInsert(KeyType key, KeyType size, heap_shadow_node_t *p) {$/;"	f	file:
+rbx	arch_dump.c	/^    target_ulong r15, r14, r13, r12, rbp, rbx, r11, r10;$/;"	m	struct:__anon1	file:
+rbx	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rclb_table	int_helper.c	/^static const uint8_t rclb_table[32] = {$/;"	v	file:
+rclw_table	int_helper.c	/^static const uint8_t rclw_table[32] = {$/;"	v	file:
+rcx	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+rcx	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rdi	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+rdi	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rdx	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+rdx	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+reg	translate.c	/^    TCGv reg;$/;"	m	struct:CCPrepare	file:
+reg2	translate.c	/^    TCGv reg2;$/;"	m	struct:CCPrepare	file:
+regTaint	rev_sem/taint.c	/^unsigned int regTaint[XED_REG_LAST];$/;"	v
+regUntainted	rev_sem/taint.c	/^void regUntainted()$/;"	f
+regUntainted_fd	rev_sem/taint.c	/^void regUntainted_fd()$/;"	f
+regs	arch_dump.c	/^    x86_64_user_regs_struct regs;$/;"	m	struct:__anon2	file:
+regs	arch_dump.c	/^    x86_user_regs_struct regs;$/;"	m	struct:__anon4	file:
+regs	cpu.h	/^    target_ulong regs[CPU_NB_REGS];$/;"	m	struct:CPUX86State
+reserved_1	svm.h	/^	uint8_t reserved_1[43];$/;"	m	struct:vmcb_save_area
+reserved_1	svm.h	/^	uint8_t reserved_1[44];$/;"	m	struct:vmcb_control_area
+reserved_2	svm.h	/^	uint8_t reserved_2[3];$/;"	m	struct:vmcb_control_area
+reserved_2	svm.h	/^	uint8_t reserved_2[4];$/;"	m	struct:vmcb_save_area
+reserved_3	svm.h	/^	uint8_t reserved_3[112];$/;"	m	struct:vmcb_save_area
+reserved_3	svm.h	/^	uint8_t reserved_3[4];$/;"	m	struct:vmcb_control_area
+reserved_4	svm.h	/^	uint8_t reserved_4[16];$/;"	m	struct:vmcb_control_area
+reserved_4	svm.h	/^	uint8_t reserved_4[88];$/;"	m	struct:vmcb_save_area
+reserved_5	svm.h	/^	uint8_t reserved_5[24];$/;"	m	struct:vmcb_save_area
+reserved_5	svm.h	/^	uint8_t reserved_5[832];$/;"	m	struct:vmcb_control_area
+reserved_6	svm.h	/^	uint8_t reserved_6[32];$/;"	m	struct:vmcb_save_area
+restore_state_to_opc	translate.c	/^void restore_state_to_opc(CPUX86State *env, TranslationBlock *tb, int pc_pos)$/;"	f
+ret	rev_sem/heap_shadow.h	/^	KeyType ret;				\/\/return addres for each kmem_cache_alloc	$/;"	m	struct:NodeTag
+rex_b	translate.c	/^    int rex_x, rex_b;$/;"	m	struct:DisasContext	file:
+rex_x	translate.c	/^    int rex_x, rex_b;$/;"	m	struct:DisasContext	file:
+rflags	arch_dump.c	/^    uint64_t rip, rflags;$/;"	m	struct:QEMUCPUState	file:
+rflags	svm.h	/^	uint64_t rflags;$/;"	m	struct:vmcb_save_area
+right	rev_sem/heap_shadow.h	/^    struct NodeTag *right;      \/\/ right child$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+rip	arch_dump.c	/^    target_ulong rip, cs, eflags;$/;"	m	struct:__anon1	file:
+rip	arch_dump.c	/^    uint64_t rip, rflags;$/;"	m	struct:QEMUCPUState	file:
+rip	svm.h	/^	uint64_t rip;$/;"	m	struct:vmcb_save_area
+rip_offset	translate.c	/^    int rip_offset; \/* only used in x86_64, but left for simplicity *\/$/;"	m	struct:DisasContext	file:
+root	rev_sem/rb_tree.c	/^static NodeType *root = SENTINEL; \/\/ root of red-black tree$/;"	v	file:
+rotateLeft	rev_sem/rb_tree.c	/^static void rotateLeft(NodeType *x) {$/;"	f	file:
+rotateRight	rev_sem/rb_tree.c	/^static void rotateRight(NodeType *x) {$/;"	f	file:
+rsi	arch_dump.c	/^    target_ulong r9, r8, rax, rcx, rdx, rsi, rdi, orig_rax;$/;"	m	struct:__anon1	file:
+rsi	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rsp	arch_dump.c	/^    target_ulong rsp, ss;$/;"	m	struct:__anon1	file:
+rsp	arch_dump.c	/^    uint64_t rax, rbx, rcx, rdx, rsi, rdi, rsp, rbp;$/;"	m	struct:QEMUCPUState	file:
+rsp	svm.h	/^	uint64_t rsp;$/;"	m	struct:vmcb_save_area
+s_base	rev_sem/parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_base_regid	rev_sem/parse_operand.c	/^xed_reg_enum_t s_base_regid, s_index_regid;$/;"	v
+s_dis	rev_sem/parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_index	rev_sem/parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_index_regid	rev_sem/parse_operand.c	/^xed_reg_enum_t s_base_regid, s_index_regid;$/;"	v
+s_scale	rev_sem/parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+satsb	ops_sse.h	/^static inline int satsb(int x)$/;"	f
+satsw	ops_sse.h	/^static inline int satsw(int x)$/;"	f
+satub	ops_sse.h	/^static inline int satub(int x)$/;"	f
+satuw	ops_sse.h	/^static inline int satuw(int x)$/;"	f
+save	svm.h	/^	struct vmcb_save_area save;$/;"	m	struct:vmcb	typeref:struct:vmcb::vmcb_save_area
+segs	cpu.h	/^    SegmentCache segs[6]; \/* selector values *\/$/;"	m	struct:CPUX86State
+selector	arch_dump.c	/^    uint32_t selector;$/;"	m	struct:QEMUCPUSegment	file:
+selector	cpu.h	/^    uint32_t selector;$/;"	m	struct:SegmentCache
+selector	svm.h	/^	uint16_t selector;$/;"	m	struct:vmcb_seg
+sentinel	rev_sem/rb_tree.c	/^static NodeType sentinel = { SENTINEL, SENTINEL, 0, BLACK, 0};$/;"	v	file:
+set_cc_op	translate.c	/^static void set_cc_op(DisasContext *s, CCOp op)$/;"	f	file:
+set_mem_taint	rev_sem/taint.c	/^void  set_mem_taint( Addr a, unsigned int bytes)$/;"	f
+set_mem_taint_bysize	rev_sem/taint.c	/^void  set_mem_taint_bysize( Addr a, unsigned int bytes, UInt size)$/;"	f
+set_reg_taint	rev_sem/taint.c	/^void set_reg_taint(xed_reg_enum_t reg, unsigned int bytes)$/;"	f
+set_reg_taint_fd	rev_sem/taint.c	/^void set_reg_taint_fd(xed_reg_enum_t reg, unsigned int bytes)$/;"	f
+set_seg	kvm.c	/^static void set_seg(struct kvm_segment *lhs, const SegmentCache *rhs)$/;"	f	file:
+set_taint_source_args	rev_sem/hook_inst.c	/^void set_taint_source_args(void)$/;"	f
+set_taint_source_heaps	rev_sem/hook_inst.c	/^void set_taint_source_heaps(uint32_t addr, int len)$/;"	f
+set_v8086_seg	kvm.c	/^static void set_v8086_seg(struct kvm_segment *lhs, const SegmentCache *rhs)$/;"	f	file:
+setup_inst_hook	rev_sem/hook_inst.c	/^void setup_inst_hook()$/;"	f
+sfmask	svm.h	/^	uint64_t sfmask;$/;"	m	struct:vmcb_save_area
+shadow_bytes	rev_sem/taint.c	/^unsigned int shadow_bytes;$/;"	v
+shadow_heap_node	rev_sem/heap_shadow.h	/^typedef struct shadow_heap_node$/;"	s
+shadow_size	rev_sem/heap_shadow.h	/^	unsigned int shadow_size;$/;"	m	struct:shadow_heap_node
+singlestep_enabled	translate.c	/^    int singlestep_enabled; \/* "hardware" single step enabled *\/$/;"	m	struct:DisasContext	file:
+sipi_vector	cpu.h	/^    uint32_t sipi_vector;$/;"	m	struct:CPUX86State
+size	arch_dump.c	/^    uint32_t size;$/;"	m	struct:QEMUCPUState	file:
+size	rev_sem/heap_shadow.h	/^    KeyType size;				\/\/ allocation size -->also used in searching$/;"	m	struct:NodeTag
+smbase	cpu.h	/^    uint32_t smbase;$/;"	m	struct:CPUX86State
+soft_interrupt	cpu.h	/^    uint8_t soft_interrupt;$/;"	m	struct:CPUX86State
+ss	arch_dump.c	/^    QEMUCPUSegment cs, ds, es, fs, gs, ss;$/;"	m	struct:QEMUCPUState	file:
+ss	arch_dump.c	/^    target_ulong rsp, ss;$/;"	m	struct:__anon1	file:
+ss	arch_dump.c	/^    unsigned short ss, __ss;$/;"	m	struct:__anon3	file:
+ss	svm.h	/^	struct vmcb_seg ss;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+ss32	translate.c	/^    int ss32;   \/* 32 bit stack segment *\/$/;"	m	struct:DisasContext	file:
+sse_op_table1	translate.c	/^static const SSEFunc_0_epp sse_op_table1[256][4] = {$/;"	v	file:
+sse_op_table2	translate.c	/^static const SSEFunc_0_epp sse_op_table2[3 * 8][2] = {$/;"	v	file:
+sse_op_table3ai	translate.c	/^static const SSEFunc_0_epi sse_op_table3ai[] = {$/;"	v	file:
+sse_op_table3aq	translate.c	/^static const SSEFunc_0_epl sse_op_table3aq[] = {$/;"	v	file:
+sse_op_table3bi	translate.c	/^static const SSEFunc_i_ep sse_op_table3bi[] = {$/;"	v	file:
+sse_op_table3bq	translate.c	/^static const SSEFunc_l_ep sse_op_table3bq[] = {$/;"	v	file:
+sse_op_table4	translate.c	/^static const SSEFunc_0_epp sse_op_table4[8][4] = {$/;"	v	file:
+sse_op_table5	translate.c	/^static const SSEFunc_0_epp sse_op_table5[256] = {$/;"	v	file:
+sse_op_table6	translate.c	/^static const struct SSEOpHelper_epp sse_op_table6[256] = {$/;"	v	typeref:struct:SSEOpHelper_epp	file:
+sse_op_table7	translate.c	/^static const struct SSEOpHelper_eppi sse_op_table7[256] = {$/;"	v	typeref:struct:SSEOpHelper_eppi	file:
+sse_status	cpu.h	/^    float_status sse_status;$/;"	m	struct:CPUX86State
+sstrcmp	cpu.c	/^static int sstrcmp(const char *s1, const char *e1, const char *s2,$/;"	f	file:
+star	cpu.h	/^    uint64_t star;$/;"	m	struct:CPUX86State
+star	svm.h	/^	uint64_t star;$/;"	m	struct:vmcb_save_area
+start_addr	rev_sem/heap_shadow.h	/^	unsigned int start_addr;$/;"	m	struct:shadow_heap_node
+status	helper.c	/^    uint64_t status;$/;"	m	struct:MCEInjectionParams	file:
+steal_time_msr	cpu.h	/^    uint64_t steal_time_msr;$/;"	m	struct:CPUX86State
+steal_time_msr_needed	machine.c	/^static bool steal_time_msr_needed(void *opaque)$/;"	f	file:
+stepping	cpu.c	/^    int stepping;$/;"	m	struct:x86_def_t	file:
+svm_feature_name	cpu.c	/^static const char *svm_feature_name[] = {$/;"	v	file:
+svm_is_rep	translate.c	/^static inline int svm_is_rep(int prefixes)$/;"	f	file:
+svm_load_seg	svm_helper.c	/^static inline void svm_load_seg(CPUX86State *env, hwaddr addr,$/;"	f	file:
+svm_load_seg_cache	svm_helper.c	/^static inline void svm_load_seg_cache(CPUX86State *env, hwaddr addr,$/;"	f	file:
+svm_save_seg	svm_helper.c	/^static inline void svm_save_seg(CPUX86State *env, hwaddr addr,$/;"	f	file:
+switch_tss	seg_helper.c	/^static void switch_tss(CPUX86State *env, int tss_selector,$/;"	f	file:
+sysenter_cs	cpu.h	/^    uint32_t sysenter_cs;$/;"	m	struct:CPUX86State
+sysenter_cs	svm.h	/^	uint64_t sysenter_cs;$/;"	m	struct:vmcb_save_area
+sysenter_eip	cpu.h	/^    target_ulong sysenter_eip;$/;"	m	struct:CPUX86State
+sysenter_eip	svm.h	/^	uint64_t sysenter_eip;$/;"	m	struct:vmcb_save_area
+sysenter_esp	cpu.h	/^    target_ulong sysenter_esp;$/;"	m	struct:CPUX86State
+sysenter_esp	svm.h	/^	uint64_t sysenter_esp;$/;"	m	struct:vmcb_save_area
+system_time_msr	cpu.h	/^    uint64_t system_time_msr;$/;"	m	struct:CPUX86State
+taintInit	rev_sem/taint.c	/^void taintInit()$/;"	f
+taint_mem_access0	rev_sem/hook_inst.c	/^static void taint_mem_access0(INS ins)$/;"	f	file:
+taskaddr	rev_sem/linux.h	/^	unsigned int taskaddr;$/;"	m	struct:PEMU_guest_os
+taskaddr	rev_sem/linux.h	/^    unsigned int taskaddr; $/;"	m	struct:koffset
+tasksize	rev_sem/linux.h	/^	int tasksize;$/;"	m	struct:PEMU_guest_os
+tasksize	rev_sem/linux.h	/^    int tasksize; $/;"	m	struct:koffset
+tb	translate.c	/^    struct TranslationBlock *tb;$/;"	m	struct:DisasContext	typeref:struct:DisasContext::TranslationBlock	file:
+tcg_gen_lshift	translate.c	/^static inline void tcg_gen_lshift(TCGv ret, TCGv arg1, target_long arg2)$/;"	f	file:
+tf	translate.c	/^    int tf;     \/* TF cpu flag *\/$/;"	m	struct:DisasContext	file:
+tlb_ctl	svm.h	/^	uint8_t tlb_ctl;$/;"	m	struct:vmcb_control_area
+tlb_fill	mem_helper.c	/^void tlb_fill(CPUX86State *env, target_ulong addr, int is_write, int mmu_idx,$/;"	f
+tpr_access_type	cpu.h	/^    TPRAccess tpr_access_type;$/;"	m	struct:CPUX86State
+tr	arch_dump.c	/^    QEMUCPUSegment ldt, tr, gdt, idt;$/;"	m	struct:QEMUCPUState	file:
+tr	cpu.h	/^    SegmentCache tr;$/;"	m	struct:CPUX86State
+tr	svm.h	/^	struct vmcb_seg tr;$/;"	m	struct:vmcb_save_area	typeref:struct:vmcb_save_area::vmcb_seg
+try_get_cpuid	kvm.c	/^static struct kvm_cpuid2 *try_get_cpuid(KVMState *s, int max)$/;"	f	file:
+tsc	cpu.h	/^    uint64_t tsc;$/;"	m	struct:CPUX86State
+tsc_adjust	cpu.h	/^    uint64_t tsc_adjust;$/;"	m	struct:CPUX86State
+tsc_adjust_needed	machine.c	/^static bool tsc_adjust_needed(void *opaque)$/;"	f	file:
+tsc_aux	cpu.h	/^    uint64_t tsc_aux;$/;"	m	struct:CPUX86State
+tsc_deadline	cpu.h	/^    uint64_t tsc_deadline;$/;"	m	struct:CPUX86State
+tsc_khz	cpu.h	/^    int tsc_khz;$/;"	m	struct:CPUX86State
+tsc_offset	cpu.h	/^    uint64_t tsc_offset;$/;"	m	struct:CPUX86State
+tsc_offset	svm.h	/^	uint64_t tsc_offset;$/;"	m	struct:vmcb_control_area
+tsc_valid	cpu.h	/^    bool tsc_valid;$/;"	m	struct:CPUX86State
+tscdeadline_needed	machine.c	/^static bool tscdeadline_needed(void *opaque)$/;"	f	file:
+tss_load_seg	seg_helper.c	/^static void tss_load_seg(CPUX86State *env, int seg_reg, int selector)$/;"	f	file:
+type	kvm.c	/^    int type;$/;"	m	struct:__anon11	file:
+type	rev_sem/heap_shadow.h	/^	void * type;$/;"	m	struct:shadow_heap_node
+unavailable_host_feature	cpu.c	/^static int unavailable_host_feature(FeatureWordInfo *f, uint32_t mask)$/;"	f	file:
+update_fp_status	fpu_helper.c	/^static void update_fp_status(CPUX86State *env)$/;"	f	file:
+update_sse_status	fpu_helper.c	/^static void update_sse_status(CPUX86State *env)$/;"	f	file:
+use_reg2	translate.c	/^    bool use_reg2;$/;"	m	struct:CCPrepare	file:
+v_tpr	cpu.h	/^    uint8_t v_tpr;$/;"	m	struct:CPUX86State
+val	rev_sem/heap_shadow.h	/^	ValType *val;                \/\/ data related to key$/;"	m	struct:NodeTag
+validate_seg	seg_helper.c	/^static inline void validate_seg(CPUX86State *env, int seg_reg, int cpl)$/;"	f	file:
+vendor	cpu.c	/^    char vendor[CPUID_VENDOR_SZ + 1];$/;"	m	struct:x86_def_t	file:
+version	arch_dump.c	/^    uint32_t version;$/;"	m	struct:QEMUCPUState	file:
+version	rev_sem/linux.h	/^    char version[128]; $/;"	m	struct:koffset
+version_is_5	machine.c	/^static bool version_is_5(void *opaque, int version_id)$/;"	f	file:
+vex_l	translate.c	/^    int vex_l;  \/* vex vector length *\/$/;"	m	struct:DisasContext	file:
+vex_v	translate.c	/^    int vex_v;  \/* vex vvvv register, without 1's compliment.  *\/$/;"	m	struct:DisasContext	file:
+vm86	translate.c	/^    int vm86;   \/* vm86 mode *\/$/;"	m	struct:DisasContext	file:
+vm_hsave	cpu.h	/^    uint64_t vm_hsave;$/;"	m	struct:CPUX86State
+vm_vmcb	cpu.h	/^    uint64_t vm_vmcb;$/;"	m	struct:CPUX86State
+vmcb	svm.h	/^struct QEMU_PACKED vmcb {$/;"	s
+vmcb_control_area	svm.h	/^struct QEMU_PACKED vmcb_control_area {$/;"	s
+vmcb_save_area	svm.h	/^struct QEMU_PACKED vmcb_save_area {$/;"	s
+vmcb_seg	svm.h	/^struct QEMU_PACKED vmcb_seg {$/;"	s
+vmendoffset	rev_sem/linux.h	/^	int vmendoffset;$/;"	m	struct:PEMU_guest_os
+vmendoffset	rev_sem/linux.h	/^    int vmendoffset;$/;"	m	struct:koffset
+vmfileoffset	rev_sem/linux.h	/^	int vmfileoffset;$/;"	m	struct:PEMU_guest_os
+vmfileoffset	rev_sem/linux.h	/^    int vmfileoffset;$/;"	m	struct:koffset
+vmflagsoffset	rev_sem/linux.h	/^	int vmflagsoffset;	$/;"	m	struct:PEMU_guest_os
+vmflagsoffset	rev_sem/linux.h	/^    int vmflagsoffset;	$/;"	m	struct:koffset
+vmnextoffset	rev_sem/linux.h	/^	int vmnextoffset;$/;"	m	struct:PEMU_guest_os
+vmnextoffset	rev_sem/linux.h	/^    int vmnextoffset; $/;"	m	struct:koffset
+vmstartoffset	rev_sem/linux.h	/^	int vmstartoffset;$/;"	m	struct:PEMU_guest_os
+vmstartoffset	rev_sem/linux.h	/^    int vmstartoffset; $/;"	m	struct:koffset
+vmstate_async_pf_msr	machine.c	/^static const VMStateDescription vmstate_async_pf_msr = {$/;"	v	file:
+vmstate_fpop_ip_dp	machine.c	/^static const VMStateDescription vmstate_fpop_ip_dp = {$/;"	v	file:
+vmstate_fpreg	machine.c	/^static const VMStateInfo vmstate_fpreg = {$/;"	v	file:
+vmstate_fpreg_1_mmx	machine.c	/^static const VMStateInfo vmstate_fpreg_1_mmx = {$/;"	v	file:
+vmstate_fpreg_1_no_mmx	machine.c	/^static const VMStateInfo vmstate_fpreg_1_no_mmx = {$/;"	v	file:
+vmstate_hack_uint64_as_uint32	machine.c	/^static const VMStateInfo vmstate_hack_uint64_as_uint32 = {$/;"	v	file:
+vmstate_msr_ia32_misc_enable	machine.c	/^static const VMStateDescription vmstate_msr_ia32_misc_enable = {$/;"	v	file:
+vmstate_msr_tsc_adjust	machine.c	/^static const VMStateDescription vmstate_msr_tsc_adjust = {$/;"	v	file:
+vmstate_msr_tscdeadline	machine.c	/^static const VMStateDescription vmstate_msr_tscdeadline = {$/;"	v	file:
+vmstate_mtrr_var	machine.c	/^static const VMStateDescription vmstate_mtrr_var = {$/;"	v	file:
+vmstate_pv_eoi_msr	machine.c	/^static const VMStateDescription vmstate_pv_eoi_msr = {$/;"	v	file:
+vmstate_segment	machine.c	/^static const VMStateDescription vmstate_segment = {$/;"	v	file:
+vmstate_steal_time_msr	machine.c	/^static const VMStateDescription vmstate_steal_time_msr = {$/;"	v	file:
+vmstate_x86_cpu	machine.c	/^const VMStateDescription vmstate_x86_cpu = {$/;"	v
+vmstate_xmm_reg	machine.c	/^static const VMStateDescription vmstate_xmm_reg = {$/;"	v	file:
+vmstate_ymmh_reg	machine.c	/^static const VMStateDescription vmstate_ymmh_reg = {$/;"	v	file:
+walk_pde	arch_memory_mapping.c	/^static void walk_pde(MemoryMappingList *list, hwaddr pde_start_addr,$/;"	f	file:
+walk_pde2	arch_memory_mapping.c	/^static void walk_pde2(MemoryMappingList *list,$/;"	f	file:
+walk_pdpe	arch_memory_mapping.c	/^static void walk_pdpe(MemoryMappingList *list,$/;"	f	file:
+walk_pdpe2	arch_memory_mapping.c	/^static void walk_pdpe2(MemoryMappingList *list,$/;"	f	file:
+walk_pml4e	arch_memory_mapping.c	/^static void walk_pml4e(MemoryMappingList *list,$/;"	f	file:
+walk_pte	arch_memory_mapping.c	/^static void walk_pte(MemoryMappingList *list, hwaddr pte_start_addr,$/;"	f	file:
+walk_pte2	arch_memory_mapping.c	/^static void walk_pte2(MemoryMappingList *list,$/;"	f	file:
+wall_clock_msr	cpu.h	/^    uint64_t wall_clock_msr;$/;"	m	struct:CPUX86State
+x86_64_elf_prstatus	arch_dump.c	/^} x86_64_elf_prstatus;$/;"	t	typeref:struct:__anon2	file:
+x86_64_hregs	translate.c	/^static int x86_64_hregs;$/;"	v	file:
+x86_64_user_regs_struct	arch_dump.c	/^} x86_64_user_regs_struct;$/;"	t	typeref:struct:__anon1	file:
+x86_64_write_elf64_note	arch_dump.c	/^static int x86_64_write_elf64_note(WriteCoreDumpFunction f,$/;"	f	file:
+x86_apicid_from_cpu_idx	topology.h	/^static inline apic_id_t x86_apicid_from_cpu_idx(unsigned nr_cores,$/;"	f
+x86_cpu_apic_create	cpu.c	/^static void x86_cpu_apic_create(X86CPU *cpu, Error **errp)$/;"	f	file:
+x86_cpu_apic_id_from_index	cpu.c	/^uint32_t x86_cpu_apic_id_from_index(unsigned int cpu_index)$/;"	f
+x86_cpu_apic_realize	cpu.c	/^static void x86_cpu_apic_realize(X86CPU *cpu, Error **errp)$/;"	f	file:
+x86_cpu_common_class_init	cpu.c	/^static void x86_cpu_common_class_init(ObjectClass *oc, void *data)$/;"	f	file:
+x86_cpu_compat_set_features	cpu.c	/^void x86_cpu_compat_set_features(const char *cpu_model, FeatureWord w,$/;"	f
+x86_cpu_do_interrupt	seg_helper.c	/^void x86_cpu_do_interrupt(CPUState *cs)$/;"	f
+x86_cpu_dump_state	helper.c	/^void x86_cpu_dump_state(CPUState *cs, FILE *f, fprintf_function cpu_fprintf,$/;"	f
+x86_cpu_gdb_load_seg	gdbstub.c	/^static int x86_cpu_gdb_load_seg(X86CPU *cpu, int sreg, uint8_t *mem_buf)$/;"	f	file:
+x86_cpu_gdb_read_register	gdbstub.c	/^int x86_cpu_gdb_read_register(CPUState *cs, uint8_t *mem_buf, int n)$/;"	f
+x86_cpu_gdb_write_register	gdbstub.c	/^int x86_cpu_gdb_write_register(CPUState *cs, uint8_t *mem_buf, int n)$/;"	f
+x86_cpu_get_arch_id	cpu.c	/^static int64_t x86_cpu_get_arch_id(CPUState *cs)$/;"	f	file:
+x86_cpu_get_feature_words	cpu.c	/^static void x86_cpu_get_feature_words(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpu_get_memory_mapping	arch_memory_mapping.c	/^void x86_cpu_get_memory_mapping(CPUState *cs, MemoryMappingList *list,$/;"	f
+x86_cpu_get_paging_enabled	cpu.c	/^static bool x86_cpu_get_paging_enabled(const CPUState *cs)$/;"	f	file:
+x86_cpu_get_phys_page_debug	helper.c	/^hwaddr x86_cpu_get_phys_page_debug(CPUState *cs, vaddr addr)$/;"	f
+x86_cpu_initfn	cpu.c	/^static void x86_cpu_initfn(Object *obj)$/;"	f	file:
+x86_cpu_list	cpu.c	/^void x86_cpu_list(FILE *f, fprintf_function cpu_fprintf)$/;"	f
+x86_cpu_machine_reset_cb	cpu.c	/^static void x86_cpu_machine_reset_cb(void *opaque)$/;"	f	file:
+x86_cpu_properties	cpu.c	/^static Property x86_cpu_properties[] = {$/;"	v	file:
+x86_cpu_realizefn	cpu.c	/^static void x86_cpu_realizefn(DeviceState *dev, Error **errp)$/;"	f	file:
+x86_cpu_register_types	cpu.c	/^static void x86_cpu_register_types(void)$/;"	f	file:
+x86_cpu_reset	cpu.c	/^static void x86_cpu_reset(CPUState *s)$/;"	f	file:
+x86_cpu_set_a20	helper.c	/^void x86_cpu_set_a20(X86CPU *cpu, int a20_state)$/;"	f
+x86_cpu_set_pc	cpu.c	/^static void x86_cpu_set_pc(CPUState *cs, vaddr value)$/;"	f	file:
+x86_cpu_synchronize_from_tb	cpu.c	/^static void x86_cpu_synchronize_from_tb(CPUState *cs, TranslationBlock *tb)$/;"	f	file:
+x86_cpu_type_info	cpu.c	/^static const TypeInfo x86_cpu_type_info = {$/;"	v	file:
+x86_cpu_vendor_words2str	cpu.c	/^static void x86_cpu_vendor_words2str(char *dst, uint32_t vendor1,$/;"	f	file:
+x86_cpu_write_elf32_note	arch_dump.c	/^int x86_cpu_write_elf32_note(WriteCoreDumpFunction f, CPUState *cs,$/;"	f
+x86_cpu_write_elf32_qemunote	arch_dump.c	/^int x86_cpu_write_elf32_qemunote(WriteCoreDumpFunction f, CPUState *cs,$/;"	f
+x86_cpu_write_elf64_note	arch_dump.c	/^int x86_cpu_write_elf64_note(WriteCoreDumpFunction f, CPUState *cs,$/;"	f
+x86_cpu_write_elf64_qemunote	arch_dump.c	/^int x86_cpu_write_elf64_qemunote(WriteCoreDumpFunction f, CPUState *cs,$/;"	f
+x86_cpudef_setup	cpu.c	/^void x86_cpudef_setup(void)$/;"	f
+x86_cpuid_get_apic_id	cpu.c	/^static void x86_cpuid_get_apic_id(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_get_level	cpu.c	/^static void x86_cpuid_get_level(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_get_model_id	cpu.c	/^static char *x86_cpuid_get_model_id(Object *obj, Error **errp)$/;"	f	file:
+x86_cpuid_get_tsc_freq	cpu.c	/^static void x86_cpuid_get_tsc_freq(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_get_vendor	cpu.c	/^static char *x86_cpuid_get_vendor(Object *obj, Error **errp)$/;"	f	file:
+x86_cpuid_get_xlevel	cpu.c	/^static void x86_cpuid_get_xlevel(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_set_apic_id	cpu.c	/^static void x86_cpuid_set_apic_id(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_set_level	cpu.c	/^static void x86_cpuid_set_level(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_set_model_id	cpu.c	/^static void x86_cpuid_set_model_id(Object *obj, const char *model_id,$/;"	f	file:
+x86_cpuid_set_tsc_freq	cpu.c	/^static void x86_cpuid_set_tsc_freq(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_set_vendor	cpu.c	/^static void x86_cpuid_set_vendor(Object *obj, const char *value,$/;"	f	file:
+x86_cpuid_set_xlevel	cpu.c	/^static void x86_cpuid_set_xlevel(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_version_get_family	cpu.c	/^static void x86_cpuid_version_get_family(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_version_get_model	cpu.c	/^static void x86_cpuid_version_get_model(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_version_get_stepping	cpu.c	/^static void x86_cpuid_version_get_stepping(Object *obj, Visitor *v,$/;"	f	file:
+x86_cpuid_version_set_family	cpu.c	/^static void x86_cpuid_version_set_family(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_version_set_model	cpu.c	/^static void x86_cpuid_version_set_model(Object *obj, Visitor *v, void *opaque,$/;"	f	file:
+x86_cpuid_version_set_stepping	cpu.c	/^static void x86_cpuid_version_set_stepping(Object *obj, Visitor *v,$/;"	f	file:
+x86_def_t	cpu.c	/^typedef struct x86_def_t {$/;"	s	file:
+x86_def_t	cpu.c	/^} x86_def_t;$/;"	t	typeref:struct:x86_def_t	file:
+x86_elf_prstatus	arch_dump.c	/^} x86_elf_prstatus;$/;"	t	typeref:struct:__anon4	file:
+x86_env_get_cpu	cpu-qom.h	/^static inline X86CPU *x86_env_get_cpu(CPUX86State *env)$/;"	f
+x86_fill_elf_prstatus	arch_dump.c	/^static void x86_fill_elf_prstatus(x86_elf_prstatus *prstatus, CPUX86State *env,$/;"	f	file:
+x86_longdouble	machine.c	/^union x86_longdouble {$/;"	u	file:
+x86_reg_info_32	cpu.c	/^X86RegisterInfo32 x86_reg_info_32[CPU_NB_REGS32] = {$/;"	v
+x86_topo_ids_from_idx	topology.h	/^static inline void x86_topo_ids_from_idx(unsigned nr_cores,$/;"	f
+x86_user_regs_struct	arch_dump.c	/^} x86_user_regs_struct;$/;"	t	typeref:struct:__anon3	file:
+x86_write_elf64_note	arch_dump.c	/^static int x86_write_elf64_note(WriteCoreDumpFunction f, CPUX86State *env,$/;"	f	file:
+xcr0	cpu.h	/^    uint64_t xcr0;$/;"	m	struct:CPUX86State
+xed_regmapping	rev_sem/qemu-pemu.c	/^static int xed_regmapping[][3] = {$/;"	v	file:
+xlevel	cpu.c	/^    uint32_t xlevel;$/;"	m	struct:x86_def_t	file:
+xlevel2	cpu.c	/^    uint32_t xlevel2;$/;"	m	struct:x86_def_t	file:
+xmm_regs	cpu.h	/^    XMMReg xmm_regs[CPU_NB_REGS];$/;"	m	struct:CPUX86State
+xmm_t0	cpu.h	/^    XMMReg xmm_t0;$/;"	m	struct:CPUX86State
+xstate_bv	cpu.h	/^    uint64_t xstate_bv;$/;"	m	struct:CPUX86State
+ymmh_regs	cpu.h	/^    XMMReg ymmh_regs[CPU_NB_REGS];$/;"	m	struct:CPUX86State

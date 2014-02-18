@@ -1,0 +1,307 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Addr	taint.h	/^typedef  unsigned int Addr;$/;"	t
+BLACK	heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	e	enum:__anon2
+CALL_STACK_H	callstack.h	2;"	d
+CONDITION_H	condition.h	2;"	d
+CONFIG_PEMU_H	config_pemu.h	2;"	d
+Char	taint.h	/^typedef    signed char   Char;$/;"	t
+DEBUG_TAINT	hook_inst.c	22;"	d	file:
+DISAS_H	disas.h	2;"	d
+ENABLE_TAINT	hook_inst.c	23;"	d	file:
+ENSURE_MAPPABLE	obj.c	28;"	d	file:
+ENSURE_MAPPABLE	taint.c	28;"	d	file:
+ENSURE_MAPPABLE_BYTE_GRANUITY	obj.c	35;"	d	file:
+ENSURE_MAPPABLE_BYTE_GRANUITY	taint.c	35;"	d	file:
+FDTAINTED	taint.h	19;"	d
+FDregTaint	taint.c	/^unsigned int FDregTaint[XED_REG_LAST];$/;"	v
+GEN_HELPER	main.c	12;"	d	file:
+HChar	taint.h	/^typedef           char   HChar; \/* signfulness depends on host *\/$/;"	t
+HOOK_INST_H	hook_inst.h	3;"	d
+INS	hook_inst.h	/^typedef const xed_inst_t * INS;$/;"	t
+IS_DISTINGUISHED_SM	obj.c	25;"	d	file:
+IS_DISTINGUISHED_SM	taint.c	25;"	d	file:
+Instrument	hook_inst.c	/^void Instrument(uint32_t pc, INS ins)$/;"	f
+InstrumentFunction	hook_inst.h	/^typedef void (*InstrumentFunction)(INS ins);$/;"	t
+Instrument_Binary_OP	hook_inst.c	/^static void Instrument_Binary_OP(INS ins)\/\/TODO: if parameter bop local_variable ==> local_variable$/;"	f	file:
+Instrument_CALL	hook_inst.c	/^static void Instrument_CALL(INS xi)$/;"	f	file:
+Instrument_CMOVcc	hook_inst.c	/^static void Instrument_CMOVcc(INS ins) $/;"	f	file:
+Instrument_LEA	hook_inst.c	/^static void Instrument_LEA(INS xi)$/;"	f	file:
+Instrument_LODSX	hook_inst.c	/^static void Instrument_LODSX(INS ins)$/;"	f	file:
+Instrument_MOV	hook_inst.c	/^static void Instrument_MOV(INS ins)$/;"	f	file:
+Instrument_MOVSBWD	hook_inst.c	/^static void Instrument_MOVSBWD(INS ins) $/;"	f	file:
+Instrument_NONE	hook_inst.c	/^static void Instrument_NONE(INS ins)$/;"	f	file:
+Instrument_POP	hook_inst.c	/^static void Instrument_POP(INS ins)$/;"	f	file:
+Instrument_POPAD	hook_inst.c	/^static void Instrument_POPAD(INS ins){ $/;"	f	file:
+Instrument_POPFD	hook_inst.c	/^static void Instrument_POPFD(INS ins)$/;"	f	file:
+Instrument_PUSH	hook_inst.c	/^static void Instrument_PUSH(INS ins) $/;"	f	file:
+Instrument_PUSHAD	hook_inst.c	/^static void Instrument_PUSHAD(INS ins) {$/;"	f	file:
+Instrument_PUSHFD	hook_inst.c	/^static void Instrument_PUSHFD(INS ins)$/;"	f	file:
+Instrument_RET	hook_inst.c	/^static void Instrument_RET(INS xi)$/;"	f	file:
+Instrument_SETcc	hook_inst.c	/^static void Instrument_SETcc(INS ins)$/;"	f	file:
+Instrument_STOSX	hook_inst.c	/^static void Instrument_STOSX(INS ins)$/;"	f	file:
+Instrument_XADD	hook_inst.c	/^static void Instrument_XADD(INS ins)\/\/TODO: if parameter bop local_variable ==> local_variable$/;"	f	file:
+Instrument_XOR	hook_inst.c	/^static void Instrument_XOR(INS xi) $/;"	f	file:
+Int	taint.h	/^typedef    signed int    Int;$/;"	t
+KMEM_CACHE_ALLOC	config_pemu.h	8;"	d
+KMEM_CACHE_CREATE	config_pemu.h	7;"	d
+KMEM_CACHE_FREE	config_pemu.h	9;"	d
+KeyType	heap_shadow.h	/^typedef unsigned int KeyType;            \/\/ type of key$/;"	t
+LINUX_2_6_32_8	config_pemu.h	10;"	d
+Libc_item	linux.h	/^}Libc_item;$/;"	t	typeref:struct:_Libc_item
+NodeTag	heap_shadow.h	/^typedef struct NodeTag {$/;"	s
+NodeType	heap_shadow.h	/^} NodeType;$/;"	t	typeref:struct:NodeTag
+OBJECT	config_pemu.h	15;"	d
+PAGE_BITS	obj.c	21;"	d	file:
+PAGE_BITS	taint.c	21;"	d	file:
+PAGE_NUM	obj.c	23;"	d	file:
+PAGE_NUM	taint.c	23;"	d	file:
+PAGE_SIZE	obj.c	22;"	d	file:
+PAGE_SIZE	taint.c	22;"	d	file:
+PARSE_OPRAND_H	parse_operand.h	2;"	d
+PEMU_DEBUG	config_pemu.h	4;"	d
+PEMU_EXEC_STATS	pemu.h	/^struct PEMU_EXEC_STATS {$/;"	s
+PEMU_H	pemu.h	2;"	d
+PEMU_INST	pemu.h	/^struct PEMU_INST {$/;"	s
+PEMU_already_flush	pemu.h	/^	uint32_t PEMU_already_flush;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_binary_name	pemu.h	/^	char PEMU_binary_name[100];$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_cr3	pemu.h	/^	uint32_t PEMU_cr3;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_dis_pc	pemu.h	/^	target_ulong PEMU_dis_pc;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_dstate	pemu.h	/^	xed_state_t PEMU_dstate;$/;"	m	struct:PEMU_INST
+PEMU_exec_pc	pemu.h	/^	target_ulong PEMU_exec_pc;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_find_process	linux.c	/^int PEMU_find_process(void *opaque)$/;"	f
+PEMU_get_cr3	qemu-pemu.c	/^uint32_t PEMU_get_cr3()$/;"	f
+PEMU_get_reg	qemu-pemu.c	/^uint32_t PEMU_get_reg(xed_reg_enum_t reg_id)$/;"	f
+PEMU_guest_os	linux.h	/^struct PEMU_guest_os{$/;"	s
+PEMU_img_end	pemu.h	/^	target_ulong PEMU_img_end;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_img_start	pemu.h	/^	target_ulong PEMU_img_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_init	pemu.c	/^int PEMU_init(void *env)$/;"	f
+PEMU_inst_buf	pemu.h	/^	char PEMU_inst_buf[15];$/;"	m	struct:PEMU_INST
+PEMU_inst_pc	pemu.h	/^	target_ulong PEMU_inst_pc;$/;"	m	struct:PEMU_INST
+PEMU_inst_str	pemu.h	/^	char PEMU_inst_str[128];$/;"	m	struct:PEMU_INST
+PEMU_int_level	pemu.h	/^	int PEMU_int_level;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_iret_target_pc	pemu.h	/^	target_ulong PEMU_iret_target_pc;	$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_libc_end	pemu.h	/^	target_ulong PEMU_libc_end;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_libc_start	pemu.h	/^	target_ulong PEMU_libc_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_main_start	pemu.h	/^	target_ulong PEMU_main_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_pid	pemu.h	/^	uint32_t PEMU_pid;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_plugin_name	pemu.h	/^	char PEMU_plugin_name[100];$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_read_mem	qemu-pemu.c	/^int PEMU_read_mem(uint32_t vaddr, int len, void *buf)$/;"	f
+PEMU_start	pemu.h	/^	uint32_t PEMU_start;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_start_trace_syscall	pemu.h	/^	int PEMU_start_trace_syscall;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_task_addr	pemu.h	/^	target_ulong PEMU_task_addr;$/;"	m	struct:PEMU_EXEC_STATS
+PEMU_xedd_g	pemu.h	/^	xed_decoded_inst_t PEMU_xedd_g;$/;"	m	struct:PEMU_INST
+QEMU_PEMU_H	qemu-pemu.h	2;"	d
+RBT_STATUS_DUPLICATE_KEY	heap_shadow.h	/^    RBT_STATUS_DUPLICATE_KEY,$/;"	e	enum:__anon1
+RBT_STATUS_KEY_NOT_FOUND	heap_shadow.h	/^    RBT_STATUS_KEY_NOT_FOUND$/;"	e	enum:__anon1
+RBT_STATUS_MEM_EXHAUSTED	heap_shadow.h	/^    RBT_STATUS_MEM_EXHAUSTED,$/;"	e	enum:__anon1
+RBT_STATUS_OK	heap_shadow.h	/^    RBT_STATUS_OK,$/;"	e	enum:__anon1
+RBT_STATUS_REALLOC_LARGE	heap_shadow.h	/^    RBT_STATUS_REALLOC_LARGE,$/;"	e	enum:__anon1
+RBT_STATUS_REALLOC_SMALL	heap_shadow.h	/^    RBT_STATUS_REALLOC_SMALL,$/;"	e	enum:__anon1
+RB_CALLBACK	heap_shadow.h	/^typedef void(*RB_CALLBACK)(NodeType*, void*);$/;"	t
+RED	heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	e	enum:__anon2
+RbtStatus	heap_shadow.h	/^} RbtStatus;$/;"	t	typeref:enum:__anon1
+SENTINEL	rb_tree.c	9;"	d	file:
+SET_TAINT	hook_inst.c	49;"	d	file:
+SecMap	obj.c	/^} SecMap;$/;"	t	typeref:struct:__anon3	file:
+SecMap	taint.c	/^} SecMap;$/;"	t	typeref:struct:__anon4	file:
+Short	taint.h	/^typedef    signed short  Short;$/;"	t
+TAINT	config_pemu.h	14;"	d
+TAINTED	taint.h	17;"	d
+TIMMER	config_pemu.h	5;"	d
+TRACECALLSTACK	config_pemu.h	13;"	d
+UChar	taint.h	/^typedef  unsigned char   UChar;$/;"	t
+UINT	taint.h	34;"	d
+UInt	heap_shadow.h	57;"	d
+UInt	rb_tree.c	11;"	d	file:
+UInt	taint.h	33;"	d
+UNTAINTED	taint.h	18;"	d
+UShort	taint.h	/^typedef  unsigned short  UShort;$/;"	t
+UnimplementedInstruction	hook_inst.c	/^static void UnimplementedInstruction(INS ins) $/;"	f	file:
+VGM_BYTE_INVALID	taint.h	16;"	d
+ValType	heap_shadow.h	/^typedef heap_shadow_node_t ValType;$/;"	t
+_Libc_item	linux.h	/^typedef struct _Libc_item{$/;"	s
+__HEAP_SHADOW_H	heap_shadow.h	2;"	d
+__LINUX_H__	linux.h	2;"	d
+__UTILITY_H	taint.h	14;"	d
+alloc_secondary_map	obj.c	/^static SecMap* alloc_secondary_map ()$/;"	f	file:
+alloc_secondary_map	taint.c	/^static SecMap* alloc_secondary_map ()$/;"	f	file:
+byte	obj.c	/^   unsigned int byte[PAGE_SIZE];$/;"	m	struct:__anon3	file:
+byte	taint.c	/^   unsigned int byte[PAGE_SIZE];$/;"	m	struct:__anon4	file:
+callstack_hook	main.c	/^void callstack_hook(int pc_start)$/;"	f
+clear_calldata	callstack.cpp	/^void clear_calldata(void)$/;"	f
+clear_taint_source_heaps	hook_inst.c	/^void clear_taint_source_heaps(uint32_t addr, int len)$/;"	f
+color	heap_shadow.h	/^    nodeColor color;            \/\/ node color (BLACK, RED)$/;"	m	struct:NodeTag
+commoffset	linux.h	/^	int commoffset;$/;"	m	struct:PEMU_guest_os
+commoffset	linux.h	/^    int commoffset; $/;"	m	struct:koffset
+commsize	linux.h	/^	int commsize;$/;"	m	struct:PEMU_guest_os
+commsize	linux.h	/^    int commsize; $/;"	m	struct:koffset
+compEQ	heap_shadow.h	26;"	d
+compLT	heap_shadow.h	25;"	d
+deleteFixup	rb_tree.c	/^static void deleteFixup(NodeType *x) {$/;"	f	file:
+delete_callsite	callstack.cpp	/^void delete_callsite(void)$/;"	f
+delete_callstack	callstack.cpp	/^void delete_callstack(void)$/;"	f
+delete_retaddr	callstack.cpp	/^void delete_retaddr(unsigned int pc)$/;"	f
+dentryoffset	linux.h	/^	int dentryoffset;$/;"	m	struct:PEMU_guest_os
+dentryoffset	linux.h	/^    int dentryoffset; $/;"	m	struct:koffset
+dinameoffset	linux.h	/^	int dinameoffset;$/;"	m	struct:PEMU_guest_os
+dinameoffset	linux.h	/^    int dinameoffset;$/;"	m	struct:koffset
+disas_one_inst_ex	disas.c	/^xed_error_enum_t disas_one_inst_ex(target_ulong pc, struct PEMU_INST *inst)$/;"	f
+distinguished_secondary_map	obj.c	/^static SecMap distinguished_secondary_map;$/;"	v	file:
+distinguished_secondary_map	taint.c	/^static SecMap distinguished_secondary_map;$/;"	v	file:
+dnameoffset	linux.h	/^	int dnameoffset;$/;"	m	struct:PEMU_guest_os
+dnameoffset	linux.h	/^    int dnameoffset; $/;"	m	struct:koffset
+ds_code_delete_rb	rb_tree.c	/^int ds_code_delete_rb(UInt start_addr)$/;"	f
+ds_code_handle_mem_access0	hook_inst.c	/^static void ds_code_handle_mem_access0(INS ins)$/;"	f	file:
+ds_code_handle_mem_access1	hook_inst.c	/^static void ds_code_handle_mem_access1(INS ins)$/;"	f	file:
+ds_code_insert_rb	rb_tree.c	/^void ds_code_insert_rb(UInt start_addr, UInt size, long type){$/;"	f
+ds_code_load_heapTypes	callstack.cpp	/^void ds_code_load_heapTypes(void)$/;"	f
+ds_code_load_rb	rb_tree.c	/^void ds_code_load_rb(void)$/;"	f
+ds_code_rbtFind2	rb_tree.c	/^NodeType *ds_code_rbtFind2(KeyType key)$/;"	f
+ds_code_traverse	rb_tree.c	/^void ds_code_traverse(RB_CALLBACK callback, void* p)$/;"	f
+dump_callsites	callstack.cpp	/^void dump_callsites(void)$/;"	f
+dump_callstacks	callstack.cpp	/^void dump_callstacks(void)$/;"	f
+free_shadow_memory	obj.c	/^static void free_shadow_memory(void)$/;"	f	file:
+free_shadow_memory	taint.c	/^static void free_shadow_memory(void)$/;"	f	file:
+g_callsite	callstack.cpp	/^static list<unsigned int> g_callsite;$/;"	v	file:
+g_callstack	callstack.cpp	/^static list<unsigned int> g_callstack;$/;"	v	file:
+g_heap_types	callstack.cpp	/^static map<unsigned int, string> g_heap_types;$/;"	v	file:
+g_heap_types_s	callstack.cpp	/^static map<string, unsigned int> g_heap_types_s;$/;"	v	file:
+g_inst_buffer	hook_inst.c	/^char g_inst_buffer[15];$/;"	v
+g_inst_name	hook_inst.c	/^char g_inst_name[1024];$/;"	v
+g_inst_str	hook_inst.c	/^char g_inst_str[500];$/;"	v
+g_obj	callstack.cpp	/^static map<unsigned int, int> g_obj;$/;"	v	file:
+g_opcode	hook_inst.c	/^xed_iclass_enum_t g_opcode;$/;"	v
+g_pc	hook_inst.c	/^uint32_t g_pc;$/;"	v
+g_ret_stack	callstack.cpp	/^static stack<unsigned int> g_ret_stack;$/;"	v	file:
+g_taint	hook_inst.c	/^unsigned int g_taint;$/;"	v
+get_callDest	parse_operand.c	/^uint32_t get_callDest(const xed_decoded_inst_t* xedd, uint32_t cur_pc)$/;"	f
+get_current_func	callstack.cpp	/^int get_current_func(void)$/;"	f
+get_first_mmap	linux.c	/^static uint32_t get_first_mmap(uint32_t addr)$/;"	f	file:
+get_mem_operand_size	parse_operand.c	/^int get_mem_operand_size(const xed_operand_enum_t op_name, uint32_t operand_i){$/;"	f
+get_mem_taint	taint.c	/^unsigned int  get_mem_taint( Addr a )$/;"	f
+get_mod_name	linux.c	/^static void get_mod_name(uint32_t addr, char *name, int size)$/;"	f	file:
+get_name	linux.c	/^static void get_name(uint32_t addr, int size, char *buf)$/;"	f	file:
+get_next_mmap	linux.c	/^static uint32_t get_next_mmap(uint32_t addr)$/;"	f	file:
+get_objsize	obj.c	/^unsigned int  get_objsize(Addr a)$/;"	f
+get_pgd	linux.c	/^static uint32_t get_pgd(uint32_t addr)$/;"	f	file:
+get_pid	linux.c	/^static uint32_t get_pid(uint32_t addr)$/;"	f	file:
+get_reg_taint	taint.c	/^unsigned int get_reg_taint(xed_reg_enum_t reg)$/;"	f
+get_reg_taint_fd	taint.c	/^unsigned int get_reg_taint_fd(xed_reg_enum_t reg)$/;"	f
+get_vmend	linux.c	/^static uint32_t get_vmend(uint32_t addr)$/;"	f	file:
+get_vmflags	linux.c	/^static uint32_t get_vmflags(uint32_t addr)$/;"	f	file:
+get_vmstart	linux.c	/^static uint32_t get_vmstart(uint32_t addr)$/;"	f	file:
+handle_control_target	hook_inst.c	/^static unsigned int handle_control_target(INS xi)$/;"	f	file:
+heap_shadow_node_t	heap_shadow.h	/^} heap_shadow_node_t;$/;"	t	typeref:struct:shadow_heap_node
+helper_hook	main.c	/^void helper_hook(int pc_start)$/;"	f
+hookingpoint	linux.h	/^	unsigned int hookingpoint;$/;"	m	struct:PEMU_guest_os
+hookingpoint	linux.h	/^    unsigned int hookingpoint;$/;"	m	struct:koffset
+hookingpoint2	linux.h	/^	unsigned int hookingpoint2;$/;"	m	struct:PEMU_guest_os
+hookingpoint2	linux.h	/^    unsigned int hookingpoint2; $/;"	m	struct:koffset
+ii_primary_map	obj.c	/^static SecMap * ii_primary_map[PAGE_NUM];$/;"	v	file:
+ii_primary_map	taint.c	/^static SecMap * ii_primary_map[PAGE_NUM];$/;"	v	file:
+init_inst	pemu.c	/^void init_inst(void)$/;"	f
+init_kernel_offsets	linux.c	/^int init_kernel_offsets(void)$/;"	f
+init_shadow_memory	obj.c	/^static void init_shadow_memory(void)$/;"	f	file:
+init_shadow_memory	taint.c	/^static void init_shadow_memory(void)$/;"	f	file:
+insertFixup	rb_tree.c	/^static void insertFixup(NodeType *x) {$/;"	f	file:
+insert_callsite	callstack.cpp	/^void insert_callsite(unsigned int pc)$/;"	f
+insert_callstack	callstack.cpp	/^void insert_callstack(unsigned int pc)$/;"	f
+insert_retaddr	callstack.cpp	/^void insert_retaddr(unsigned int pc)$/;"	f
+instrument_functions	hook_inst.c	/^InstrumentFunction instrument_functions[XED_ICLASS_LAST];$/;"	v
+is_af_set	condition.h	/^static inline int is_af_set(){$/;"	f
+is_cf_set	condition.h	/^static inline int is_cf_set(){$/;"	f
+is_of_set	condition.h	/^static inline int is_of_set(){$/;"	f
+is_pf_set	condition.h	/^static inline int is_pf_set(){$/;"	f
+is_retaddr	callstack.cpp	/^int is_retaddr(unsigned int pc)$/;"	f
+is_sf_set	condition.h	/^static inline int is_sf_set(){$/;"	f
+is_special_inst	hook_inst.c	/^static inline int is_special_inst(const xed_decoded_inst_t *x)$/;"	f	file:
+is_zf_set	condition.h	/^static inline int is_zf_set(){$/;"	f
+kernel_table	linux.c	/^static struct koffset kernel_table[] = {$/;"	v	typeref:struct:koffset	file:
+key	heap_shadow.h	/^    KeyType key;                \/\/ key used for searching$/;"	m	struct:NodeTag
+kmem_cache_alloc_addr	linux.h	/^	unsigned int kmem_cache_alloc_addr;$/;"	m	struct:PEMU_guest_os
+kmem_cache_alloc_addr	linux.h	/^	unsigned int kmem_cache_alloc_addr;$/;"	m	struct:koffset
+kmem_cache_free_addr	linux.h	/^	unsigned int kmem_cache_free_addr;$/;"	m	struct:PEMU_guest_os
+kmem_cache_free_addr	linux.h	/^	unsigned int kmem_cache_free_addr;$/;"	m	struct:koffset
+koffset	linux.h	/^struct koffset {$/;"	s
+left	heap_shadow.h	/^    struct NodeTag *left;       \/\/ left child$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+listoffset	linux.h	/^	int listoffset;$/;"	m	struct:PEMU_guest_os
+listoffset	linux.h	/^    int listoffset; $/;"	m	struct:koffset
+mem_taint_format	taint.c	/^void mem_taint_format()$/;"	f
+mmoffset	linux.h	/^	int mmoffset;$/;"	m	struct:PEMU_guest_os
+mmoffset	linux.h	/^    int mmoffset; $/;"	m	struct:koffset
+name	linux.h	/^	char name[100];$/;"	m	struct:_Libc_item
+next_task_struct	linux.c	/^static uint32_t next_task_struct(uint32_t addr)$/;"	f	file:
+nodeColor	heap_shadow.h	/^typedef enum { BLACK, RED } nodeColor;$/;"	t	typeref:enum:__anon2
+objInit	obj.c	/^void objInit(void)$/;"	f
+object_hook	main.c	/^void object_hook(int pc_start)$/;"	f
+operand_is_imm	parse_operand.c	/^int operand_is_imm(const xed_operand_enum_t op_name, uint32_t *value) {$/;"	f
+operand_is_mem	parse_operand.c	/^int operand_is_mem(const xed_operand_enum_t op_name, uint32_t* mem_addr, $/;"	f
+operand_is_reg	parse_operand.c	/^int operand_is_reg(const xed_operand_enum_t op_name, xed_reg_enum_t * reg_id) $/;"	f
+operand_is_relbr	parse_operand.c	/^int operand_is_relbr(const xed_operand_enum_t op_name, uint32_t * branch) $/;"	f
+parent	heap_shadow.h	/^    struct NodeTag *parent;     \/\/ parent$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+pemu_exec_stats	pemu.c	/^struct PEMU_EXEC_STATS pemu_exec_stats;$/;"	v	typeref:struct:PEMU_EXEC_STATS
+pemu_guest_os	linux.c	/^struct PEMU_guest_os pemu_guest_os;$/;"	v	typeref:struct:PEMU_guest_os
+pemu_inst	pemu.c	/^struct PEMU_INST pemu_inst;$/;"	v	typeref:struct:PEMU_INST
+pgdoffset	linux.h	/^	int pgdoffset;$/;"	m	struct:PEMU_guest_os
+pgdoffset	linux.h	/^    int pgdoffset; $/;"	m	struct:koffset
+pidoffset	linux.h	/^	int pidoffset;$/;"	m	struct:PEMU_guest_os
+pidoffset	linux.h	/^    int pidoffset; $/;"	m	struct:koffset
+rbtDelete	rb_tree.c	/^static void rbtDelete(NodeType *p) {$/;"	f	file:
+rbtErase	rb_tree.c	/^static RbtStatus rbtErase(NodeType * z) {$/;"	f	file:
+rbtFind	rb_tree.c	/^static NodeType *rbtFind(KeyType key) {$/;"	f	file:
+rbtInorder	rb_tree.c	/^static void rbtInorder(NodeType *node, RB_CALLBACK callback, void* p) {$/;"	f	file:
+rbtInsert	rb_tree.c	/^static RbtStatus rbtInsert(KeyType key, KeyType size, heap_shadow_node_t *p) {$/;"	f	file:
+regTaint	taint.c	/^unsigned int regTaint[XED_REG_LAST];$/;"	v
+regUntainted	taint.c	/^void regUntainted()$/;"	f
+regUntainted_fd	taint.c	/^void regUntainted_fd()$/;"	f
+ret	heap_shadow.h	/^	KeyType ret;				\/\/return addres for each kmem_cache_alloc	$/;"	m	struct:NodeTag
+right	heap_shadow.h	/^    struct NodeTag *right;      \/\/ right child$/;"	m	struct:NodeTag	typeref:struct:NodeTag::NodeTag
+root	rb_tree.c	/^static NodeType *root = SENTINEL; \/\/ root of red-black tree$/;"	v	file:
+rotateLeft	rb_tree.c	/^static void rotateLeft(NodeType *x) {$/;"	f	file:
+rotateRight	rb_tree.c	/^static void rotateRight(NodeType *x) {$/;"	f	file:
+s_base	parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_base_regid	parse_operand.c	/^xed_reg_enum_t s_base_regid, s_index_regid;$/;"	v
+s_dis	parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_index	parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+s_index_regid	parse_operand.c	/^xed_reg_enum_t s_base_regid, s_index_regid;$/;"	v
+s_scale	parse_operand.c	/^uint32_t s_base, s_index, s_scale, s_dis;$/;"	v
+sentinel	rb_tree.c	/^static NodeType sentinel = { SENTINEL, SENTINEL, 0, BLACK, 0};$/;"	v	file:
+set_mem_taint	taint.c	/^void  set_mem_taint( Addr a, unsigned int bytes)$/;"	f
+set_mem_taint_bysize	taint.c	/^void  set_mem_taint_bysize( Addr a, unsigned int bytes, UInt size)$/;"	f
+set_objsize	obj.c	/^void  set_objsize(Addr a, unsigned int bytes)$/;"	f
+set_reg_taint	taint.c	/^void set_reg_taint(xed_reg_enum_t reg, unsigned int bytes)$/;"	f
+set_reg_taint_fd	taint.c	/^void set_reg_taint_fd(xed_reg_enum_t reg, unsigned int bytes)$/;"	f
+set_taint_source_args	hook_inst.c	/^void set_taint_source_args(void)$/;"	f
+set_taint_source_heaps	hook_inst.c	/^void set_taint_source_heaps(uint32_t addr, int len)$/;"	f
+setup_inst_hook	hook_inst.c	/^void setup_inst_hook()$/;"	f
+shadow_bytes	obj.c	/^static unsigned int shadow_bytes;$/;"	v	file:
+shadow_bytes	taint.c	/^unsigned int shadow_bytes;$/;"	v
+shadow_heap_node	heap_shadow.h	/^typedef struct shadow_heap_node$/;"	s
+shadow_size	heap_shadow.h	/^	unsigned int shadow_size;$/;"	m	struct:shadow_heap_node
+size	heap_shadow.h	/^    KeyType size;				\/\/ allocation size -->also used in searching$/;"	m	struct:NodeTag
+start_addr	heap_shadow.h	/^	unsigned int start_addr;$/;"	m	struct:shadow_heap_node
+taintInit	taint.c	/^void taintInit()$/;"	f
+taint_mem_access0	hook_inst.c	/^static void taint_mem_access0(INS ins)$/;"	f	file:
+taskaddr	linux.h	/^	unsigned int taskaddr;$/;"	m	struct:PEMU_guest_os
+taskaddr	linux.h	/^    unsigned int taskaddr; $/;"	m	struct:koffset
+tasksize	linux.h	/^	int tasksize;$/;"	m	struct:PEMU_guest_os
+tasksize	linux.h	/^    int tasksize; $/;"	m	struct:koffset
+type	heap_shadow.h	/^	void * type;$/;"	m	struct:shadow_heap_node
+val	heap_shadow.h	/^	ValType *val;                \/\/ data related to key$/;"	m	struct:NodeTag
+version	linux.h	/^    char version[128]; $/;"	m	struct:koffset
+vmendoffset	linux.h	/^	int vmendoffset;$/;"	m	struct:PEMU_guest_os
+vmendoffset	linux.h	/^    int vmendoffset;$/;"	m	struct:koffset
+vmfileoffset	linux.h	/^	int vmfileoffset;$/;"	m	struct:PEMU_guest_os
+vmfileoffset	linux.h	/^    int vmfileoffset;$/;"	m	struct:koffset
+vmflagsoffset	linux.h	/^	int vmflagsoffset;	$/;"	m	struct:PEMU_guest_os
+vmflagsoffset	linux.h	/^    int vmflagsoffset;	$/;"	m	struct:koffset
+vmnextoffset	linux.h	/^	int vmnextoffset;$/;"	m	struct:PEMU_guest_os
+vmnextoffset	linux.h	/^    int vmnextoffset; $/;"	m	struct:koffset
+vmstartoffset	linux.h	/^	int vmstartoffset;$/;"	m	struct:PEMU_guest_os
+vmstartoffset	linux.h	/^    int vmstartoffset; $/;"	m	struct:koffset
+xed_regmapping	qemu-pemu.c	/^static int xed_regmapping[][3] = {$/;"	v	file:
