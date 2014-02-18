@@ -2077,22 +2077,10 @@ static void get_min_max_addr()
 
 static void do_vmmi_start(Monitor *mon, const QDict *qdict)
 {
-
     const char *snapshot_fname = qdict_get_str(qdict, "snapshot_fname");
     sprintf(sname, "%s_update", snapshot_fname);
     const char *cr3_fname = qdict_get_str(qdict, "cr3_fname");
     vmmi_profile = qdict_get_int(qdict, "profile");
-
-    //yufei.begin
-    if (vmmi_profile == 1){
-        const char * snapshot_local = "snapshot_local";
-        mem_save(256 * 1024 * 1024, snapshot_local);
-        gen_module_offset(mon, snapshot_local, snapshot_fname);
-        read_module_offset(mon, "module_offset");
-        get_min_max_addr();
-        monitor_printf(mon, "module min %x, max %x\n", module_min, module_max);
-    }
-    //yufei.end
 
     FILE *f;
 
@@ -2179,26 +2167,27 @@ static void do_vmmi_stop(Monitor *mon, const QDict *qdict)
 
 static void do_vmmi_moncmd(Monitor *mon, const QDict *qdict)
 {
-	if(vmmi_mode){
+    if(vmmi_mode){
+        sys_hook_init();
 		
-		sys_hook_init();
+        const char *filename = qdict_get_str(qdict, "filename");
+        init_process(filename);//yufei
+        
+        strcpy(vmmi_process_name, filename);	
+        vmmi_process_cr3 = 0xffffffff;
+        printf("moniter process %s\n", filename);
 		
-		const char *filename = qdict_get_str(qdict, "filename");
-		strcpy(vmmi_process_name, filename);	
-		vmmi_process_cr3 = 0xffffffff;
-		printf("moniter process %s\n", filename);
-		
-		if(trace_log!=NULL)
-			fclose(trace_log);
-		if(pc_log!=NULL)
-			fclose(pc_log);
-	 	char str[1024];
-		sprintf(str, "trace/%s_trace", filename);
-   		trace_log = fopen(str, "w");
-		sprintf(str, "trace/%s_pc", filename);
-		pc_log = fopen(str, "w");
+        if(trace_log!=NULL)
+            fclose(trace_log);
+        if(pc_log!=NULL)
+            fclose(pc_log);
+        char str[1024];
+        sprintf(str, "trace/%s_trace", filename);
+        trace_log = fopen(str, "w");
+        sprintf(str, "trace/%s_pc", filename);
+        pc_log = fopen(str, "w");
 
-	}
+    }
 }
 
 static void do_vmmi_kill(Monitor *mon, const QDict *qdict)

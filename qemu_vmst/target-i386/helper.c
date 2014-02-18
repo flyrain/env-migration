@@ -25,6 +25,9 @@
 #include "cpu.h"
 #include "qemu-common.h"
 #include "kvm.h"
+#include "windows.h"
+#include "winHook.h"
+#include "code_config.h"
 #ifndef CONFIG_USER_ONLY
 #include "sysemu.h"
 #include "monitor.h"
@@ -571,64 +574,60 @@ inline void set_io_need_red(){
 }
 //yufei.end
 
+
 inline uint32_t is_monitored_vmmi_kernel_data_read(target_ulong addr)
 {
+    if((vmmi_start) \
+       && (cpu_single_env->cr[3] == vmmi_process_cr3) \
+       && ((cpu_single_env->hflags & HF_CPL_MASK) != 3)\
+       && (is_interrupt !=1 || need_interrupt == 1)  \     
+       &&addr >= KERNEL_ADDRESS
 
-	if((vmmi_start) \
-		&& (cpu_single_env->cr[3] == vmmi_process_cr3) \
-		&& ((cpu_single_env->hflags & HF_CPL_MASK) != 3)\
-                && (is_interrupt !=1 || need_interrupt == 1)  \     
-		&&addr >=0xc0000000
-//		&&addr<0xf8000000
-//		&&!is_printr
 #ifdef VMMI_ALL_REDIRCTION
-		&&!is_sysenter
+       &&!is_sysenter
 #endif
-		&& sys_need_red
-		)
-	{ 
+       && sys_need_red
+        )
+    { 
 
-		if(!is_kernel_stack(addr))
-		{
-			return vmmi_profile;
-	    }
-		else
-		{
-			return 0;
-		}
-	}
-	else
-		return 0;
-
+        if(!is_kernel_stack(addr))
+        {
+            return vmmi_profile;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    else
+        return 0;
 }
+
 inline uint32_t is_monitored_vmmi_kernel_data_write(target_ulong addr)
 {
-
-	if((vmmi_start) \
-		&& (cpu_single_env->cr[3] == vmmi_process_cr3) \
-		&& ((cpu_single_env->hflags & HF_CPL_MASK) != 3)\
-                &&  (is_interrupt !=1 || need_interrupt == 1) \  
-		&&addr >=0xc0000000
-//		&&addr<0xf8000000
-//		&&!is_print
+    if((vmmi_start) \
+       && (cpu_single_env->cr[3] == vmmi_process_cr3) \
+       && ((cpu_single_env->hflags & HF_CPL_MASK) != 3)\
+       &&  (is_interrupt !=1 || need_interrupt == 1) \  
+       &&addr >= KERNEL_ADDRESS
 #ifdef VMMI_ALL_REDIRCTION
-		&&!is_sysenter
+       &&!is_sysenter
 #endif
-		&& sys_need_red
-		)
-	{ 
-		if(!is_kernel_stack(addr))
-		{
-			return vmmi_profile;
-	    }
-		else
-		{
-			return 0;
-		}
+       && sys_need_red
+        )
+    { 
+        if(!is_kernel_stack(addr))
+        {
+            return vmmi_profile;
+        }
+        else
+        {
+            return 0;
+        }
 
-	}
-	else
-		return 0;
+    }
+    else
+        return 0;
 }
 
 //yang.begin
@@ -781,22 +780,17 @@ target_ulong my_current_task;
 #define MM_STRUCT_PGD  40
 #endif
 
-
-void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)
-{
-//yang.begin
+//yufei.begin
+void find_task_linux(CPUX86State *env, target_ulong new_cr3){
 #ifdef DEBUG_VMMI
-	if(vmmi_mode)
-		if(qemu_log_enabled()){
-		  	qemu_log("process is 0x%08x, 0x%08x, 0x%08x\n", vmmi_process_cr3, new_cr3,cpu_single_env->cr[3] );
-		}
+    if(vmmi_mode)
+        if(qemu_log_enabled()){
+            qemu_log("process is 0x%08x, 0x%08x, 0x%08x\n", vmmi_process_cr3, new_cr3,cpu_single_env->cr[3] );
+        }
 #endif			
 
-
-	if( 
-        //	vmmi_main_start
-        vmmi_mode
-		&&!vmmi_start
+    if( vmmi_mode
+        &&!vmmi_start
         //   &&vmmi_process_cr3 == cpu_single_env->cr[3]
         //	&&vmmi_process_cr3 != new_cr3
         )
@@ -846,242 +840,21 @@ void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)
                 break;
         }while(next!=task);
     }
-
-    env->cr[3] = new_cr3;
-//yang.end
-
-    if (env->cr[0] & CR0_PG_MASK) {
-#if defined(DEBUG_MMU)
-        printf("CR3 update: CR3=" TARGET_FMT_lx "\n", new_cr3);
-#endif
-
-        tlb_flush(env, 0);
-    }
 }
+//yufei.end
 
-
-void cpu_x86_update_cr3_old(CPUX86State *env, target_ulong new_cr3)
+void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)
 {
-//yang.begin
 #ifdef DEBUG_VMMI
-	if(vmmi_mode)
-		if(qemu_log_enabled()){
-		  	qemu_log("process is 0x%08x, 0x%08x, 0x%08x\n", vmmi_process_cr3, new_cr3,cpu_single_env->cr[3] );
-		}
+    if(vmmi_mode && qemu_log_enabled()){
+        qemu_log("process is 0x%08x, 0x%08x, 0x%08x\n",
+                 vmmi_process_cr3, new_cr3, cpu_single_env->cr[3]);
+    }
 #endif			
 
-#ifdef DEBUG_VMMI_CONTEXT_SWITCH
-	
-	if( 
-		vmmi_start
-	    &&vmmi_process_cr3 == cpu_single_env->cr[3]
-		&&vmmi_process_cr3 != new_cr3
-	  )
-	{
-		if(qemu_log_enabled())
-			qemu_log("context switch\n");
-
-		if(is_interrupt){
-			if(cond_res &&vmmi_interrupt_stack==1){
-				qemu_log("exception\n");
-				excep_con++;
-			}
-			else
-		    int_con++;
-
-		}else if(is_syscall){
-			if(cond_res){
-				qemu_log("cond_reschdule\n");
-				sys_con++;
-			}else{
-				qemu_log("non cond_reschdule\n");
-				sys_con_w++;
-			}
-		}
-		else
-			other++;
-		if(vmmi_main_start){
-			run_timer();
-			vmmi_main_start = 0;
-		}
-	
-		cond_res=0;
-	   }
-#endif
-	if(
-		vmmi_main_start
-		&&vmmi_start
-		&&vmmi_process_cr3==cpu_single_env->cr[3]
-		&&vmmi_process_cr3!=new_cr3
-	  )
-	{
-		vmmi_main_start = 0;
-		run_timer();
-
-	}
-
-	if(
-	    !vmmi_main_start
-		&&vmmi_start
-	    &&vmmi_process_cr3 != cpu_single_env->cr[3]
-		&&vmmi_process_cr3 == new_cr3
-	  )
-	{
-		vmmi_main_start=1;
-#ifdef DEBUG_VMMI
-		  if(qemu_log_enabled())
-		  qemu_log("vmmi_process return is 0x%08x\n", vmmi_process_cr3);
-#endif
-
-	}
-
-
-	if( 
-		vmmi_main_start
-		&&!vmmi_start
-	    &&vmmi_process_cr3 == cpu_single_env->cr[3]
-		&&vmmi_process_cr3 != new_cr3
-	  )
-	  {
-
-#ifdef DEBUG_VMMI
-		  if(qemu_log_enabled())
-		  qemu_log("vmmi_process is 0x%08x\n", new_cr3);
-#endif
-
-		  vmmi_process_cr3 = new_cr3;
-		  vmmi_start =1;
-                  //yufei.begin
-                  char buf=0xc3;
-                  int func_address= 0xc10d9453;
-                  cpu_memory_rw_debug(env, func_address, &buf , 1 ,1);
-                  //yufei.end
-	{
-		int i=0;
- 	 	uint32_t stack= env->regs[R_ESP]&0xffffe000;
-  		uint32_t task;
- 		 uint32_t pid;
-  		uint32_t mm;
-  		uint32_t pgd;
-  		uint32_t next;
-  		uint32_t list;
-  		char comm[128];
-		
-  		cpu_memory_rw_debug(env, stack, &task, 4,0);
-  		next=task;
-		
-		printf("process is 0x%08x, 0x%08x, 0x%08x\n", vmmi_process_cr3, new_cr3,cpu_single_env->cr[3] );
-  		do{
-			cpu_memory_rw_debug(env, next+0x218, comm, 128,0);
-			comm[127]='\0';
-			cpu_memory_rw_debug(env, next+0x120, &pid, 4,0);
-			cpu_memory_rw_debug(env, next+0x100, &mm, 4,0);
-			//print the task
-			if(mm!=0){
-				cpu_memory_rw_debug(env, mm+0x24, &pgd, 4,0);
-				printf("find process %x %s %x\n", next, comm, pgd+0x40000000);
-			}
-			cpu_memory_rw_debug(env, next+0xe4, &list, 4, 0);
-			next=list-0xe4;
-			i++;
-			if(i>100)
-				break;
-		}while(next!=task);
-	}
-
-//		  vmmi_main_start =0;
-//		  run_timer();
-	   }
+    scanProcess(env); //yufei
+    
     env->cr[3] = new_cr3;
-	/*
-	if(vmmi_mode)
-	{
-		int i=0;
- 	 	uint32_t stack= env->regs[R_ESP]&0xffffe000;
-  		uint32_t task;
- 		 uint32_t pid;
-  		uint32_t mm;
-  		uint32_t pgd;
-  		uint32_t next;
-  		uint32_t list;
-  		char comm[128];
-		
-  		cpu_memory_rw_debug(env, stack, &task, 4,0);
-  		next=task;
-  		do{
-			cpu_memory_rw_debug(env, next+0x224, comm, 128,0);
-			comm[127]='\0';
-			cpu_memory_rw_debug(env, next+0x12c, &pid, 4,0);
-			cpu_memory_rw_debug(env, next+0x10c, &mm, 4,0);
-			//print the task
-		//	printf("task is %s %d\n", comm, pid);
-			if(strcmp(comm, "getpid")==0 &&mm!=0){
-				cpu_memory_rw_debug(env, mm+0x24, &pgd, 4,0);
-				printf("find process %s %x\n", comm, pgd+0x40000000);
-				break;
-			}
-			cpu_memory_rw_debug(env, next+0xf0, &list, 4, 0);
-			next=list-0xf0;
-			i++;
-			if(i>100)
-				break;
-		}while(next!=task);
-	}
-
-	*/
-	/*
-	target_ulong esp;
-	struct cr3_node *n;
-
-    env->cr[3] = new_cr3;
-	uint32_t stack= env->regs[R_ESP]&0xffffe000;
-	uint32_t task;
-	uint32_t pid;
-	uint32_t mm;
-	uint32_t pgd;
-	uint32_t next;
-	char comm[128];
-	cpu_memory_rw_debug(env, stack, &next, 4,0);
-	cpu_memory_rw_debug(env, next+0x10c, &mm, 4,0);
-
-	cpu_memory_rw_debug(env, next+0x2dc, comm, 128,0);
-	if(mm!=0){
-		cpu_memory_rw_debug(env, mm+0x24, &pgd, 4,0);
-		printf("cr3 is %x %x %s \n", new_cr3, pgd+0x40000000, comm);
-	}
-
-    esp = env->regs[4];
-	if(vmmi_mode && vmmi_process_cr3 ==0xffffffff &&!vmmi_start){
-
-		uint32_t stack= env->regs[R_ESP]&0xffffe000;
-		uint32_t task;
-		uint32_t pid;
-		char comm[128];
-		cpu_memory_rw_debug(env, stack, &task, 4,0);
-		cpu_memory_rw_debug(env, task+0x224, comm, 128,0);
-		if(strcmp(comm, "modprobe")==0)
-		{
-			vmmi_process_cr3 = env->cr[3];
-			vmmi_start=1;	
-			printf("vmmi_process is %x\n", vmmi_process_cr3);
-		}
-	}
-	*/
-/*
-    n = find_cr3(new_cr3);
-    if(!n)
-    {
-		add_cr3_node(new_cr3, esp);
-		if(qemu_loglevel_mask(CPU_LOG_CR3))
-			qemu_log("new process CR3 update: CR3=" TARGET_FMT_lx " ESP " TARGET_FMT_lx "\n", new_cr3, esp);
-
-		if(vmmi_mode)
-		{
-			qemu_log("vmmi_process is 0x%08x\n", vmmi_process_cr3);
-		}
-    }
-*/
-//yang.end
 
     if (env->cr[0] & CR0_PG_MASK) {
 #if defined(DEBUG_MMU)
@@ -1091,6 +864,7 @@ void cpu_x86_update_cr3_old(CPUX86State *env, target_ulong new_cr3)
         tlb_flush(env, 0);
     }
 }
+
 
 void cpu_x86_update_cr4(CPUX86State *env, uint32_t new_cr4)
 {

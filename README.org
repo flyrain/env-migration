@@ -1,0 +1,23 @@
+# Time-stamp: <2014-02-14 17:35:15 cs3612>
+* Introduction
+A customized qemu for environment migration. 
+* Compile
+#+BEGIN_SRC sh
+./configure --target-list=i386-softmmu --prefix=`pwd` --disable-vnc --disable-werror --disable-strip
+make install
+#+END_SRC
+   
+* Usage
+#+BEGIN_SRC sh
+cd bin
+./start.sh
+
+(EXTERIOR) exterior_start de2 cr3 0
+cr3 = c245000
+Snapshot is successfully loaded
+268435456 bytes read 0x8e5ec000
+(EXTERIOR) monps ls
+moniter process ls
+(EXTERIOR) log op
+(EXTERIOR) process name is ls
+#+END_SRC

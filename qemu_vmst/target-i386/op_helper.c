@@ -26,6 +26,7 @@
 #include "qemu-log.h"
 #include "cpu-defs.h"
 #include "helper.h"
+#include "code_config.h"
 
 #if !defined(CONFIG_USER_ONLY)
 #include "softmmu_exec.h"
@@ -6031,11 +6032,11 @@ extern int global_buf_len;
 
 void helper_load(target_ulong addr, int size)
 {
-	if(size == 3)size++;
+    if(size == 3)size++;
 
-	if(is_ins_log())
-	{
-		if(addr >= 0xc0000000){
+    if(is_ins_log())
+    {
+        if(addr >= KERNEL_ADDRESS){
             //yufei.begin
             //get physicial address
             target_ulong page = addr & TARGET_PAGE_MASK;
@@ -6061,8 +6062,8 @@ void helper_load(target_ulong addr, int size)
             }else {
                 qemu_log(" LD:0x%08x new %d ", addr, new);
             }
-		}
-	}
+        }
+    }
 }
 
 uint32_t snapshot_size;
@@ -6284,7 +6285,7 @@ static void no_red_schedule(target_ulong current_PC){
 }
 //yufei.end
 int is_kernel_address(target_ulong addr){
-    if(addr <= 0xc0000000 || addr == 0xffffffff)
+    if(addr <= KERNEL_ADDRESS || addr == 0xffffffff)
         return 0;
     else 
         return 1;
@@ -6293,7 +6294,7 @@ int is_kernel_address(target_ulong addr){
 int pc_needed = 0;
 
 int match_task_struct(target_ulong t1, target_ulong task_struct) {
-    if(t1 <= 0xc0000000 || t1 == 0xffffffff)
+    if(t1 <= KERNEL_ADDRESS || t1 == 0xffffffff)
         return 0;
 
     int i;
@@ -6689,17 +6690,17 @@ void helper_inst_hook(int PC)
 }
 
 int vmmi_init(void) {
-	xed_decoded_inst_set_mode(&xedd_g, XED_MACHINE_MODE_LEGACY_32,
+    xed_decoded_inst_set_mode(&xedd_g, XED_MACHINE_MODE_LEGACY_32,
                               XED_ADDRESS_WIDTH_32b);
 	
-	setup_inst_hook();
-	setup_inst_hook_fd();
-	xed2_init();
+    setup_inst_hook();
+    setup_inst_hook_fd();
+    xed2_init();
 
-	taintInit();
-	pc_taintInit();
+    taintInit();
+    pc_taintInit();
 	
-	return 0;
+    return 0;
 }
 
 //yang.end
