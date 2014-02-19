@@ -337,72 +337,10 @@ int operand_is_mem(const xed_operand_enum_t op_name, uint32_t * mem_addr,
 			    (unsigned long)
 			    xed_decoded_inst_get_memory_displacement(&xedd_g,
 								     mem_idx);
-	//		if(base_regid == XED_REG_INVALID)	
-	//		*taint =  *taint | get_mem_taint(displacement);
-	
 
-			
-//        fprintf(tracelog,"INDEX_REG %d %s, index %x, scale %x, disp %x\n",index_regid,xed_reg_enum_t2str(index_regid), index, scale, displacement);
-			/*
-			   // Fix displacement for:
-			   //   1) Any instruction that pushes into the stack, since ESP is 
-			   //        decremented before memory operand is written using ESP. 
-			   //        Affects: ENTER,PUSH,PUSHA,PUSHF,CALL
-			   if (is_stackpush) {
-			   stackpushpop_acc += eh->operand[op_idx].length;
-			   displacement = displacement - stackpushpop_acc -j;
-			   }
-			   //   2) Pop instructions where the 
-			   //      destination operand is a memory location that uses ESP 
-			   //        as base or index register. 
-			   //      The pop operations increments ESP and the written memory 
-			   //        location address needs to be adjusted.
-			   //      Affects: pop (%esp)
-			   else if ((category == XED_CATEGORY_POP) && (!is_stackpop)) {
-			   if ((eh->memregs[op_idx][1].addr == esp_reg) || 
-			   (eh->memregs[op_idx][2].addr == esp_reg)) 
-			   {
-			   displacement = displacement + eh->operand[op_idx].length;
-			   }
-			   }
-
-			 */
 			// Calculate memory address accessed
 			*mem_addr =
 			    segbase + base + index * scale + displacement;
-		//	if(displacement>=0xc0000000&&base_regid!=XED_REG_ESP)
-		//		*taint=0;
-		
-			/*	
-			if(is_kernel_stack(*mem_addr) 
-					&& base_regid != XED_REG_INVALID
-					&& !(base_regid == XED_REG_ESP || base_regid == XED_REG_EBP)) 
-				qemu_log("unnormal stack address");
-			*/
-			
-			/*
-			   // Special handling for LEA instructions
-			   if (op_name == XED_OPERAND_AGEN) {
-			   eh->operand[op_idx].type = TMemAddress;
-			   eh->operand[op_idx].length = 4;
-			   has_page_fault = 0; // LEA won't trigger page fault
-			   }
-			   else {
-			   has_page_fault = TEMU_read_mem(eh->operand[op_idx].addr,
-			   (int)(eh->operand[op_idx].length), 
-			   (uint8_t *)&(eh->operand[op_idx].value));
-			   }
-
-			   // Check if instruction accesses user memory
-			   // kernel_mem_start defined in shared/read_linux.c
-			   if ((eh->operand[op_idx].addr < kernel_mem_start) &&
-			   (op_name != XED_OPERAND_AGEN))
-			   {
-			   access_user_mem = 1;
-			   }
-			   if (ignore_taint == 0) set_operand_data(&(eh->operand[op_idx]));
-			 */
-
 			return 1;
 		}
 

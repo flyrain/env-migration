@@ -2453,9 +2453,11 @@ static void do_command(Monitor *mon, const QDict *qdict)
 
 	pname = qdict_get_str(qdict, "prog");
 	strcpy(pemu_exec_stats.PEMU_binary_name, pname);
-	
+        init_process_win(pname);
+        
 	init_kernel_offsets();
 	PEMU_init(mon_get_cpu());
+
 
 	fprintf(stdout, "program: %s\n", pemu_exec_stats.PEMU_binary_name);
 

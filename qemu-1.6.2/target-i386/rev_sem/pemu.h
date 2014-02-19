@@ -70,6 +70,22 @@ struct PEMU_HOOK_FUNCS {
 };
 #endif
 
+//#define LINUX_KERNEL
+#define WINDOWS_KERNEL
+
+#ifdef LINUX_KERNEL
+#define KERNEL_ADDRESS 0xc0000000
+#endif
+
+#ifdef WINDOWS_KERNEL
+#define KERNEL_ADDRESS 0x80000000
+#endif
+
+extern FILE * pemu_log;
+#define pemu_debug(...) do {                                                 \
+        if (pemu_log)                                                   \
+        { fprintf(pemu_log, ## __VA_ARGS__); fflush(pemu_log);}   \
+    } while(0)
 
 int PEMU_init(void*);
 int PEMU_exit(void);

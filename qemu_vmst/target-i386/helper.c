@@ -852,7 +852,7 @@ void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)
     }
 #endif			
 
-    scanProcess(env); //yufei
+//    scanProcess(env); //yufei
     
     env->cr[3] = new_cr3;
 

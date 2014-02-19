@@ -105,7 +105,7 @@ unsigned int  get_mem_taint( Addr a )
    return  sm->byte[sm_off];
 }
 
-extern FILE * vmmi_log;
+//extern FILE * vmmi_log;
 void  set_mem_taint( Addr a, unsigned int bytes)
 {
 

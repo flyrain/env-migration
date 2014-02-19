@@ -126,9 +126,8 @@ void  pc_set_mem_taint_bysize( Addr a, UChar bytes, UInt size)
 
 void pc_taintInit()
 {
-
-	free_shadow_memory();
-	init_shadow_memory();	
+    free_shadow_memory();
+    init_shadow_memory();	
 }
 
 

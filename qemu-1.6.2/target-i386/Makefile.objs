@@ -9,6 +9,6 @@ obj-$(CONFIG_LINUX_USER) += ioport-user.o
 obj-$(CONFIG_BSD_USER) += ioport-user.o
 #jzeng
 obj-y += rev_sem/pemu.o rev_sem/qemu-pemu.o rev_sem/linux.o rev_sem/main.o rev_sem/disas.o rev_sem/parse_operand.o rev_sem/taint.o rev_sem/hook_inst.o	\
-	rev_sem/rb_tree.o 
+	rev_sem/rb_tree.o rev_sem/windows.o
 #rev_sem/obj.o
 #obj-y += rev_sem/callstack.o

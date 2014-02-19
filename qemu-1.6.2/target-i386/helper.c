@@ -447,20 +447,20 @@ void cpu_x86_update_cr0(CPUX86State *env, uint32_t new_cr0)
 #include "rev_sem/pemu.h"
 void cpu_x86_update_cr3(CPUX86State *env, target_ulong new_cr3)
 {
-	if(pemu_exec_stats.PEMU_start && pemu_exec_stats.PEMU_cr3 == 0) {
-		if(PEMU_find_process(0)) {
-		}
-	}
+    if(pemu_exec_stats.PEMU_start && pemu_exec_stats.PEMU_cr3 == 0) {
+        //PEMU_find_process(0);
+        PEMU_find_process_winxp(env, new_cr3);
+    }
 
 #if 0
-	if(!pemu_exec_stats.PEMU_already_flush 
-			&& pemu_exec_stats.PEMU_start 
-			&& pemu_exec_stats.PEMU_cr3 != 0 
-			&& pemu_exec_stats.PEMU_cr3 == new_cr3){
-		tb_flush(env);
-		pemu_exec_stats.PEMU_already_flush = 1;
-		printf("tb_flush\n");
-	}
+    if(!pemu_exec_stats.PEMU_already_flush 
+       && pemu_exec_stats.PEMU_start 
+       && pemu_exec_stats.PEMU_cr3 != 0 
+       && pemu_exec_stats.PEMU_cr3 == new_cr3){
+        tb_flush(env);
+        pemu_exec_stats.PEMU_already_flush = 1;
+        printf("tb_flush\n");
+    }
 #endif
 //end
 

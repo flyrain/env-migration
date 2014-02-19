@@ -233,18 +233,16 @@ void set_reg_taint_fd(xed_reg_enum_t reg, UChar bytes)
 
 void taintInit()
 {
-	init_shadow_memory();
-	regUntainted();
-	regUntainted_fd();
+    init_shadow_memory();
+    regUntainted();
+    regUntainted_fd();
 }
 
-void	mem_taint_format()
+void mem_taint_format()
 {
-	Int i,j;
-
-	for (i =0; i< PAGE_NUM; i++)
-		for(j=0;j< PAGE_SIZE;j++)
-			if(ii_primary_map[i]->byte[j]>TAINTED)
-				ii_primary_map[i]->byte[j]=UNTAINTED;
-
+    Int i,j;
+    for (i =0; i< PAGE_NUM; i++)
+        for(j=0;j< PAGE_SIZE;j++)
+            if(ii_primary_map[i]->byte[j]>TAINTED)
+                ii_primary_map[i]->byte[j]=UNTAINTED;
 }

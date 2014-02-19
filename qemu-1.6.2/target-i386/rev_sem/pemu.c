@@ -48,6 +48,8 @@ inline void inst_update(char *buf)
 }
 #endif
 
+FILE *pemu_log;
+
 int PEMU_init(void *env)
 {
 	//pemu_exec_stats.PEMU_hook_sys_call = -1;
@@ -57,6 +59,9 @@ int PEMU_init(void *env)
 	//init_hashTable();
 	//init_disas();
 	setup_inst_hook();
+        
+        pemu_log = fopen("pemu_log", "a+");
+        //    init_process_win(pname);
 }
 
 #if 0

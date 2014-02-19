@@ -230,28 +230,28 @@ static uint32_t get_vmflags(uint32_t addr)
 
 int PEMU_find_process(void *opaque)
 {
-	uint32_t nextaddr = 0;
-	char comm[512];
-	int count = 0;
+    uint32_t nextaddr = 0;
+    char comm[512];
+    int count = 0;
 
-	nextaddr = pemu_guest_os.taskaddr;
-	do{
-		if (++count > 1000)
-			return -1;
-	  	get_name(nextaddr, 16, comm);
-		if(!strcmp(comm, pemu_exec_stats.PEMU_binary_name))
-			break;
-		nextaddr = next_task_struct(nextaddr);
-	}while(nextaddr != pemu_guest_os.taskaddr);
+    nextaddr = pemu_guest_os.taskaddr;
+    do{
+        if (++count > 1000)
+            return -1;
+        get_name(nextaddr, 16, comm);
+        if(!strcmp(comm, pemu_exec_stats.PEMU_binary_name))
+            break;
+        nextaddr = next_task_struct(nextaddr);
+    }while(nextaddr != pemu_guest_os.taskaddr);
 
-	if(nextaddr != pemu_guest_os.taskaddr){
-		pemu_exec_stats.PEMU_pid = get_pid(nextaddr);
-		pemu_exec_stats.PEMU_cr3 = get_pgd(nextaddr) - 0xc0000000;
-		pemu_exec_stats.PEMU_task_addr = nextaddr;
-		fprintf(stdout, "finding process\t%s\t0x%x\t0x%x\n", comm, pemu_exec_stats.PEMU_pid, pemu_exec_stats.PEMU_cr3);
-		return 1;
-	}
-	return 0;
+    if(nextaddr != pemu_guest_os.taskaddr){
+        pemu_exec_stats.PEMU_pid = get_pid(nextaddr);
+        pemu_exec_stats.PEMU_cr3 = get_pgd(nextaddr) - 0xc0000000;
+        pemu_exec_stats.PEMU_task_addr = nextaddr;
+        fprintf(stdout, "finding process\t%s\t0x%x\t0x%x\n", comm, pemu_exec_stats.PEMU_pid, pemu_exec_stats.PEMU_cr3);
+        return 1;
+    }
+    return 0;
 }
 
 

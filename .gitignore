@@ -23,3 +23,7 @@
 /qemu_vmst/qapi-generated/qga-qapi-visit.h
 /qemu_vmst/qapi-generated/qga-qmp-commands.h
 /qemu_vmst/qapi-generated/qga-qmp-marshal.c
+/qemu-1.6.2/GPATH
+/qemu-1.6.2/GRTAGS
+/qemu-1.6.2/GTAGS
+/qemu-1.6.2/build

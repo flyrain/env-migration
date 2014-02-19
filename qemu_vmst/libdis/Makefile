@@ -1,1 +1,1 @@
-/home/cs3612/fs_traverse/trainning/qemu_vmst/Makefile.dis
+/home/cs3612/env-migration/qemu_vmst/Makefile.dis
