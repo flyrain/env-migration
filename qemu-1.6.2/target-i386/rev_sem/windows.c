@@ -453,9 +453,7 @@ void PEMU_find_process_winxp(CPUX86State *env, target_ulong new_cr3)
 
         if(strcmp(eprocess.ImageFileName, win.m_hookApp)==0)
         {
-            pemu_debug("Found process %s new_cr3 %x!\n", win.m_hookApp, new_cr3);
-            pemu_exec_stats.PEMU_cr3 = new_cr3;
-            pemu_debug("pemu_exec_stats.PEMU_cr3 %x!\n", pemu_exec_stats.PEMU_cr3);
+            //pemu_debug("Found process %s new_cr3 %x eprocess.Pcb.DirectoryTableBase %x!\n", win.m_hookApp, new_cr3, eprocess.Pcb.DirectoryTableBase);
             PEB32 peb;
             PEB_LDR_DATA32 ldrdata;
             LDR_DATA_TABLE_ENTRY32 ldrentry;
@@ -492,7 +490,7 @@ void PEMU_find_process_winxp(CPUX86State *env, target_ulong new_cr3)
                     win.mstart=ldrentry.EntryPoint;
                     win.m_hookCr3=eprocess.Pcb.DirectoryTableBase;
                     pemu_exec_stats.PEMU_cr3 = win.m_hookCr3;
-                    //init_top(win.mstart);  commented by yufei
+                    pemu_debug("pemu_exec_stats.PEMU_cr3 %x!\n", pemu_exec_stats.PEMU_cr3);
                     return;
                 }
                 curptr=ldrentry.InLoadOrderLinks.Flink;

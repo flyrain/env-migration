@@ -94,7 +94,7 @@ void helper_hook(int pc_start)
        //&& pc_start > 0x8000000 && pc_start < 0x10000000
        && pemu_exec_stats.PEMU_cr3 == PEMU_get_cr3()) {
         pemu_exec_stats.PEMU_main_start = 1;
-        printf("\n--------------------main--------------------\n");
+        pemu_debug("\n--------------------main--------------------\n");
     }
 	
     if(pc_start < KERNEL_ADDRESS || pemu_exec_stats.PEMU_main_start == 0) {
