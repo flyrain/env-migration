@@ -8,7 +8,7 @@
 //#include "ds_code/call_stack.h"
 #include "condition.h"
 #include "config_pemu.h"
-
+#include "page_tree.h"
 
 /*
  * *****************************************************************
@@ -190,11 +190,50 @@ static int is_kernel_stack(uint32_t addr)
     return 0;
 }
 
+
 #define MAX_GLOBAL_DATA_PAGE 1024
 uint32_t global_addrs[MAX_GLOBAL_DATA_PAGE];
+struct page_node global_pages[MAX_GLOBAL_DATA_PAGE];
 int global_page_no = 0;
 
-static void record_global_addrs(xed_operand_t *oprand, uint32_t addr){
+int is_kernel_address(uint32_t addr)
+{
+    uint32_t kernle_start_addr;
+    kernle_start_addr = 0xc0000000;
+    
+#ifdef WINDOWS_XP
+    kernle_start_addr = 0x80000000;
+#endif        
+
+    if (addr > kernle_start_addr) 
+        return 1;
+    return 0;
+}
+
+static void page_node_scan(uint32_t addr)
+{
+    uint32_t value = 0;
+    addr = (addr & (~ 0xfff));
+
+    struct page_node * node = &(global_pages[global_page_no]);
+    node->addr = addr;
+    int pointer_no = 0;
+
+    int i = 0;
+    for(; i < 4 * 1024; i += 4){
+        PEMU_read_mem(addr + i, 4, &value);
+        if(is_kernel_address(value)){
+            struct offset_value *pointer = &(node->point_out[pointer_no]);
+            pointer->offset = i;
+            pointer->value = value;
+            pemu_debug("%x %d: %d %x\n", node->addr, pointer_no, pointer->offset, pointer->value);
+            pointer_no ++;
+        }
+    }
+}
+
+static void record_global_addrs(xed_operand_t *oprand, uint32_t addr)
+{
     if(addr == 0)
         return;
     
@@ -210,7 +249,9 @@ static void record_global_addrs(xed_operand_t *oprand, uint32_t addr){
     
     if(global_page_no < MAX_GLOBAL_DATA_PAGE){
         global_addrs[global_page_no] = (addr & (~ 0xfff));
+        //check the whole page, add all pointer to a array
         pemu_debug("Global:%x, global page no %d\n", addr & (~ 0xfff), global_page_no);
+        page_node_scan(addr);
         global_page_no ++;
     }
 }
@@ -236,8 +277,6 @@ static void record_heap_addrs(uint32_t addr){
     }
 }
 
-
-
 static void ds_code_handle_mem_access(INS ins, int oprand_i)
 {
     uint32_t addr = 0;
@@ -254,6 +293,8 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
             record_heap_addrs(addr);
     }
 }
+
+#if 0
 
 static void ds_code_handle_mem_access1(INS ins)
 {
@@ -319,6 +360,7 @@ static void ds_code_handle_mem_access0(INS ins)
     }
 }
 
+#endif
 
 static void taint_mem_access0(INS ins)
 {
@@ -774,7 +816,6 @@ static void Instrument_XOR(INS xi)
 static int eflags;
 void Instrument(uint32_t pc, INS ins)
 {
-    get_page_tree_no();
     xed_iclass_enum_t opcode = g_opcode = xed_decoded_inst_get_iclass(&pemu_inst.PEMU_xedd_g);
     //strcpy(g_inst_name, xed_iclass_enum_t2str(opcode));
 

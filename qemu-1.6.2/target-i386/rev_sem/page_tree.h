@@ -3,18 +3,16 @@
 #include <inttypes.h>
 //#include "qemu-common.h"
 
-struct page_node;
-
-struct offset_page_node
+struct offset_value
 {
     int offset;
-    struct page_node * next;
+    uint32_t value;
 };
 
 struct page_node
 {
     uint32_t addr;
-    struct offset_page_node point_out[1024];
+    struct offset_value point_out[1024];
 };
 
 
