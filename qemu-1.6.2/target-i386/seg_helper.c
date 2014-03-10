@@ -1179,13 +1179,13 @@ static void do_interrupt_all(X86CPU *cpu, int intno, int is_int,
 			set_taint_source_args();
 #ifdef PEMU_DEBUG
 			struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
-			fprintf(stdout, "int80 start syscall:%d\n", env->regs[R_EAX]);
+			pemu_debug( "int80 start syscall:%d\n", env->regs[R_EAX]);
 #endif
 		}else {
 			if(pemu_exec_stats.PEMU_start_trace_syscall) {
 				pemu_exec_stats.PEMU_int_level++;
 #ifdef PEMU_DEBUG
-				fprintf(stdout, "interrupt:%d\n", pemu_exec_stats.PEMU_int_level);
+				pemu_debug( "interrupt:%d\n", pemu_exec_stats.PEMU_int_level);
 #endif
 			}
 		}
@@ -2251,26 +2251,26 @@ void helper_iret_protected(CPUX86State *env, int shift, int next_eip)
     env->hflags2 &= ~HF2_NMI_MASK;
 
 //jzeng
-	if(pemu_exec_stats.PEMU_start 
-			&& pemu_exec_stats.PEMU_cr3 == PEMU_get_cr3()
-			&& pemu_exec_stats.PEMU_main_start) {
-		if(pemu_exec_stats.PEMU_start_trace_syscall) {
-			if(pemu_exec_stats.PEMU_iret_target_pc < 0xc0000000) {
-				pemu_exec_stats.PEMU_int_level = 0;
-				pemu_exec_stats.PEMU_start_trace_syscall = 0;
-				set_taint_source_args();
+    if(pemu_exec_stats.PEMU_start 
+       && pemu_exec_stats.PEMU_cr3 == PEMU_get_cr3()
+       && pemu_exec_stats.PEMU_main_start) {
+        if(pemu_exec_stats.PEMU_start_trace_syscall) {
+            if(pemu_exec_stats.PEMU_iret_target_pc < 0xc0000000) {
+                pemu_exec_stats.PEMU_int_level = 0;
+                pemu_exec_stats.PEMU_start_trace_syscall = 0;
+                set_taint_source_args();
 #ifdef PEMU_DEBUG
-				fprintf(stdout, "iret syscall\n");
+                pemu_debug( "iret syscall\n");
 #endif
-				//clear_calldata();
-			} else {
-				pemu_exec_stats.PEMU_int_level--;
+                //clear_calldata();
+            } else {
+                pemu_exec_stats.PEMU_int_level--;
 #ifdef PEMU_DEBUG
-				fprintf(stdout, "iret interrupt:%d\n", pemu_exec_stats.PEMU_int_level);
+                pemu_debug( "iret interrupt:%d\n", pemu_exec_stats.PEMU_int_level);
 #endif
-			}
-		}	
-	}
+            }
+        }	
+    }
 //end
 }
 
@@ -2295,7 +2295,7 @@ void helper_sysenter(CPUX86State *env)
 		pemu_exec_stats.PEMU_int_level = 0;
 #ifdef PEMU_DEBUG
 		struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
-		fprintf(stdout, "sysenter system call:%d eip=%x\n", env->regs[R_EAX], env->eip);
+	        pemu_debug("sysenter system call:%d eip=%x\n", env->regs[R_EAX], env->eip);
 #endif
 	}
 //end
@@ -2335,16 +2335,16 @@ void helper_sysexit(CPUX86State *env, int dflag)
 {
     int cpl;
 //jzeng
-	if(pemu_exec_stats.PEMU_start 
-			&& pemu_exec_stats.PEMU_cr3 == PEMU_get_cr3()
-			&& pemu_exec_stats.PEMU_main_start){
-		pemu_exec_stats.PEMU_start_trace_syscall = 0;
-		pemu_exec_stats.PEMU_int_level = 0;
+    if(pemu_exec_stats.PEMU_start 
+       && pemu_exec_stats.PEMU_cr3 == PEMU_get_cr3()
+       && pemu_exec_stats.PEMU_main_start){
+        pemu_exec_stats.PEMU_start_trace_syscall = 0;
+        pemu_exec_stats.PEMU_int_level = 0;
 #ifdef PEMU_DEBUG
-		fprintf(stdout, "sysexit\n");
+        pemu_debug("sysexit\n");
 #endif
-		//clear_calldata();
-	}
+        //clear_calldata();
+    }
 //end
     cpl = env->hflags & HF_CPL_MASK;
     if (env->sysenter_cs == 0 || cpl != 0) {

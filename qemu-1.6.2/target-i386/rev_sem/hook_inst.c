@@ -46,7 +46,7 @@ void clear_taint_source_heaps(uint32_t addr, int len)
 
 
 #define SET_TAINT(XXX, T)                               \
-    printf("setting taint at addr: 0x%x\n", XXX);	\
+    pemu_debug("setting taint at addr: 0x%x\n", XXX);	\
     if(XXX >= 0x8000000 && XXX < esp+10000){            \
         if(!get_mem_taint(XXX)){                        \
             set_mem_taint_bysize(XXX, T, 4);            \
@@ -88,7 +88,7 @@ void set_taint_source_args(void)
     //this esp getting only work for Linux, not for Windows
     PEMU_read_mem(0xc1c07f80-0x217c, 4, &kernel_esp); 
     kernel_esp &= 0xffffe000;
-    //printf("kernel esp: %x\n", kernel_esp);
+    //pemu_debug("kernel esp: %x\n", kernel_esp);
 
     uint32_t ebx = PEMU_get_reg(XED_REG_EBX);
     uint32_t ecx = PEMU_get_reg(XED_REG_ECX);
@@ -454,7 +454,7 @@ static void Instrument_CMOVcc(INS ins)
     struct CPUX86State* cpu_single_env = (struct CPUX86State*)(first_cpu->env_ptr);
     uint32_t eflags = cpu_compute_eflags(cpu_single_env);
 
-    printf("eflags:\t%x\t%x\n", cpu_single_env->eflags, eflags);
+    pemu_debug("eflags:\t%x\t%x\n", cpu_single_env->eflags, eflags);
 
     switch(opcode){
     case XED_ICLASS_CMOVB:
@@ -495,7 +495,7 @@ static void Instrument_CMOVcc(INS ins)
         cont = is_sf_set() == is_of_set() && !is_zf_set();
         break;
     default:
-        printf("unfound CMOVcc!\n");
+        pemu_debug("unfound CMOVcc!\n");
         exit(0);
     }
 
