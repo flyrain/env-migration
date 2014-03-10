@@ -235,10 +235,14 @@ static int connect_page_nodes(uint32_t addr)
     for(; i < page_node_no; i ++){
         int j = 0;
         for(; j < 1024; j++ ){
-            if(page_nodes[i].point_out[j].value == 0)
+            uint32_t value = page_nodes[i].point_out[j].value;
+
+            if(value == 0)
                 break;
-            if(page_nodes[i].point_out[j].value == (addr & (~ 0xfff))){
+
+            if((value & (~ 0xfff))  == (addr & (~ 0xfff))){
                 graph_output("\"%x\" -> \"%x\" [label=%d]\n", page_nodes[i].addr, (addr & (~ 0xfff)), page_nodes[i].point_out[j].offset);
+                //TODO, multiple path, and remove duplicate path
                 return 1;
             }
         }
@@ -250,6 +254,8 @@ static void record_page_nodes(uint32_t addr, int global)
 {
     if(addr == 0 || (addr & (~ 0xfff)) < KERNEL_ADDRESS)
         return;
+    
+    pemu_debug("(addr %x)", addr);
     
     int i = 0;
     for(; i < page_node_no; i ++){
