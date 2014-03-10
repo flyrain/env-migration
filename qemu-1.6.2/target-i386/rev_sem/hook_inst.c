@@ -1,11 +1,10 @@
 #include <xed-interface.h>
+#include <assert.h>
 #include "cpu.h"
 #include "hook_inst.h"
-//#include "ds_code/call_stack.h"
 #include "parse_operand.h"
 #include "linux.h"
 #include "heap_shadow.h"
-//#include "ds_code/call_stack.h"
 #include "condition.h"
 #include "config_pemu.h"
 #include "page_tree.h"
@@ -147,7 +146,7 @@ static unsigned int handle_control_target(INS xi)
     else if(operand_is_relbr(op_name, &dest)){
         dest += (g_pc +  xed_decoded_inst_get_length(&pemu_inst.PEMU_xedd_g));
     }else{
-        fprintf(stderr, "error: Instrument_CALL\n");
+        pemu_debug("error: Instrument_CALL\n");
         exit(0);
     }
     return dest;
@@ -191,10 +190,9 @@ static int is_kernel_stack(uint32_t addr)
 }
 
 
-#define MAX_GLOBAL_DATA_PAGE 1024
-uint32_t global_addrs[MAX_GLOBAL_DATA_PAGE];
-struct page_node global_pages[MAX_GLOBAL_DATA_PAGE];
-int global_page_no = 0;
+#define MAX_DATA_PAGE_NODE 1024
+struct page_node page_nodes[MAX_DATA_PAGE_NODE];
+int page_node_no = 0;
 
 int is_kernel_address(uint32_t addr)
 {
@@ -205,18 +203,17 @@ int is_kernel_address(uint32_t addr)
     kernle_start_addr = 0x80000000;
 #endif        
 
-    if (addr > kernle_start_addr) 
+    if (addr > kernle_start_addr && addr != 0xffffffff) 
         return 1;
     return 0;
 }
 
-static void page_node_scan(uint32_t addr)
+static void inside_page_scan(uint32_t addr, struct page_node * node)
 {
+    //check the whole page, add all pointer to a array
     uint32_t value = 0;
     addr = (addr & (~ 0xfff));
 
-    struct page_node * node = &(global_pages[global_page_no]);
-    node->addr = addr;
     int pointer_no = 0;
 
     int i = 0;
@@ -232,49 +229,31 @@ static void page_node_scan(uint32_t addr)
     }
 }
 
-static void record_global_addrs(xed_operand_t *oprand, uint32_t addr)
+static void record_page_nodes(uint32_t addr, int global)
 {
-    if(addr == 0)
-        return;
-    
-    if(! (xed_operand_type(oprand) == XED_OPERAND_TYPE_IMM
-          || xed_operand_type(oprand) == XED_OPERAND_TYPE_IMM_CONST))
+    if(addr == 0 || (addr & (~ 0xfff)) < 0x80000000)
         return;
     
     int i = 0;
-    for(i = 0; i < global_page_no; i ++){
-        if(global_addrs[i] == (addr & (~ 0xfff)))
+    for(; i < page_node_no; i ++){
+        if(page_nodes[i].addr == (addr & (~ 0xfff)))
             return;
     }
-    
-    if(global_page_no < MAX_GLOBAL_DATA_PAGE){
-        global_addrs[global_page_no] = (addr & (~ 0xfff));
-        //check the whole page, add all pointer to a array
-        pemu_debug("Global:%x, global page no %d\n", addr & (~ 0xfff), global_page_no);
-        page_node_scan(addr);
-        global_page_no ++;
-    }
-}
 
-#define MAX_HEAP_DATA_PAGE 1024
-uint32_t heap_addrs[MAX_HEAP_DATA_PAGE];
-int heap_page_no = 0;
+    assert(page_node_no < MAX_DATA_PAGE_NODE);
 
-static void record_heap_addrs(uint32_t addr){
-    if(addr == 0)
-        return;
-    
-    int i = 0;
-    for(i = 0; i < heap_page_no; i ++){
-        if(heap_addrs[i] == (addr & (~ 0xfff)))
-            return;
+    struct page_node * node = &(page_nodes[page_node_no]);
+    node->addr = (addr & (~ 0xfff));
+    if(global){
+        node->global = 1;
+        pemu_debug("Global:%x, page node no %d\n", node->addr, page_node_no);
+    }else{
+        node->global = 0;
+        pemu_debug("Heap:%x, page node no %d\n", addr & (~ 0xfff), page_node_no);
     }
-    
-    if(heap_page_no < MAX_HEAP_DATA_PAGE){
-        heap_addrs[heap_page_no] = (addr & (~ 0xfff));
-        pemu_debug("Heap:%x, heap page no %d\n", addr & (~ 0xfff), heap_page_no);
-        heap_page_no ++;
-    }
+        
+    inside_page_scan(addr, node);
+    page_node_no ++;
 }
 
 static void ds_code_handle_mem_access(INS ins, int oprand_i)
@@ -288,79 +267,12 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
             return;
 
         if (only_displacement(op_name, oprand_i))
-            record_global_addrs(oprand, addr);
+            record_page_nodes(addr,1);
         else
-            record_heap_addrs(addr);
+            record_page_nodes(addr,0);
     }
 }
 
-#if 0
-
-static void ds_code_handle_mem_access1(INS ins)
-{
-    uint32_t addr, value;
-    //int size = 0;
-    NodeType *tmp1, *tmp2;
-//	const xed_inst_t *p = xed_decoded_inst_inst(pemu_inst.PEMU_xedd_g);
-    const xed_operand_t *oprand = xed_inst_operand(ins, 1);
-    xed_operand_enum_t op_name_1 = xed_operand_name(oprand);
-
-    if(is_special_inst(&pemu_inst.PEMU_xedd_g)){
-        return;
-    }
-
-    if(operand_is_mem(op_name_1, &addr, 1)){
-//        pemu_debug("access memory address: %x\ttaint=%d oprand type: %s\n",
-//                   addr, get_mem_taint(addr), xed_oprand_type_string[xed_operand_type(oprand)]);
-
-        //if oprand is the immediate, then add to global nodes, else add
-        //to heap addresses
-        if(is_kernel_stack(addr))
-            return; 
-        if (only_displacement(op_name_1, 1))
-            record_global_addrs(oprand, addr);
-        else
-            record_heap_addrs(addr);
-
-        /*
-        if((tmp1 = ds_code_rbtFind2(addr)) != 0){
-            //fprintf(stderr, "at pc: %x in %x function read object:%x\n", g_pc, get_current_func(),tmp1->size);
-            PEMU_read_mem(addr, 4, &value);
-            pemu_debug("addr %x, value %x", addr, value);
-
-            if((tmp2 = ds_code_rbtFind2(value)) != 0){
-                fprintf(stderr, "%x\tcontains\t%x\n", tmp1->size, tmp2->size);
-            }
-        }*/
-    }
-}
-
-
-static void ds_code_handle_mem_access0(INS ins)
-{
-    uint32_t addr;
-    //int size = 0;
-    NodeType *tmp;
-//	const xed_inst_t *p = xed_decoded_inst_inst(pemu_inst.PEMU_xedd_g);
-    const xed_operand_t *oprand = xed_inst_operand(ins, 0);
-    xed_operand_enum_t op_name_0 = xed_operand_name(oprand);
-
-    if(operand_is_mem(op_name_0, &addr, 0)){
-        //size = xed_decoded_inst_operand_length(&pemu_inst.PEMU_xedd_g, 0);
-//        pemu_debug("access memory address: %x\ttaint=%d oprand type: %s\n",
-//                   addr, get_mem_taint(addr), xed_oprand_type_string[xed_operand_type(oprand)]);
-
-        if(is_kernel_stack(addr))
-            return;
-
-        if (only_displacement(op_name_0, 0))
-            record_global_addrs(oprand, addr);
-        else
-            record_heap_addrs(addr);
-    }
-}
-
-#endif
 
 static void taint_mem_access0(INS ins)
 {
@@ -373,12 +285,12 @@ static void taint_mem_access0(INS ins)
         NodeType *tmp;
 #if 0
         if((tmp = ds_code_rbtFind2(addr)) != 0){
-            fprintf(stderr, "pc\t%x\tpropagate to heap mem:\t%x\t%x\t%x\tpara_%d\n", g_pc, addr, 
+            pemu_debug("pc\t%x\tpropagate to heap mem:\t%x\t%x\t%x\tpara_%d\n", g_pc, addr, 
                     tmp->key, tmp->size, get_mem_taint(addr));
         }
 #endif
         if(addr < kernel_esp  || addr > kernel_esp + 0x2000) {
-            fprintf(stderr, "pc\t%x\tpropagate to heap mem:\tpara_%d\n", g_pc, get_mem_taint(addr));
+            pemu_debug("pc\t%x\tpropagate to heap mem:\tpara_%d\n", g_pc, get_mem_taint(addr));
         }
     }
 }
@@ -391,7 +303,7 @@ unsigned int g_taint;
 static void UnimplementedInstruction(INS ins) 
 {
     //strcpy(g_inst_name, xed_iclass_enum_t2str(g_opcode));
-    fprintf(stderr, "missing:\t%s\n", g_inst_name);
+    pemu_debug("missing:\t%s\n", g_inst_name);
     return;
 }
 
@@ -704,7 +616,7 @@ static void Instrument_PUSH(INS ins)
         g_taint = get_mem_taint(addr);
     }else {
 #ifdef DEBUG_TAINT
-        fprintf(stderr, "%d unknown\n", 1);
+        pemu_debug("%d unknown\n", 1);
 #endif
         return;
     }

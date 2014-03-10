@@ -12,6 +12,7 @@ struct offset_value
 struct page_node
 {
     uint32_t addr;
+    int global;
     struct offset_value point_out[1024];
 };
 
