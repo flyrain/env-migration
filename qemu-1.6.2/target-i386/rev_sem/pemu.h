@@ -56,17 +56,16 @@ struct PEMU_INST {
 
 #if 0
 struct PEMU_BBL {
-	target_ulong PEMU_bbl_pc;
-	//xed_decoded_inst_t PEMU_xedd_g;
-	BBL bbl;
+    target_ulong PEMU_bbl_pc;
+    //xed_decoded_inst_t PEMU_xedd_g;
+    BBL bbl;
 };
 
 struct PEMU_HOOK_FUNCS {
-	//TODO
     INS_INSTRUMENT_CALLBACK inst_hook;
-	BBL_INSTRUMENT_CALLBACK bbl_hook;
-	SYSCALL_ENTRY_CALLBACK enter_syscall_hook;
-	SYSCALL_EXIT_CALLBACK exit_syscall_hook;
+    BBL_INSTRUMENT_CALLBACK bbl_hook;
+    SYSCALL_ENTRY_CALLBACK enter_syscall_hook;
+    SYSCALL_EXIT_CALLBACK exit_syscall_hook;
 };
 #endif
 

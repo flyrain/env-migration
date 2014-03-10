@@ -9,8 +9,6 @@
 #define KMEM_CACHE_FREE	0xc10a997f  /*address of kmem_cache_free*/
 #define LINUX_2_6_32_8
 
-#define WINDOWS_XP
-
 #define TRACECALLSTACK
 #define TAINT
 #define OBJECT

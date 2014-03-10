@@ -1,7 +1,6 @@
 #ifndef PAGE_TREE_H
 #define PAGE_TREE_H
 #include <inttypes.h>
-//#include "qemu-common.h"
 
 struct offset_value
 {

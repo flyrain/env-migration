@@ -196,14 +196,7 @@ int page_node_no = 0;
 
 int is_kernel_address(uint32_t addr)
 {
-    uint32_t kernle_start_addr;
-    kernle_start_addr = 0xc0000000;
-    
-#ifdef WINDOWS_XP
-    kernle_start_addr = 0x80000000;
-#endif        
-
-    if (addr > kernle_start_addr && addr != 0xffffffff) 
+    if (addr > KERNEL_ADDRESS && addr != 0xffffffff) 
         return 1;
     return 0;
 }
@@ -229,9 +222,33 @@ static void inside_page_scan(uint32_t addr, struct page_node * node)
     }
 }
 
+
+extern FILE *mem_graph;
+#define graph_output(...) do {                                                 \
+        if (mem_graph)                                                   \
+        { fprintf(mem_graph, ## __VA_ARGS__); fflush(mem_graph);}                \
+    } while(0)
+
+static int connect_page_nodes(uint32_t addr)
+{
+    int i = 0;
+    for(; i < page_node_no; i ++){
+        int j = 0;
+        for(; j < 1024; j++ ){
+            if(page_nodes[i].point_out[j].value == 0)
+                break;
+            if(page_nodes[i].point_out[j].value == (addr & (~ 0xfff))){
+                graph_output("\"%x\" -> \"%x\" [label=%d]\n", page_nodes[i].addr, (addr & (~ 0xfff)), page_nodes[i].point_out[j].offset);
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 static void record_page_nodes(uint32_t addr, int global)
 {
-    if(addr == 0 || (addr & (~ 0xfff)) < 0x80000000)
+    if(addr == 0 || (addr & (~ 0xfff)) < KERNEL_ADDRESS)
         return;
     
     int i = 0;
@@ -244,12 +261,17 @@ static void record_page_nodes(uint32_t addr, int global)
 
     struct page_node * node = &(page_nodes[page_node_no]);
     node->addr = (addr & (~ 0xfff));
-    if(global){
+    if(global){//global
         node->global = 1;
         pemu_debug("Global:%x, page node no %d\n", node->addr, page_node_no);
-    }else{
+        graph_output("\"%x\" [shape=box color=red style=filled];\n", node->addr);
+    }else{//heap
         node->global = 0;
-        pemu_debug("Heap:%x, page node no %d\n", addr & (~ 0xfff), page_node_no);
+        pemu_debug("Heap:%x, page node no %d\n", node->addr, page_node_no);
+        graph_output("\"%x\" [shape=ellipse color=yellow style=filled];\n", node->addr);
+        //check if the address is inside other page nodes, print out
+        //the edges for dot 
+        connect_page_nodes(addr);
     }
         
     inside_page_scan(addr, node);

@@ -49,6 +49,7 @@ inline void inst_update(char *buf)
 #endif
 
 FILE *pemu_log;
+FILE *mem_graph;
 
 int PEMU_init(void *env)
 {
@@ -61,6 +62,7 @@ int PEMU_init(void *env)
 	setup_inst_hook();
         
         pemu_log = fopen("pemu_log", "a+");
+        mem_graph = fopen("mem_graph.dot", "a+");
         //    init_process_win(pname);
 }
 
