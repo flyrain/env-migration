@@ -327,11 +327,14 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
         if(is_kernel_stack(addr))
             return;
 
+        uint32_t value = 0;
+        PEMU_read_mem(addr, 4, &value);
+        
         if (only_displacement(op_name, oprand_i)){
-            pemu_debug("Global:%x\n", addr);
+            pemu_debug("Global:%x: %x\n", addr, value);
             record_page_nodes(addr,1);
         } else{
-            pemu_debug("Heap:%x\n", addr);
+            pemu_debug("Heap:%x: %x\n", addr, value);
             record_page_nodes(addr,0);
         }
     }
