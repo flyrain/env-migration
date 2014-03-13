@@ -229,54 +229,59 @@ extern FILE *mem_graph;
         { fprintf(mem_graph, ## __VA_ARGS__); fflush(mem_graph);}                \
     } while(0)
 
-static int connect_page_nodes1(uint32_t addr)
-{
-    int i = 0;
-    for(; i < page_node_no; i ++){
-        int j = 0;
-        for(; j < 1024; j++ ){
-            uint32_t value = page_nodes[i].point_out[j].value;
-
-            if(value == 0)
-                break;
-
-            if((value & (~ 0xfff))  == (addr & (~ 0xfff))){
-                graph_output("\"%x\" -> \"%x\" [label=%d]\n", page_nodes[i].addr, (addr & (~ 0xfff)), page_nodes[i].point_out[j].offset);
-                //TODO, multiple path, and remove duplicate path
-                //return 1;
-            }
-        }
-    }
-    return 0;
-}
-
-
 
 #define MAX_EDGE_NO 5000
 struct edge
 {
     uint32_t source;
     uint32_t target;
+    int is_printed;
 };
 struct edge edges[MAX_EDGE_NO];
 int edge_no = 0;
 
+static void print_edge(struct edge edge_item)
+{
+    pemu_debug("(%x -> %x)\n", edge_item.source, edge_item.target);
+    //If point to self, don't print it out.
+    if((edge_item.source & (~ 0xfff)) != edge_item.target )
+        graph_output("\"%x\" -> \"%x\" [label=%d]\n", (edge_item.source & (~ 0xfff)), edge_item.target, edge_item.source & 0xfff );
+    edge_item.is_printed = 1;
+}
+
 static void connect_page_nodes(uint32_t addr, uint32_t value)
 {
-    //TODO remove the leaf
-    //TODO if point to self, don't print it out.
+    //Print previous edges if current address is the
+    //target of the previous edge.
     int i = 0;
+    for (i = edge_no - 1; i >= 0; i--) {
+        if(edges[i].target == (addr & (~ 0xfff)) ){
+            if(!edges[i].is_printed){
+                print_edge(edges[i]);
+                edges[i].is_printed = 1;
+            }
+            break;
+        }
+    }
+
+    if(!is_kernel_address(value))
+        return;
+
+    assert(edge_no < MAX_EDGE_NO);
+    
+    //remove duplicate
     for (i = 0; i < edge_no; i++) {
         if(edges[i].source == addr && edges[i].target == value)
             return;
     }
-
+    //add to edegs array
     edges[edge_no].source = addr;
     edges[edge_no].target = value;
-    pemu_debug("(%x -> %x)\n", addr, value);
-    graph_output("\"%x\" -> \"%x\" [label=%d]\n", (addr & (~ 0xfff)), (value & (~ 0xfff)), addr & 0xfff );
+    edges[edge_no].is_printed = 0;
+    pemu_debug("new edges %x -> %x %d\n", edges[edge_no].source, edges[edge_no].target, edges[edge_no].source & 0xfff);
     edge_no ++;
 }
+
 static void record_page_nodes(uint32_t addr, int global)
 {
     if(addr == 0 || (addr & (~ 0xfff)) < KERNEL_ADDRESS)
@@ -285,9 +290,7 @@ static void record_page_nodes(uint32_t addr, int global)
     //connect the name and value
     uint32_t value = 0;
     PEMU_read_mem(addr, 4, &value);
-    if(is_kernel_address(value)){
-        connect_page_nodes(addr, (value & (~ 0xfff)) );
-    }
+    connect_page_nodes(addr, (value & (~ 0xfff)) );
     
     int i = 0;
     for(; i < page_node_no; i ++){
@@ -308,9 +311,6 @@ static void record_page_nodes(uint32_t addr, int global)
         node->global = 0;
         pemu_debug("Heap:%x, page node no %d\n", node->addr, page_node_no);
         graph_output("\"%x\" [shape=ellipse color=yellow style=filled];\n", node->addr);
-        //check if the address is inside other page nodes, print out
-        //the edges for dot 
-//    connect_page_nodes(addr);
     }
 
 //    inside_page_scan(addr, node);
@@ -327,10 +327,13 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
         if(is_kernel_stack(addr))
             return;
 
-        if (only_displacement(op_name, oprand_i))
+        if (only_displacement(op_name, oprand_i)){
+            pemu_debug("Global:%x\n", addr);
             record_page_nodes(addr,1);
-        else
+        } else{
+            pemu_debug("Heap:%x\n", addr);
             record_page_nodes(addr,0);
+        }
     }
 }
 

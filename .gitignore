@@ -31,3 +31,10 @@
 /qemu_vmst/bin/mem
 /qemu_vmst/bin/qemu
 /qemu_vmst/bin/qemu-ga
+/mem_graph.bk.pdf
+/mem_graph.dot
+/mem_graph.dot.bk
+/mem_graph.pdf
+/mem_graph1.pdf
+/pemu_log
+/pemu_log.bk

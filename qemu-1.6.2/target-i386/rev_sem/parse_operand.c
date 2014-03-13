@@ -191,7 +191,12 @@ int operand_is_mem(const xed_operand_enum_t op_name, uint32_t* mem_addr,
         segbase = 0;
         displacement = 0;
 
-        segbase = 0;
+        //get seg base, add by Yufei
+        xed_reg_enum_t seg = xed_decoded_inst_get_seg_reg(&pemu_inst.PEMU_xedd_g, mem_idx);
+        if (seg != XED_REG_INVALID) {
+            segbase = PEMU_get_seg(seg);
+        }
+        
         // Get Base register
         xed_reg_enum_t base_regid = s_base_regid 
             = xed_decoded_inst_get_base_reg(&pemu_inst.PEMU_xedd_g, mem_idx);

@@ -235,14 +235,23 @@ static int xed_regmapping[][3] = {
 /* XED_REG_YMM_LAST=XED_REG_YMM15 */ {-1,-1,-1},
 };
 
+//add by Yufei
+uint32_t PEMU_get_seg(xed_reg_enum_t reg_id)
+{
+    if(reg_id == XED_REG_INVALID)
+        return 0;
+    uint32_t reg = xed_regmapping[reg_id][0];
+    struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
+    return env->segs[reg].base;
+}
 
 uint32_t PEMU_get_reg(xed_reg_enum_t reg_id)
 {
-	if(reg_id == XED_REG_INVALID)
-		return 0;
-	uint32_t reg = xed_regmapping[reg_id][0];
-	struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
-	return env->regs[reg];
+    if(reg_id == XED_REG_INVALID)
+        return 0;
+    uint32_t reg = xed_regmapping[reg_id][0];
+    struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
+    return env->regs[reg];
 }
 
 uint32_t PEMU_get_cr3()
