@@ -1,1 +1,0 @@
-/home/cs3612/env-migration/qemu_vmst/Makefile.user
