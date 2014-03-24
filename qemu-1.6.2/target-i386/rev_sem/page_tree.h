@@ -1,6 +1,6 @@
 #ifndef PAGE_TREE_H
 #define PAGE_TREE_H
-#include <inttypes.h>
+#include <stdint.h>
 
 struct offset_value
 {

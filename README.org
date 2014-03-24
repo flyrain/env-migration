@@ -1,6 +1,7 @@
-# Time-stamp: <2014-03-16 00:05:54 yufei>
+# Time-stamp: <2014-03-24 12:02:49 cs3612>
 * Introduction
-A customized qemu for environment migration. 
+A customized qemu for environment migration. The guest OS only support
+Windows-XP SP3 right now.
 * Compile
 #+BEGIN_SRC sh
 cd qemu-1.6.2
