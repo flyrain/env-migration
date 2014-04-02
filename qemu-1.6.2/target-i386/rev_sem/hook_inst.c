@@ -240,6 +240,7 @@ struct edge
 struct edge edges[MAX_EDGE_NO];
 int edge_no = 0;
 
+/*
 static void print_edge(struct edge edge_item)
 {
     pemu_debug("(%x -> %x)\n", edge_item.source, edge_item.target);
@@ -316,6 +317,7 @@ static void record_page_nodes(uint32_t addr, int global)
 //    inside_page_scan(addr, node);
     page_node_no ++;
 }
+*/
 
 static void ds_code_handle_mem_access(INS ins, int oprand_i)
 {
@@ -332,10 +334,10 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
         
         if (only_displacement(op_name, oprand_i)){
             pemu_debug("Global:%x: %x\n", addr, value);
-            record_page_nodes(addr,1);
+            record_object_node(addr,1);
         } else{
             pemu_debug("Heap:%x: %x\n", addr, value);
-            record_page_nodes(addr,0);
+            record_object_node(addr, 0);
         }
     }
 }
