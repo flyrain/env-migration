@@ -86,6 +86,12 @@ extern FILE * pemu_log;
         { fprintf(pemu_log, ## __VA_ARGS__); fflush(pemu_log);}   \
     } while(0)
 
+extern FILE *mem_graph;
+#define graph_output(...) do {                                                 \
+        if (mem_graph)                                                   \
+        { fprintf(mem_graph, ## __VA_ARGS__); fflush(mem_graph);}                \
+    } while(0)
+
 int PEMU_init(void*);
 int PEMU_exit(void);
 #endif

@@ -223,11 +223,6 @@ static void inside_page_scan(uint32_t addr, struct page_node * node)
 }
 
 
-extern FILE *mem_graph;
-#define graph_output(...) do {                                                 \
-        if (mem_graph)                                                   \
-        { fprintf(mem_graph, ## __VA_ARGS__); fflush(mem_graph);}                \
-    } while(0)
 
 
 #define MAX_EDGE_NO 5000
@@ -333,10 +328,10 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
         PEMU_read_mem(addr, 4, &value);
         
         if (only_displacement(op_name, oprand_i)){
-            pemu_debug("Global:%x: %x\n", addr, value);
+            //pemu_debug("Global:%x: %x\n", addr, value);
             record_object_node(addr,1);
         } else{
-            pemu_debug("Heap:%x: %x\n", addr, value);
+            //pemu_debug("Heap:%x: %x\n", addr, value);
             record_object_node(addr, 0);
         }
     }
