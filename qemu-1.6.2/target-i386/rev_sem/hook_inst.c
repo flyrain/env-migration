@@ -808,8 +808,12 @@ void Instrument(uint32_t pc, INS ins)
         taint_mem_access0(ins);
     }
 #endif
-    ds_code_handle_mem_access(ins, 1);
-    ds_code_handle_mem_access(ins, 0);
+    
+    //lea doesn't access memory
+    if(opcode != XED_ICLASS_LEA){
+        ds_code_handle_mem_access(ins, 1);
+        ds_code_handle_mem_access(ins, 0);
+    }
 }
 
 void setup_inst_hook(void)

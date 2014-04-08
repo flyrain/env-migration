@@ -6,26 +6,28 @@
 struct object_node object_nodes[MAX_DATA_OBJECT_NODE];
 int object_node_no = 0;
 
-static void connect_nodes(uint32_t source, uint32_t target, uint32_t offset)
+static void connect_nodes(struct object_node *node, struct pointer* p)
 {
+    uint32_t source = node->addr;
+    uint32_t target = p->value;
+    uint32_t offset = p->offset;
     pemu_debug("(%x -> %x, o: %d)\n", source, target, offset);
     graph_output("\"%x\" -> \"%x\" [label=%d]\n", source, target, offset);
 }
 
-static void add_pointer_to_node(struct object_node *new_node, uint32_t addr, uint32_t value)
+static void pointer_add(struct object_node *node, uint32_t offset, uint32_t value)
 {
     struct pointer * newpointer = malloc(sizeof(struct pointer));
-    newpointer->offset = (addr & 0xfff);
+    newpointer->offset = offset;
     newpointer->value = value;
-    newpointer->next = NULL;
-    if(new_node->pointers == NULL){
-        new_node->pointers = newpointer;
+    if(node->count == 0){
+        node->count++;
+        node->pointers = malloc(sizeof(struct pointer*));
+        node->pointers[0] = newpointer;
     }else{
-        struct pointer * curr = new_node->pointers;
-        while(curr->next != NULL){
-            curr = curr->next;
-        }
-        curr->next = newpointer;
+        node->count++;
+        node->pointers = realloc(node->pointers, sizeof(struct pointer*) * node->count);
+        node->pointers[node->count - 1] = newpointer;
     }
 }
 
@@ -54,24 +56,37 @@ static struct object_node* find_heap_node(uint32_t addr)
 
 static struct pointer* find_pointers(uint32_t addr)
 {
+    //find the nearest pointer related to addr
     int i = 0;
+    int distance = -1;
+    struct pointer * nearest_pointer = NULL;
+    struct object_node * nearest_node = NULL;
     for (i = object_node_no - 1; i >= 0; i--) {
         struct object_node * node = &object_nodes[i];
-        struct pointer * curr = node->pointers;
-        while(curr != NULL){
+        int j = 0;
+        for (j = 0; j < node->count; j++) {
+            struct pointer * curr = node->pointers[j];
             if(addr >= curr->value &&
-               addr <= curr->value + 3*4096){
-                //connect 
-                connect_nodes(node->addr, curr->value, curr->offset);
-                return curr;
-            }
-            curr = curr->next;
+               addr <= curr->value + 3*4096)
+                if(distance == -1 || addr - curr->value < distance){
+                    if(distance != -1)
+                        pemu_debug("(distance: %d to %d)\n", distance, addr - curr->value);
+                    nearest_pointer = curr;
+                    nearest_node = node;
+                    distance = addr - curr->value;
+                }
         }
     }
+
+    if(nearest_pointer != NULL){
+        connect_nodes(nearest_node, nearest_pointer);
+        return nearest_pointer;
+    }
+
     return NULL;
 }
 
-static struct object_node* new_object_node(uint32_t addr, uint32_t range, int global)
+static struct object_node* object_node_add(uint32_t addr, uint32_t range, int global)
 {
     struct object_node* newnode = NULL;
     assert(object_node_no < MAX_DATA_OBJECT_NODE);
@@ -79,7 +94,7 @@ static struct object_node* new_object_node(uint32_t addr, uint32_t range, int gl
     object_nodes[object_node_no].range = range; 
     newnode = &object_nodes[object_node_no];
     if(global == 1){
-        pemu_debug("(Global:%x, object no %d\n)", addr, object_node_no);
+        pemu_debug("(Global:%x, object no %d)\n", addr, object_node_no);
         graph_output("\"%x\" [shape=box color=red style=filled];\n", addr);
     }else{
         pemu_debug("(Heap:%x, object no %d\n)", addr, object_node_no);
@@ -100,7 +115,7 @@ static void heap_access(uint32_t addr, uint32_t value)
         //then create a new node, and print out the edeges
         struct pointer * curr_pointer = find_pointers(addr);
         if(curr_pointer != NULL){
-            heap_node = new_object_node(curr_pointer->value, 
+            heap_node = object_node_add(curr_pointer->value, 
                                         addr - curr_pointer->value, 0);
         }else{
             pemu_debug("(Cannot find pointer to this object %x)\n", addr);
@@ -112,8 +127,25 @@ static void heap_access(uint32_t addr, uint32_t value)
         //renew the range of node
         if(addr - heap_node->addr > heap_node->range)
             heap_node->range = addr - heap_node->addr; 
-        add_pointer_to_node(heap_node, addr, value);
+        pointer_add(heap_node, addr - heap_node->addr, value);
     }
+}
+
+static void global_access(uint32_t addr, uint32_t value)
+{
+    //In global area, each page is considered as a node heap area, we
+    //should caculate the size and the start address of a object, also
+    //then internal pointer should have offset which related to start
+    //address of the object, and value of pointer which point out to
+    //another object.
+    struct object_node * new_node = find_global_node(addr);
+    if(new_node == NULL){
+        new_node = object_node_add((addr & (~ 0xfff)), 4096, 1);
+    }
+
+    //add pointer into node
+    assert(new_node != NULL);
+    pointer_add(new_node, (addr & 0xfff), value);
 }
 
 void record_object_node(uint32_t addr, int global)
@@ -124,24 +156,9 @@ void record_object_node(uint32_t addr, int global)
     uint32_t value = 0;
     PEMU_read_mem(addr, 4, &value);
     
-    //In global area, each page is considered as a node heap area, we
-    //should caculate the size and the start address of a object, also
-    //then internal pointer should have offset which related to start
-    //address of the object, and value of pointer which point out to
-    //another object.
     if(global == 1){
-        //global
-        struct object_node * new_node = find_global_node(addr);
-        if(new_node == NULL){
-            new_node = new_object_node((addr & (~ 0xfff)), 4096, 1);
-       }
-
-        //add pointer into node
-        assert(new_node != NULL);
-        add_pointer_to_node(new_node, addr, value);
+        global_access(addr, value);
     }else if(global == 0){
         heap_access(addr, value);
     }
-
-    return;
 }

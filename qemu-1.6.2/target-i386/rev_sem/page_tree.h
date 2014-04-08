@@ -19,14 +19,14 @@ struct pointer
 {
     int offset;
     uint32_t value;
-    struct pointer * next;
 };
 
 struct object_node
 {
     uint32_t addr;
     uint32_t range;
-    struct pointer* pointers;
+    int count;
+    struct pointer** pointers;
 };
 
 #endif // PAGE_TREE_H
