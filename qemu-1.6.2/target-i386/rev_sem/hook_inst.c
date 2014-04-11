@@ -18,7 +18,7 @@
 /******************Global Data Section***************************/
 
 
-#define DEBUG_TAINT
+//#define DEBUG_TAINT
 #define ENABLE_TAINT
 
 #include "taint.h"
@@ -29,6 +29,8 @@ static char g_inst_buffer[15];
 static char g_inst_name[1024];
 static xed_iclass_enum_t g_opcode;
 static uint32_t kernel_esp;
+
+int is_lea = 0;
 
 void set_taint_source_heaps(uint32_t addr, int len)
 {
@@ -157,7 +159,6 @@ static unsigned int handle_control_target(INS xi)
 uint32_t stack_pages[MAX_STACK_DATA_PAGE];
 int stack_pages_no = 0;
 
-
 static void record_stack_addrs()
 {
     struct CPUX86State* cpu_single_env = (struct CPUX86State*)(first_cpu->env_ptr);
@@ -171,7 +172,7 @@ static void record_stack_addrs()
     
     if(stack_pages_no < MAX_STACK_DATA_PAGE){
         stack_pages[stack_pages_no] = (esp & (~ 0xfff));
-        pemu_debug("Stack:%x, stack page no %d\n", esp & (~ 0xfff), stack_pages_no);
+        pemu_debug(" (Stack:%x, stack page no %d)", esp & (~ 0xfff), stack_pages_no);
         stack_pages_no ++;
     }
 }
@@ -189,130 +190,13 @@ static int is_kernel_stack(uint32_t addr)
     return 0;
 }
 
-
-#define MAX_DATA_PAGE_NODE 1024
-struct page_node page_nodes[MAX_DATA_PAGE_NODE];
-int page_node_no = 0;
-
 int is_kernel_address(uint32_t addr)
 {
-    if (addr > KERNEL_ADDRESS && addr != 0xffffffff) 
+    //addr should be an even number
+    if (addr > KERNEL_ADDRESS && addr != 0xffffffff && addr % 2 == 0) 
         return 1;
     return 0;
 }
-
-static void inside_page_scan(uint32_t addr, struct page_node * node)
-{
-    //check the whole page, add all pointer to a array
-    uint32_t value = 0;
-    addr = (addr & (~ 0xfff));
-
-    int pointer_no = 0;
-
-    int i = 0;
-    for(; i < 4 * 1024; i += 4){
-        PEMU_read_mem(addr + i, 4, &value);
-        if(is_kernel_address(value)){
-            struct offset_value *pointer = &(node->point_out[pointer_no]);
-            pointer->offset = i;
-            pointer->value = value;
-            pemu_debug("%x %d: %d %x\n", node->addr, pointer_no, pointer->offset, pointer->value);
-            pointer_no ++;
-        }
-    }
-}
-
-
-
-
-#define MAX_EDGE_NO 5000
-struct edge
-{
-    uint32_t source;
-    uint32_t target;
-    int is_printed;
-};
-struct edge edges[MAX_EDGE_NO];
-int edge_no = 0;
-
-/*
-static void print_edge(struct edge edge_item)
-{
-    pemu_debug("(%x -> %x)\n", edge_item.source, edge_item.target);
-    //If point to self, don't print it out.
-    if((edge_item.source & (~ 0xfff)) != edge_item.target )
-        graph_output("\"%x\" -> \"%x\" [label=%d]\n", (edge_item.source & (~ 0xfff)), edge_item.target, edge_item.source & 0xfff );
-    edge_item.is_printed = 1;
-}
-
-static void connect_page_nodes(uint32_t addr, uint32_t value)
-{
-    //Print previous edges if current address is the
-    //target of the previous edge.
-    int i = 0;
-    for (i = edge_no - 1; i >= 0; i--) {
-        if(edges[i].target == (addr & (~ 0xfff)) ){
-            if(!edges[i].is_printed){
-                print_edge(edges[i]);
-                edges[i].is_printed = 1;
-            }
-            break;
-        }
-    }
-
-    if(!is_kernel_address(value))
-        return;
-
-    assert(edge_no < MAX_EDGE_NO);
-    
-    //remove duplicate
-    for (i = 0; i < edge_no; i++) {
-        if(edges[i].source == addr && edges[i].target == value)
-            return;
-    }
-    //add to edegs array
-    edges[edge_no].source = addr;
-    edges[edge_no].target = value;
-    edges[edge_no].is_printed = 0;
-    pemu_debug("new edges %x -> %x %d\n", edges[edge_no].source, edges[edge_no].target, edges[edge_no].source & 0xfff);
-    edge_no ++;
-}
-
-static void record_page_nodes(uint32_t addr, int global)
-{
-    if(addr == 0 || (addr & (~ 0xfff)) < KERNEL_ADDRESS)
-        return;
-
-    //connect the name and value
-    uint32_t value = 0;
-    PEMU_read_mem(addr, 4, &value);
-    connect_page_nodes(addr, (value & (~ 0xfff)) );
-    
-    int i = 0;
-    for(; i < page_node_no; i ++){
-        if(page_nodes[i].addr == (addr & (~ 0xfff)))
-            return;
-    }
-
-    assert(page_node_no < MAX_DATA_PAGE_NODE);
-
-    struct page_node * node = &(page_nodes[page_node_no]);
-    node->addr = (addr & (~ 0xfff));
-    if(global){//global
-        node->global = 1;
-        pemu_debug("Global:%x, page node no %d\n", node->addr, page_node_no);
-        graph_output("\"%x\" [shape=box color=red style=filled];\n", node->addr);
-        
-    }else{//heap
-        node->global = 0;
-        pemu_debug("Heap:%x, page node no %d\n", node->addr, page_node_no);
-        graph_output("\"%x\" [shape=ellipse color=yellow style=filled];\n", node->addr);
-    }
-
-//    inside_page_scan(addr, node);
-    page_node_no ++;
-}
-*/
 
 static void ds_code_handle_mem_access(INS ins, int oprand_i)
 {
@@ -321,18 +205,17 @@ static void ds_code_handle_mem_access(INS ins, int oprand_i)
     xed_operand_enum_t op_name = xed_operand_name(oprand);
 
     if(operand_is_mem(op_name, &addr, oprand_i)){
-        if(is_kernel_stack(addr))
-            return;
+        if(!is_kernel_address(addr)){return;}
+
+        if(is_kernel_stack(addr)){return;}
 
         uint32_t value = 0;
         PEMU_read_mem(addr, 4, &value);
         
-        if (only_displacement(op_name, oprand_i)){
-            //pemu_debug("Global:%x: %x\n", addr, value);
-            record_object_node(addr,1);
+        if (is_global(op_name, oprand_i)){
+            global_access(addr, value);
         } else{
-            //pemu_debug("Heap:%x: %x\n", addr, value);
-            record_object_node(addr, 0);
+            heap_access(addr, value);
         }
     }
 }
@@ -618,8 +501,9 @@ static void Instrument_Binary_OP(INS ins)//TODO: if parameter bop local_variable
         set_reg_taint(reg, g_taint);
     }
 
-#ifdef DEBUG_TAINT
 END:
+    if(1){}
+#ifdef DEBUG_TAINT
     if(g_taint){
         pemu_debug("taint at pc\t%x\n", g_pc);
     }
@@ -797,7 +681,7 @@ void Instrument(uint32_t pc, INS ins)
 
     xed_decoded_inst_dump_att_format(&pemu_inst.PEMU_xedd_g, g_inst_str, sizeof(g_inst_str), 0);
     g_pc = pc;
-    pemu_debug("%x:\t%s\n", g_pc, g_inst_str);
+    pemu_debug("%x:\t%s", g_pc, g_inst_str);
     record_stack_addrs();
     
 #ifdef ENABLE_TAINT
@@ -809,11 +693,22 @@ void Instrument(uint32_t pc, INS ins)
     }
 #endif
     
-    //lea doesn't access memory
-    if(opcode != XED_ICLASS_LEA){
-        ds_code_handle_mem_access(ins, 1);
-        ds_code_handle_mem_access(ins, 0);
-    }
+    //lea doesn't access memory, but caculate address of memory
+    if(opcode == XED_ICLASS_LEA)
+        is_lea = 1; 
+    else
+        is_lea = 0;
+    //print value of some registers
+    pemu_debug("(eax:%x, ebx:%x, ecx:%x, edx:%x)",
+               PEMU_get_reg(XED_REG_EAX),
+               PEMU_get_reg(XED_REG_EBX),
+               PEMU_get_reg(XED_REG_ECX),
+               PEMU_get_reg(XED_REG_EDX));
+ 
+    ds_code_handle_mem_access(ins, 1);
+    ds_code_handle_mem_access(ins, 0);
+
+    pemu_debug("\n");
 }
 
 void setup_inst_hook(void)

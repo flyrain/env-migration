@@ -99,10 +99,10 @@ int get_mem_operand_size(const xed_operand_enum_t op_name, uint32_t operand_i){
     }
 }
 
-int only_displacement(const xed_operand_enum_t op_name, int operand_i)
+//if displacement is a kernel address, so we consider it as a global address
+int is_global(const xed_operand_enum_t op_name, int operand_i)
 {
     switch (op_name) {
-        /* Memory */
     case XED_OPERAND_AGEN:
     case XED_OPERAND_MEM0:
     case XED_OPERAND_MEM1:{
@@ -117,48 +117,13 @@ int only_displacement(const xed_operand_enum_t op_name, int operand_i)
         if (op_name == XED_OPERAND_MEM1)
             mem_idx = 1;
 
-        /* Initialization */
-        base = 0;
-        index = 0;
-        scale = 0;
-        segbase = 0;
-        displacement = 0;
-
-        // Get Seg Base register, add by Yufei
-        xed_reg_enum_t seg =
-            xed_decoded_inst_get_seg_reg(&pemu_inst.PEMU_xedd_g, mem_idx);
-        if (seg != XED_REG_INVALID) {
-            segbase = PEMU_get_seg(seg);
-        }
-
-        // Get Base register
-        xed_reg_enum_t base_regid = s_base_regid 
-            = xed_decoded_inst_get_base_reg(&pemu_inst.PEMU_xedd_g, mem_idx);
-			
-        if (base_regid != XED_REG_INVALID) {
-            base = PEMU_get_reg(base_regid);
-        }
-        // Get Index register and Scale
-        xed_reg_enum_t index_regid =
-            xed_decoded_inst_get_index_reg(&pemu_inst.PEMU_xedd_g, mem_idx);
-        if (mem_idx == 0 && index_regid != XED_REG_INVALID) {
-            index = PEMU_get_reg(index_regid);
-
-            if (xed_decoded_inst_get_scale
-                (&pemu_inst.PEMU_xedd_g, operand_i) != 0) {
-                scale =
-                    (unsigned long)
-                    xed_decoded_inst_get_scale(&pemu_inst.PEMU_xedd_g,
-                                               mem_idx);
-            }
-        }
-
         displacement =
             (unsigned long)
             xed_decoded_inst_get_memory_displacement(&pemu_inst.PEMU_xedd_g,
                                                      mem_idx);
         
-        if(segbase + base + index * scale == 0 && displacement != 0) //only displacement
+        //if displacement is a kernel address, so we consider it as a global address
+        if(displacement >= KERNEL_ADDRESS)             
             return 1;
         else
             return 0;
@@ -167,7 +132,6 @@ int only_displacement(const xed_operand_enum_t op_name, int operand_i)
     default:
         return 0;
     }
-    return 0;
 }
 
 int operand_is_mem(const xed_operand_enum_t op_name, uint32_t* mem_addr, 
