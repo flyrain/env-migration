@@ -5,6 +5,7 @@
 
 #include "windows.h"
 #include "winHook.h"
+#include "winsyscalls.h"
 #include "qemu-pemu.h"
 #include "pemu.h"
 
@@ -568,3 +569,12 @@ target_ulong getImageRange()
     return win.mbase+win.msize;
 }
 
+char *get_win_syscall_name_by_no(int syscall_no, int os_type)
+{
+    int i =0;
+    for (i = 0; i < SYSCALL_SIZE; i++) {
+        if(syscalls[i].x[os_type] == syscall_no)
+            return syscalls[i].name; 
+    }
+    return NULL;
+}

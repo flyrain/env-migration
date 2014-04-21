@@ -21,13 +21,19 @@
 #include "cpu.h"
 #include "qemu/log.h"
 #include "helper.h"
-
 //#define DEBUG_PCALL
 
 //jzeng
 #include "rev_sem/config_pemu.h"
+#include "rev_sem/pemu.h"
 //end
-
+/*
+//yufei
+#ifdef WINDOWS_KERNEL
+#include "rev_sem/winsyscalls.h"
+#endif
+//end
+*/
 #if !defined(CONFIG_USER_ONLY)
 #include "exec/softmmu_exec.h"
 #endif /* !defined(CONFIG_USER_ONLY) */
@@ -1165,7 +1171,6 @@ static void handle_even_inj(CPUX86State *env, int intno, int is_int,
  * instruction. It is only relevant if is_int is TRUE.
  */
 //jzeng
-#include "rev_sem/pemu.h"
 static void do_interrupt_all(X86CPU *cpu, int intno, int is_int,
                              int error_code, target_ulong next_eip, int is_hw)
 {
@@ -2261,6 +2266,7 @@ void helper_iret_protected(CPUX86State *env, int shift, int next_eip)
                 set_taint_source_args();
 #ifdef PEMU_DEBUG
                 pemu_debug( "iret syscall\n");
+                print_obj(); //add by yufei
 #endif
                 //clear_calldata();
             } else {
@@ -2279,6 +2285,26 @@ void helper_lret_protected(CPUX86State *env, int shift, int addend)
     helper_ret_protected(env, shift, 0, addend);
 }
 
+enum {
+    OS_NT_SP3,
+    OS_NT_SP4,
+    OS_NT_SP5,
+    OS_NT_SP6,
+    OS_2K_SP0,
+    OS_2K_SP1,
+    OS_2K_SP2,
+    OS_2K_SP3,
+    OS_2K_SP4,
+    OS_XP_SP0,
+    OS_XP_SP1,
+    OS_XP_SP2,
+    OS_XP_SP3,
+    OS_2003_SP0,
+    OS_2003_SP1,
+    OS_VISTA_SP0,
+    OS_SEVEN_SP0,
+};
+
 void helper_sysenter(CPUX86State *env)
 {
 //jzeng	
@@ -2293,8 +2319,14 @@ void helper_sysenter(CPUX86State *env)
 			pemu_exec_stats.PEMU_start_trace_syscall = 1;
 		}
 		pemu_exec_stats.PEMU_int_level = 0;
-#ifdef PEMU_DEBUG
+
 		struct CPUX86State* env=(struct CPUX86State*)(first_cpu->env_ptr);
+#ifdef WINDOWS_KERNEL
+                int syscall_no = env->regs[R_EAX];
+	        pemu_debug("sysenter system call:%d %s eip=%x\n", 
+                           syscall_no, get_win_syscall_name_by_no(syscall_no, OS_XP_SP3),
+                           env->eip);
+#else
 	        pemu_debug("sysenter system call:%d eip=%x\n", env->regs[R_EAX], env->eip);
 #endif
 	}

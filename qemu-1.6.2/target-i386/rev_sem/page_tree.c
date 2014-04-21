@@ -6,6 +6,15 @@
 struct object_node object_nodes[MAX_DATA_OBJECT_NODE];
 int object_node_no = 0;
 
+int print_obj()
+{
+    int i = 0;
+    for (i = 0; i < object_node_no; i++) {
+        pemu_debug("0x%x 0x%x object %d\n", object_nodes[i].addr, object_nodes[i].range, i);
+    }
+    return object_node_no;
+}
+
 static void connect_nodes(struct object_node *node, struct pointer* p)
 {
     uint32_t source = node->addr;
